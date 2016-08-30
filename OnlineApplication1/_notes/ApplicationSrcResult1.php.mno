@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsViewApplications" value="name:Fullname;datatype:string,name:Email;datatype:string,name:Firstname;datatype:string,name:Lastname;datatype:string,name:UID;datatype:int,name:RegisterDate;datatype:timestamp,name:Seniority;datatype:string,name:Gender;datatype:string,name:Race;datatype:string,name:OverallGPA;datatype:real,name:MajorGPA;datatype:real,name:PgmYear;datatype:year" />
+</info>

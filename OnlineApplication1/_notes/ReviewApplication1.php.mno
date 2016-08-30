@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rstViewRegistration" value="name:UserID;datatype:int,name:Firstname;datatype:string,name:Lastname;datatype:string,name:Email;datatype:string,name:Username;datatype:string,name:Password;datatype:string,name:ConfirmPassword;datatype:string,name:UserLevel;datatype:int,name:UID;datatype:int,name:RegisterDate;datatype:timestamp" />
+	<infoitem key="UD_rsApplication" value="name:Username;datatype:string,name:Firstname;datatype:string,name:Lastname;datatype:string,name:Email;datatype:string,name:UID;datatype:int,name:Seniority;datatype:string,name:Gender;datatype:string,name:Race;datatype:string,name:OverallGPA;datatype:real,name:MajorGPA;datatype:real,name:Credits;datatype:int,name:Graduation;datatype:date,name:PgmYear;datatype:year,name:Citizenship;datatype:string,name:InternshipInterest;datatype:blob,name:PastInternLocation;datatype:blob,name:InternInFall;datatype:string,name:FallInternLoc;datatype:string,name:OtherComments;datatype:blob" />
+	<infoitem key="UD_rsMajor" value="name:Username;datatype:string,name:Programs;datatype:string,name:UID;datatype:int,name:MID;datatype:int,name:Type;datatype:string,name:OtherMajors;datatype:blob" />
+	<infoitem key="UD_rsViewUNIVProgram" value="name:LID;datatype:int,name:UPrograms;datatype:string,name:Username;datatype:string" />
+	<infoitem key="UD_rsConcentration" value="name:Concentration;datatype:string,name:ConID;datatype:int,name:Rank;datatype:int,name:RankID;datatype:int,name:UID;datatype:int,name:PgmYear;datatype:year,name:UserID;datatype:int,name:Username;datatype:string" />
+	<infoitem key="UD_rsCitizenshipList" value="name:UID;datatype:int,name:CountryID;datatype:int,name:Country;datatype:string,name:Username;datatype:string" />
+	<infoitem key="UD_rsSupplementaryCourses" value="name:UserID;datatype:int,name:Username;datatype:string,name:CourseID;datatype:string,name:YearTaken;datatype:year,name:UID;datatype:int,name:CourseTitle;datatype:string" />
+	<infoitem key="UD_rsDocuments" value="name:Username;datatype:string,name:docName;datatype:string,name:docContent;datatype:blob,name:PgmYear;datatype:year,name:UID;datatype:int,name:docCategory;datatype:string,name:docID;datatype:int" />
+	<infoitem key="UD_rsMarketing" value="name:UserID;datatype:int,name:Username;datatype:string,name:MarketingType;datatype:string,name:UID;datatype:int,name:PgmYear;datatype:year,name:MarketingID;datatype:int,name:MarketingLocation;datatype:string" />
+</info>

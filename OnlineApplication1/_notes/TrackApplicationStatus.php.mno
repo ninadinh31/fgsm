@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsApplicationStatus" value="name:Firstname;datatype:string,name:Lastname;datatype:string,name:Username;datatype:string,name:UserLevel;datatype:int,name:UID;datatype:int,name:FGDecision;datatype:string" />
+</info>

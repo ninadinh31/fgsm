@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsStdCitizenship" value="name:UID;datatype:int,name:CountryID;datatype:int,name:Country;datatype:string,name:Username;datatype:string" />
+	<infoitem key="UD_rsStudentDetails" value="name:Username;datatype:string,name:Firstname;datatype:string,name:Lastname;datatype:string,name:Email;datatype:string,name:UserLevel;datatype:int,name:UserID;datatype:int,name:UID;datatype:int,name:Seniority;datatype:string,name:Gender;datatype:string,name:Race;datatype:string,name:OverallGPA;datatype:real,name:MajorGPA;datatype:real,name:Credits;datatype:int,name:Graduation;datatype:date,name:PgmYear;datatype:year,name:Citizenship;datatype:string,name:InternshipInterest;datatype:blob,name:PastInternLocation;datatype:blob,name:InternInFall;datatype:string,name:FallInternLoc;datatype:string,name:OtherComments;datatype:blob,name:FGDecision;datatype:string" />
+</info>

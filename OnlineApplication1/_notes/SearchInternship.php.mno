@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsViewInternship" value="name:SubOrgID;datatype:int,name:OrgID;datatype:int,name:Category;datatype:string,name:IntOffering;datatype:string,name:Description;datatype:blob,name:Qualifications;datatype:blob,name:Location;datatype:blob,name:AppRequirement;datatype:blob,name:Website;datatype:blob,name:Contact;datatype:int,name:FGSNotes;datatype:blob,name:SubOrgName;datatype:string,name:Field;datatype:string,name:OrgName;datatype:string" />
+	<infoitem key="UD_rsSearchInternship" value="name:SubOrgID;datatype:int,name:OrgID;datatype:int,name:Category;datatype:string,name:IntOffering;datatype:string,name:Description;datatype:blob,name:Qualifications;datatype:blob,name:Location;datatype:blob,name:AppRequirement;datatype:blob,name:Website;datatype:blob,name:Contact;datatype:int,name:FGSNotes;datatype:blob,name:SubOrgName;datatype:string,name:Field;datatype:string,name:OrgName;datatype:string" />
+</info>

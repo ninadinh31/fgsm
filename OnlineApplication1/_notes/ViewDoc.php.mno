@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsDocuments" value="name:Username;datatype:string,name:docName;datatype:string,name:docContent;datatype:blob,name:PgmYear;datatype:year,name:UID;datatype:int,name:docCategory;datatype:string,name:docID;datatype:int" />
+</info>

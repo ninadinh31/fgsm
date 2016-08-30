@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rstRegistration" value="name:UserID;datatype:int,name:Firstname;datatype:string,name:Lastname;datatype:string,name:Email;datatype:string,name:Username;datatype:string,name:Password;datatype:string,name:ConfirmPassword;datatype:string,name:UserLevel;datatype:int,name:UID;datatype:int,name:RegisterDate;datatype:timestamp" />
+</info>

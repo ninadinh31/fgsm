@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rstViewRegistration" value="name:UserID;datatype:int,name:Firstname;datatype:string,name:Lastname;datatype:string,name:Email;datatype:string,name:Username;datatype:string,name:Password;datatype:string,name:ConfirmPassword;datatype:string,name:UserLevel;datatype:int,name:UID;datatype:int,name:RegisterDate;datatype:timestamp" />
+	<infoitem key="UD_rsApplication" value="name:UID;datatype:int,name:Seniority;datatype:string,name:Gender;datatype:string,name:Race;datatype:string,name:OverallGPA;datatype:real,name:MajorGPA;datatype:real,name:Credits;datatype:int,name:Graduation;datatype:date,name:PgmYear;datatype:year,name:UserID;datatype:int,name:Citizenship;datatype:string,name:InternshipInterest;datatype:blob,name:PastInternLocation;datatype:blob,name:InternInFall;datatype:string,name:FallInternLoc;datatype:string,name:OtherComments;datatype:blob,name:FGDecision;datatype:string,name:AcceptDate;datatype:date,name:ConID;datatype:int,name:Submit;datatype:string,name:OtherMajor;datatype:blob" />
+</info>
