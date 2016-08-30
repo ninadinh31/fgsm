@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsProgramList" value="name:MID;datatype:int,name:Programs;datatype:string,name:TypicalCategory;datatype:string,name:SpecialNote;datatype:string" />
+</info>
