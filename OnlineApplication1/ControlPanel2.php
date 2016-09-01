@@ -544,7 +544,7 @@
             <input name="EditBackground" type="button" class="btn btn-primary" id="EditBackground" onClick="MM_goToURL('parent','EditBackground1.php');return document.MM_returnValue" value="Edit Background"> 
             <br>
             <h3>Citizenship</h3>
-            <table class="table" align="center" width="856" border="1">
+            <table class="table">
             	<thead>
               	<th>Country</th>
                 <th>&nbsp;</th>
@@ -574,7 +574,7 @@
             <?php 
               do { 
             ?>
-              <table class="table" align="center" width="856" border="1">
+              <table class="table">
                 <thead>
                 	<th>Language</th>
                   <th>&nbsp;</th>
