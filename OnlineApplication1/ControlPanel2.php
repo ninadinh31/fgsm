@@ -450,9 +450,8 @@
           </ul>
           
           <div id="tabs-1">
-            <h3 align="center">Background</h3>
-            <p align="center">*Explanation of subsection and what they need to input*</p>
-            <table align="center" width="987" border style="0">
+            <h3>Background</h3>
+            <table class="table-striped">
               <tbody>
                 <tr>
                   <td width="111"><strong>Seniority</strong></td>
@@ -544,9 +543,7 @@
             </table>
             <input name="EditBackground" type="button" class="btn btn-primary" id="EditBackground" onClick="MM_goToURL('parent','EditBackground1.php');return document.MM_returnValue" value="Edit Background"> 
             <br>
-            <p align="center">
-              <strong>Citizenship</strong>
-            </p>
+            <h3>Citizenship</h3>
             <table class="table" align="center" width="856" border="1">
             	<thead>
               	<th>Country</th>
@@ -572,11 +569,9 @@
                 ?>
               </tbody>
             </table>
-            <p align="center"> 
-              <input name="AddCitizenship" type="button" id="AddCitizenship" onClick="MM_goToURL('parent','Citizenship1.php');return document.MM_returnValue" value="Add Citizenship"> 
-            </p>
+            <input name="AddCitizenship" type="button" class="btn btn-primary" onClick="MM_goToURL('parent','Citizenship1.php');return document.MM_returnValue" value="Add Citizenship"> 
             <br>
-            <p align="center"><strong>Language Skills (if any)</strong></p>
+            <h3>Language Skills (if any)</h3>
             <?php 
               do { 
             ?>
@@ -596,9 +591,7 @@
             <?php 
               } while ($row_rsLanguages = mysql_fetch_assoc($rsLanguages)); 
             ?>
-            <p align="center">
-              <input name="butAddLanguage" type="button" id="butAddLanguage" onClick="MM_goToURL('parent','AddLanguage1.php');return document.MM_returnValue" value="Add Language">
-            </p>
+            <input name="butAddLanguage" type="button" class="btn btn-primary" onClick="MM_goToURL('parent','AddLanguage1.php');return document.MM_returnValue" value="Add Language">
           </div>
           
           <div id="tabs-2">
