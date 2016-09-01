@@ -418,7 +418,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div>
       <!-- <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%"> -->
       <h2 align="center">
         Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
