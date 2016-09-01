@@ -451,7 +451,7 @@
           
           <div id="tabs-1">
             <h3>Background</h3>
-            <table class="table-striped">
+            <table class="table">
               <tbody>
                 <tr>
                   <td width="111"><strong>Seniority</strong></td>
