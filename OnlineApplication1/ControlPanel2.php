@@ -418,7 +418,7 @@
   </head>
 
   <body>
-    <div>
+    <div class="container">
       <!-- <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%"> -->
       <h2 align="center">
         Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
@@ -542,9 +542,7 @@
                 </tr>
               </tbody>
             </table>
-            <p align="center">
-              <input name="EditBackground" type="button" class="button" id="EditBackground" onClick="MM_goToURL('parent','EditBackground1.php');return document.MM_returnValue" value="Edit Background"> 
-            </p>
+            <input name="EditBackground" type="button" class="button" id="EditBackground" onClick="MM_goToURL('parent','EditBackground1.php');return document.MM_returnValue" value="Edit Background"> 
             <br>
             <p align="center">
               <strong>Citizenship</strong>

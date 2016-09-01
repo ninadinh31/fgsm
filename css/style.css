@@ -6,15 +6,15 @@
  *
  */
 
-table {
+/*table {
 	border-collapse: collapse;
 }
       
 table, td, th {
 	border: 1px solid black;
-}
+}*/
     
-.button {
+/*.button {
     background-color: #008CBA;
     border: none;
     color: white;
@@ -25,7 +25,7 @@ table, td, th {
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
-}
+}*/
 
 .ui-tabs-vertical { 
 	width: 55em; 
