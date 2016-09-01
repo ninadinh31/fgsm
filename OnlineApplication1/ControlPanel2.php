@@ -405,60 +405,11 @@
   <head>
     <meta charset="utf-8">
     <title>Admin</title>
-    <style>
-      table {
-        border-collapse: collapse;
-      }
-      table, td, th {
-        border: 1px solid black;
-      }
-    
-      .button {
-        background-color: #008CBA;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
-
-      .ui-tabs-vertical { 
-        width: 55em; 
-      }
-      .ui-tabs-vertical .ui-tabs-nav { 
-        padding: .2em .1em .2em .2em; 
-        float: left; 
-        width: 12em; 
-      }
-      .ui-tabs-vertical .ui-tabs-nav li { 
-        clear: left; 
-        width: 100%; 
-        border-bottom-width: 1px !important; 
-        border-right-width: 0 !important; 
-        margin: 0 -1px .2em 0; 
-      }
-      .ui-tabs-vertical .ui-tabs-nav li a { 
-        display:block; 
-      }
-      .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { 
-        padding-bottom: 0; 
-        padding-right: .1em; 
-        border-right-width: 1px; 
-        border-right-width: 1px; 
-      }
-      .ui-tabs-vertical .ui-tabs-panel { 
-        padding: 1em; 
-        float: right; 
-        width: 40em;
-      }
-    </style>
     <link href="../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
     <link href="../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
     <link href="../jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
     <script src="../jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="../jQueryAssets/jquery.ui-1.10.4.tabs.min.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -904,7 +855,7 @@
         <div id="tabs-9">
           <h1 align="center"><i><a href="ReviewApplicationAdmin.php">Review Application</a></i></h1>
         </div>
-        
+
       </div>
       <input type="hidden" name="MM_update" value="frmControlPanel">
     </form>
