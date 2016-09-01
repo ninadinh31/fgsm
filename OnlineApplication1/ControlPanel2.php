@@ -1,4 +1,5 @@
 <?php 
+  
   require_once('../Connections/FGSP.php'); 
   
   if (!isset($_SESSION)) {
@@ -407,7 +408,7 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <script src="../jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="../jQueryAssets/jquery.ui-1.10.4.tabs.min.js" type="text/javascript"></script>
-    <script src="../js/ControlPanel2.js" type="text/javascript"></script>
+    <script src="../js/ControlPanel2.js" type="text/javascript"></script> 
     <!-- <script type="text/javascript">
       function MM_goToURL() { //v3.0
         var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
@@ -418,7 +419,7 @@
 
   <body>
     <div class="container">
-      <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%">
+      <!-- <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%"> -->
       <h2 align="center">
         Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
         <a href="Admin1.php">Admin</a> | <a href="Logout1.php"> Log Out</a>
@@ -857,11 +858,11 @@
         </div>
         <input type="hidden" name="MM_update" value="frmControlPanel">
       </form>
-<!--     <script type="text/javascript">
+    <script type="text/javascript">
       $(function() {
       	$( "#Tabs1" ).tabs(); 
       });
-    </script> -->
+    </script>
     </div>
   </body>
 </html>
