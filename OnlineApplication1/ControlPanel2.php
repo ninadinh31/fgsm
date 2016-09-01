@@ -542,7 +542,7 @@
                 </tr>
               </tbody>
             </table>
-            <input name="EditBackground" type="button" class="button" id="EditBackground" onClick="MM_goToURL('parent','EditBackground1.php');return document.MM_returnValue" value="Edit Background"> 
+            <input name="EditBackground" type="button" class="btn btn-primary" id="EditBackground" onClick="MM_goToURL('parent','EditBackground1.php');return document.MM_returnValue" value="Edit Background"> 
             <br>
             <p align="center">
               <strong>Citizenship</strong>
