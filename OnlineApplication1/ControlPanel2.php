@@ -548,7 +548,6 @@
             	<thead>
               	<th>Country</th>
                 <th>&nbsp;</th>
-                <td width="355">
               </thead>
               <tbody>
                 <?php 
