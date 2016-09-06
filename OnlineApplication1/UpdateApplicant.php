@@ -1,7 +1,6 @@
-<?php require_once('../Connections/FGSP.php'); ?>
-<?php require_once('../Connections/FGSP.php'); ?>
-<?php require_once('../Connections/FGSP.php'); ?>
-<?php
+<?
+  php require_once('../Connections/FGSP.php'); 
+
 if (!isset($_SESSION)) {
   session_start();
 }
