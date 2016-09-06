@@ -1,5 +1,5 @@
-<?php require_once('../Connections/FGSP.php'); ?>
-<?php
+<?php require_once('../Connections/FGSP.php');
+
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -103,13 +103,18 @@ if (isset($_POST['Username'])) {
   <table width="677" border="1" cellpadding="1">
     <tbody>
       <tr>
-        <td width="236" bgcolor="#A3C9C3"><h2 style="text-align: left">Online Application Log In</h2>          <h3>
-            <label for="Username">Username:</label>
-            <input name="Username" type="text" required id="Username">
-        </h3>          <h3>
-            <label for="Password">Password:</label>
-            <input name="Password" type="password" required id="Password">
-        </h3>        <input name="Login" type="submit" id="Login" value="Log In"></td>
+        <td width="236" bgcolor="#A3C9C3">
+        	<h2 style="text-align: left">Online Application Log In</h2> 
+            <h3>
+                <label for="Username">Username:</label>
+                <input name="Username" type="text" required id="Username">
+        	</h3>          
+            <h3>
+                <label for="Password">Password:</label>
+                <input name="Password" type="password" required id="Password">
+            </h3>
+            <input name="Login" type="submit" id="Login" value="Log In">
+        </td>
         <td width="236" bgcolor='#A3C9C3'><h3>Don't have an account?</h3>          <a href="Registration1.php">Create a new account now</a></td>
       </tr>
       <tr>
