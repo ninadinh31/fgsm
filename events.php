@@ -15,7 +15,7 @@ $sql = 'SELECT EventDate as date,
 $result = mysql_query($sql, $FGSP) or die(mysql_error());
 $rows_event_data = mysql_fetch_assoc($result);
 
-echo $rows_event_data;
+echo $rows_event_data['date'];
 
 ?>
 
