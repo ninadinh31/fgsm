@@ -17,7 +17,7 @@ require_once('Connections/FGSP.php');
 </head>	
 
 <body>
-	<table class="table">
+	<table class="table table-bordered table-hover">
 		<caption>Events with Federal & Global Fellows</caption>
 		<thead>
 			<tr>
