@@ -3,7 +3,8 @@
 require_once('Connections/FGSP.php');
 
 mysql_select_db($database_FGSP, $FGSP);
-$sql = 'SELECT EventDate as date, 
+$sql = 'SELECT EventID as id,
+			   EventDate as date, 
 			   EventName as name, 
 			   EventYear as school_year, 
 			   EventLocation as location, 
@@ -16,7 +17,8 @@ $result = mysql_query($sql, $FGSP) or die(mysql_error());
 $rows_event_data = mysql_fetch_assoc($result);
 $num_rows = mysql_num_rows($result);
 
-echo $rows_event_data['date'];
+echo $rows_event_data['id'] . '\n';
+echo $rows_event_data['id'] . '\n';
 echo $num_rows;
 
 ?>
