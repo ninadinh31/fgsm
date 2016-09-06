@@ -2,6 +2,20 @@
 
 require_once('Connections/FGSP.php');
 
+mysql_select_db($database_FGSP, $FGSP);
+$sql = 'SELECT EventDate as date, 
+			   EventName as name, 
+			   EventYear as school_year, 
+			   EventLocation as location, 
+			   EventType as type, 
+			   EventPOCID as poc_id, 
+			   EventAttendanceListLink as attendance_link
+		FROM tblevents';
+
+$result = mysql_query($sql, $FGSP) or die(mysql_error());
+$rows_event_data = mysql_fetch_assoc($result);
+
+echo $rows_event_data;
 
 ?>
 
@@ -17,7 +31,7 @@ require_once('Connections/FGSP.php');
 </head>	
 
 <body>
-	<table class="table table-bordered table-hover">
+	<table class="table table-hover">
 		<caption>Events with Federal & Global Fellows</caption>
 		<thead>
 			<tr>
@@ -38,6 +52,8 @@ require_once('Connections/FGSP.php');
 			</tr>
 		</tbody>
 	</table>
+
+
 
 </body>
 
