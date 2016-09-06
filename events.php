@@ -8,9 +8,12 @@ require_once('Connections/FGSP.php');
 <!doctype html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>
 		Federal & Global Fellows Events
 	</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>	
 
 <body>
