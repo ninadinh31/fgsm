@@ -15,15 +15,24 @@ require_once('Connections/FGSP.php');
 
 <body>
 	<table class="table">
+		<caption>Events with Federal & Global Fellows</caption>
 		<thead>
-			<th>Date</th>
-			<th>Event</th>
-			<th>Location</th>
-			<th>Time</th>
-			<th>Description</th>
+			<tr>
+				<th>Date</th>
+				<th>Event</th>
+				<th>Location</th>
+				<th>Time</th>
+				<th>Description</th>
+			</tr>
 		</thead>
 		<tbody>
-			
+			<tr>
+				<td>September 6, 2016</td>
+				<td>Website Work</td>
+				<td>Marie Mount Hall</td>
+				<td>12:00pm</td>
+				<td>You have work today!</td>
+			</tr>
 		</tbody>
 	</table>
 
