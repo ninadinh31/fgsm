@@ -16,12 +16,11 @@ $sql = 'SELECT EventID as id,
 $result = mysql_query($sql, $FGSP) or die(mysql_error());
 $num_rows = mysql_num_rows($result);
 
-echo implode(", ", $rows_event_data);
-
 while ($rows_event_data = mysql_fetch_assoc($result)) {
 	foreach ($rows_event_data as $key) {
-		echo $key . "\xA";
+		echo $key;
 	}
+	print;
 }
 
 ?>
