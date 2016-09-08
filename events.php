@@ -17,9 +17,7 @@ $result = mysql_query($sql, $FGSP) or die(mysql_error());
 $rows_event_data = mysql_fetch_assoc($result);
 $num_rows = mysql_num_rows($result);
 
-echo $rows_event_data['id'] . '\n';
-echo $rows_event_data['id'] . '\n';
-echo $num_rows;
+echo implode(", ", $rows_event_data) . '\n';
 
 ?>
 
