@@ -45,11 +45,11 @@ $num_rows = mysql_num_rows($result);
 		<tbody>
 			<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
 			<tr>
-				<td><?php $rows_event_data["date"]?></td>
-				<td><?php $rows_event_data["name"]?></td>
-				<td><?php $rows_event_data["location"]?></td>
-				<td><?php $rows_event_data["time"]?></td>
-				<td><?php $rows_event_data["type"]?></td>
+				<td><?php echo $rows_event_data["date"]?></td>
+				<td><?php echo $rows_event_data["name"]?></td>
+				<td><?php echo $rows_event_data["location"]?></td>
+				<td><?php echo $rows_event_data["time"]?></td>
+				<td><?php echo $rows_event_data["type"]?></td>
 			</tr>
 			<?php } ?>
 		</tbody>
