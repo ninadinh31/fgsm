@@ -73,7 +73,10 @@ $num_rows = mysql_num_rows($result);
 			<div class="panel panel-default js-add-event-panel hidden">
 				<div class="panel-heading">Add Event</div>
 				<div class="panel-body">
-					
+					<div class="form-group">
+						<label for="date">Date:</label>
+						<input type="date" class="form-control" id="date">
+					</div>
 					<button type="button" class="btn btn-primary js-final-add-event-button">Add Event</button>
 					<button type="button" class="btn btn-danger js-cancel-add-event-button">Cancel</button>
 				</div>
