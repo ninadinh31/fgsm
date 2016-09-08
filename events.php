@@ -77,6 +77,7 @@ $num_rows = mysql_num_rows($result);
 					</table>
 					<button type="button" class="btn btn-primary js-add-event-button">add</button>
 					<button type="button" class="btn btn-warning js-edit-event-button">edit</button>
+					<button type="button" class="btn btn-danger js-delete-event-button">delete</button>
 				</div>
 			</div>
 
