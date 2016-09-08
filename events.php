@@ -43,7 +43,7 @@ $num_rows = mysql_num_rows($result);
 			</tr>
 		</thead>
 		<tbody>
-			<?php while ($rows_event_data = mysql_fetch_assoc($result)) {
+			<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
 			<tr>
 				<td><?php $rows_event_data["date"]?></td>
 				<td><?php $rows_event_data["name"]?></td>
@@ -51,7 +51,7 @@ $num_rows = mysql_num_rows($result);
 				<td><?php $rows_event_data["time"]?></td>
 				<td><?php $rows_event_data["type"]?></td>
 			</tr>
-			} ?>
+			<?php } ?>
 		</tbody>
 	</table>
 
