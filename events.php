@@ -45,6 +45,7 @@ $num_rows = mysql_num_rows($result);
 	<div class="row">
 		<div class="col-md-1"></div>
 		<div class="col-md-10">
+
 			<div class="panel panel-default">
 				<div class="panel-heading">Events with Federal & Global Fellows</div>
 				<div class="panel-body">
@@ -74,9 +75,11 @@ $num_rows = mysql_num_rows($result);
 							<?php } ?>
 						</tbody>
 					</table>
-					<button type="button" class="btn btn-primary js-add-event-button">+</button>
+					<button type="button" class="btn btn-primary js-add-event-button">add</button>
+					<button type="button" class="btn btn-warning js-edit-event-button">edit</button>
 				</div>
 			</div>
+
 			<div class="panel panel-default js-add-event-panel hidden">
 				<div class="panel-heading">Add Event</div>
 				<div class="panel-body">
@@ -120,6 +123,52 @@ $num_rows = mysql_num_rows($result);
 					</div>
 					<button type="button" class="btn btn-primary js-final-add-event-button">Add Event</button>
 					<button type="button" class="btn btn-danger js-cancel-add-event-button">Cancel</button>
+				</div>
+			</div>
+
+			<div class="panel panel-default js-edit-event-panel hidden">
+				<div class="panel-heading">Edit Event</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="date">Date:</label>
+								<input type="date" class="form-control" id="date">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="start_time">Start Time:</label>
+								<input type="time" class="form-control" id="start_time">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="end_time">End Time:</label>
+								<input type="time" class="form-control" id="end_time">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="location">Location:</label>
+								<input type="text" class="form-control" id="location">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="event_name">Event Name:</label>
+						<input type="text" class="form-control" id="event_name">
+					</div>
+					<div class="form-group">
+						<label for="event_description">Description:</label>
+						<input type="text" class="form-control" id="event_description">
+					</div>	
+					<div class="form-group">
+						<label for="event_rsvp_link">RSVP Link:</label>
+						<input type="text" class="form-control" id="event_rsvp_link">
+					</div>
+					<button type="button" class="btn btn-primary js-final-edit-event-button">Add Event</button>
+					<button type="button" class="btn btn-danger js-cancel-edit-event-button">Cancel</button>
 				</div>
 			</div>
 		</div>
