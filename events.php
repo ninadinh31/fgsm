@@ -70,7 +70,7 @@ $num_rows = mysql_num_rows($result);
 					<button type="button" class="btn btn-primary js-add-event-button">Add Event</button>
 				</div>
 			</div>
-			<div class="panel panel-default">
+			<div class="panel panel-default js-add-event-panel hidden">
 				<div class="panel-heading">Add Event</div>
 				<div class="panel-body">
 					

@@ -1,7 +1,9 @@
 $(document).ready(function() {
+	var addEventButton = $(".js-add-event-button");
+	var addEventPanel = $(".js-add-event-panel");	
 
-	$(".js-add-event-button").click(function() {
-		console.log("cameron malagar");
+	addEventButton.click(function() {
+		addEventPanel.removeClass("hidden");
 	});
 
 });
