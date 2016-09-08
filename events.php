@@ -18,7 +18,7 @@ $num_rows = mysql_num_rows($result);
 
 while ($rows_event_data = mysql_fetch_assoc($result)) {
 	foreach ($rows_event_data as $key) {
-		echo $key . "\r\n";
+		echo $key . "<br>";
 	}
 }
 
