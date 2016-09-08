@@ -22,6 +22,9 @@ echo implode(", ", $rows_event_data);
 foreach ($rows_event_data as $hi) {
 	echo $hi;
 }
+foreach ($rows_event_data as $hi) {
+	echo $hi;
+}
 
 ?>
 
