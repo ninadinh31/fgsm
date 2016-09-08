@@ -9,9 +9,11 @@ $sql = 'SELECT EventID as id,
 			   EventYear as school_year, 
 			   EventLocation as location, 
 			   EventType as type, 
-			   EventPOCID as poc_id, 
+			   EventPOCID as poc_id,
 			   EventAttendanceListLink as attendance_link,
-			   EventTime as time
+			   EventStartTime as start_time,
+			   EventEndTime as end_time,
+			   Description as description
 		FROM tblevents';
 
 $result = mysql_query($sql, $FGSP) or die(mysql_error());
@@ -41,7 +43,8 @@ $num_rows = mysql_num_rows($result);
 						<thead>
 							<tr>
 								<th>Date</th>
-								<th>Time</th>
+								<th>Start Time</th>
+								<th>End Time</th>
 								<th>Event</th>
 								<th>Location</th>
 								<th>Description</th>
@@ -52,7 +55,8 @@ $num_rows = mysql_num_rows($result);
 							<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
 							<tr>
 								<td><?php echo $rows_event_data["date"]?></td>
-								<td><?php echo $rows_event_data["time"]?></td>
+								<td><?php echo $rows_event_data["start_time"]?></td>
+								<td><?php echo $rows_event_data["end_time"]?></td>
 								<td><?php echo $rows_event_data["name"]?></td>
 								<td><?php echo $rows_event_data["location"]?></td>
 								<td><?php echo $rows_event_data["description"]?></td>
