@@ -41,20 +41,22 @@ $num_rows = mysql_num_rows($result);
 						<thead>
 							<tr>
 								<th>Date</th>
+								<th>Time</th>
 								<th>Event</th>
 								<th>Location</th>
-								<th>Time</th>
-								<th>Type</th>
+								<th>Description</th>
+								<th>RSVP</th>
 							</tr>
 						</thead>
 						<tbody>
 							<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
 							<tr>
 								<td><?php echo $rows_event_data["date"]?></td>
+								<td><?php echo $rows_event_data["time"]?></td>
 								<td><?php echo $rows_event_data["name"]?></td>
 								<td><?php echo $rows_event_data["location"]?></td>
-								<td><?php echo $rows_event_data["time"]?></td>
-								<td><?php echo $rows_event_data["type"]?></td>
+								<td><?php echo $rows_event_data["description"]?></td>
+								<td><?php echo $rows_event_data["attendance_link"]?></td>
 							</tr>
 							<?php } ?>
 						</tbody>
