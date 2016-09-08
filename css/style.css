@@ -6,27 +6,6 @@
  *
  */
 
-/*table {
-	border-collapse: collapse;
-}
-      
-table, td, th {
-	border: 1px solid black;
-}*/
-    
-/*.button {
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-}*/
-
 .ui-tabs-vertical { 
 	width: 55em; 
 }

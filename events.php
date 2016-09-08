@@ -30,6 +30,8 @@ $num_rows = mysql_num_rows($result);
 	</title>
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/events.js"></script>
 </head>	
 
 <body>
@@ -65,7 +67,13 @@ $num_rows = mysql_num_rows($result);
 							<?php } ?>
 						</tbody>
 					</table>
-					<button type="button" class="btn btn-primary">Add Event</button>
+					<button type="button" class="btn btn-primary js-add-event-button">Add Event</button>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Add Event</div>
+				<div class="panel-body">
+					
 				</div>
 			</div>
 		</div>
