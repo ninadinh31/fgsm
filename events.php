@@ -33,7 +33,7 @@ $num_rows = mysql_num_rows($result);
 <body>
 	<div class="row">
 		<div class="col-md-2"></div>
-		<div class="col-md-10">
+		<div class="col-md-8">
 			<div class="panel panel-success">
 				<div class="panel-heading">Events with Federal & Global Fellows</div>
 				<div class="panel-body">
@@ -59,11 +59,11 @@ $num_rows = mysql_num_rows($result);
 							<?php } ?>
 						</tbody>
 					</table>
+					<button type="button" class="button">Add Event</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<button type="button" class="button">Add Event</button>
 
 
 </body>
