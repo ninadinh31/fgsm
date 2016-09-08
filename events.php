@@ -10,18 +10,12 @@ $sql = 'SELECT EventID as id,
 			   EventLocation as location, 
 			   EventType as type, 
 			   EventPOCID as poc_id, 
-			   EventAttendanceListLink as attendance_link
+			   EventAttendanceListLink as attendance_link,
+			   EventTime as time
 		FROM tblevents';
 
 $result = mysql_query($sql, $FGSP) or die(mysql_error());
 $num_rows = mysql_num_rows($result);
-
-while ($rows_event_data = mysql_fetch_assoc($result)) {
-	foreach ($rows_event_data as $key) {
-		echo $key;
-	}
-	echo "<br>";
-}
 
 ?>
 
@@ -45,17 +39,19 @@ while ($rows_event_data = mysql_fetch_assoc($result)) {
 				<th>Event</th>
 				<th>Location</th>
 				<th>Time</th>
-				<th>Description</th>
+				<th>Type</th>
 			</tr>
 		</thead>
 		<tbody>
+			<?php while ($rows_event_data = mysql_fetch_assoc($result)) {
 			<tr>
-				<td>September 6, 2016</td>
-				<td>Website Work</td>
-				<td>Marie Mount Hall</td>
-				<td>12:00pm</td>
-				<td>You have work today!</td>
+				<td><?php $rows_event_data["date"]?></td>
+				<td><?php $rows_event_data["name"]?></td>
+				<td><?php $rows_event_data["location"]?></td>
+				<td><?php $rows_event_data["time"]?></td>
+				<td><?php $rows_event_data["type"]?></td>
 			</tr>
+			} ?>
 		</tbody>
 	</table>
 
