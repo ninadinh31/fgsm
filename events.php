@@ -59,7 +59,7 @@ $num_rows = mysql_num_rows($result);
 							<?php } ?>
 						</tbody>
 					</table>
-					<button type="button" class="button">Add Event</button>
+					<button type="button" class="btn brn-primary">Add Event</button>
 				</div>
 			</div>
 		</div>
