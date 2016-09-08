@@ -31,30 +31,39 @@ $num_rows = mysql_num_rows($result);
 </head>	
 
 <body>
-	<table class="table table-hover">
-		<caption>Events with Federal & Global Fellows</caption>
-		<thead>
-			<tr>
-				<th>Date</th>
-				<th>Event</th>
-				<th>Location</th>
-				<th>Time</th>
-				<th>Type</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
-			<tr>
-				<td><?php echo $rows_event_data["date"]?></td>
-				<td><?php echo $rows_event_data["name"]?></td>
-				<td><?php echo $rows_event_data["location"]?></td>
-				<td><?php echo $rows_event_data["time"]?></td>
-				<td><?php echo $rows_event_data["type"]?></td>
-			</tr>
-			<?php } ?>
-		</tbody>
-	</table>
-
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-10">
+			<div class="panel panel-success">
+				<div class="panel-heading">Events with Federal & Global Fellows</div>
+				<div class="panel-body">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Event</th>
+								<th>Location</th>
+								<th>Time</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
+							<tr>
+								<td><?php echo $rows_event_data["date"]?></td>
+								<td><?php echo $rows_event_data["name"]?></td>
+								<td><?php echo $rows_event_data["location"]?></td>
+								<td><?php echo $rows_event_data["time"]?></td>
+								<td><?php echo $rows_event_data["type"]?></td>
+							</tr>
+							<?php } ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button type="button" class="button">Add Event</button>
 
 
 </body>
