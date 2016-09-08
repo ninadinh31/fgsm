@@ -17,7 +17,11 @@ $result = mysql_query($sql, $FGSP) or die(mysql_error());
 $rows_event_data = mysql_fetch_assoc($result);
 $num_rows = mysql_num_rows($result);
 
-echo implode(", ", $rows_event_data) . '\n';
+echo implode(", ", $rows_event_data);
+
+foreach ($rows_event_data as $hi) {
+	echo $hi;
+}
 
 ?>
 
