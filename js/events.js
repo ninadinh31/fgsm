@@ -5,6 +5,7 @@ $(document).ready(function() {
 	var editEventPanel = $(".js-edit-event-panel");
 	var cancelAddEventButton = $(".js-cancel-add-event-button");
 	var cancelEditEventButton = $(".js-cancel-edit-event-button");
+	var finalAddEventButton = $(".js-final-add-event-button");
 
 	addEventButton.click(function() {
 		addEventPanel.removeClass("hidden");
@@ -19,7 +20,11 @@ $(document).ready(function() {
 	});
 
 	cancelEditEventButton.click(function() {
-		editEventPanel.addClass("hidden");
+		editEventPanel.addClass("hidden");	
+	});
+
+	finalAddEventButton.click(function() {
+		alert("Event added!");
 	});
 
 });
