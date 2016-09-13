@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<div class="panel panel-default js-add-event-panel hidden">
+			<div class="panel panel-default js-add-event-panel">
 				<div class="panel-heading">Add Event</div>
 				<div class="panel-body">
 					<div class="row">
@@ -56,7 +56,6 @@
 						<input type="text" class="form-control" id="event_rsvp_link">
 					</div>
 					<button type="button" class="btn btn-primary js-final-add-event-button">Add Event</button>
-					<button type="button" class="btn btn-danger js-cancel-add-event-button">Cancel</button>
 				</div>
 			</div>
 		</div>
