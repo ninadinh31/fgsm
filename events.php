@@ -60,7 +60,7 @@ function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) {
 //     exit;
 // }
 
-echo $_SESSION;
+echo $_SESSION['MM_Username'];
 
 mysql_select_db($database_FGSP, $FGSP);
 $sql = 'SELECT EventID as id,
