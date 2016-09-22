@@ -1,20 +1,28 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>
-		Federal & Global Fellows Add Events
-	</title>
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/events.js"></script>
-</head>	
-<body>
+<?php
+/*
+ * Add Events to the Federal & Global Fellows Events page
+ * By: Cameron Malagar
+ * Date: 9/22/2016
+ *
+ */
+
+require_once('Connections/FGSP.php');
+require_once('includes/header.php');
+
+mysql_select_db($database_FGSP, $FGSP);
+$sql = 'INSERT INTO tblEvents
+			(EventDate, EventName, EventYear, EventLocation, EventType, EventAttendanceLink,
+			 EventStartTime, EventEndTime, EventDescription)
+		VALUES 
+			();';
+
+$result = mysql_query($sql, $FGSP) or die(mysql_error());
+?>
+
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<div class="panel panel-default js-add-event-panel">
+			<div class="panel panel-default">
 				<div class="panel-heading">Add Event</div>
 				<div class="panel-body">
 					<div class="row">
@@ -44,6 +52,10 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="event_type">Event Type:</label>
+						<input type="text" class="form-control" id="event_type">
+					</div>
+					<div class="form-group">
 						<label for="event_name">Event Name:</label>
 						<input type="text" class="form-control" id="event_name">
 					</div>
@@ -55,7 +67,7 @@
 						<label for="event_rsvp_link">RSVP Link:</label>
 						<input type="text" class="form-control" id="event_rsvp_link">
 					</div>
-					<button type="button" class="btn btn-primary js-final-add-event-button">Add Event</button>
+					<button type="button" class="btn btn-primary js-add-event-button">Add Event</button>
 				</div>
 			</div>
 		</div>
