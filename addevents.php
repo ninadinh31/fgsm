@@ -16,7 +16,7 @@ $sql = 'INSERT INTO tblEvents
 		VALUES 
 			();';
 
-$result = mysql_query($sql, $FGSP) or die(mysql_error());
+// $result = mysql_query($sql, $FGSP) or die(mysql_error());
 ?>
 
 	<div class="row">
