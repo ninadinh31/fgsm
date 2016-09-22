@@ -6,26 +6,25 @@
  *
  */
 
-require_once('Connections/FGSP.php');
+require_once('Connections/NewLogin.php');
+require_once('includes/header.php');
 
-mysql_select_db($database_FGSP, $FGSP);
+mysql_select_db($database_localhost, $localhost);
 $sql = 'SELECT EventID as id,
 			   EventDate as date, 
 			   EventName as name, 
 			   EventYear as school_year, 
 			   EventLocation as location, 
 			   EventType as type, 
-			   EventPOCID as poc_id,
-			   EventAttendanceListLink as attendance_link,
+			   EventAttendanceLink as attendance_link,
 			   EventStartTime as start_time,
 			   EventEndTime as end_time,
-			   Description as description
-		FROM tblevents';
+			   EventDescription as description
+		FROM tblEvent';
 
-$result = mysql_query($sql, $FGSP) or die(mysql_error());
+$result = mysql_query($sql, $localhost) or die(mysql_error());
 $num_rows = mysql_num_rows($result);
 
-require_once('includes/header.php');
 ?>
 	<div class="row">
 		<div class="col-md-12">
@@ -35,21 +34,21 @@ require_once('includes/header.php');
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th>Date</th>
-								<th>Start Time</th>
-								<th>End Time</th>
-								<th>Event</th>
-								<th>Location</th>
-								<th>Description</th>
-								<th>RSVP</th>
+								<th class="col-md-2">Date</th>
+								<th class="col-md-1">Start Time</th>
+								<th class="col-md-1">End Time</th>
+								<th class="col-md-3">Event</th>
+								<th class="col-md-2">Location</th>
+								<th class="col-md-3">Description</th>
+								<th class="col-md-1">RSVP</th>
 							</tr>
 						</thead>
 						<tbody>
 							<?php while ($rows_event_data = mysql_fetch_assoc($result)) { ?>
 							<tr>
-								<td><?php echo $rows_event_data["date"]?></td>
-								<td><?php echo $rows_event_data["start_time"]?></td>
-								<td><?php echo $rows_event_data["end_time"]?></td>
+								<td><?php echo date("M d, Y", strtotime($rows_event_data["date"]))?></td>
+								<td><?php echo date("g:ia", strtotime($rows_event_data["start_time"]))?></td>
+								<td><?php echo date("g:ia", strtotime($rows_event_data["end_time"]))?></td>
 								<td><?php echo $rows_event_data["name"]?></td>
 								<td><?php echo $rows_event_data["location"]?></td>
 								<td><?php echo $rows_event_data["description"]?></td>
