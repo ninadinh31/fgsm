@@ -56,7 +56,7 @@ require_once('includes/header.php');
 						</div>	
 						<div class="form-group">
 							<label for="event_rsvp_link">RSVP Link:</label>
-							<input type="text" name="event_description" class="form-control" id="event_rsvp_link">
+							<input type="text" name="event_rsvp_link" class="form-control" id="event_rsvp_link">
 						</div>
 						<button type="submit" class="btn btn-primary js-add-event-button">Add Event</button>
 					</form>
