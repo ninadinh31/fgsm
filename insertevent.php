@@ -36,6 +36,7 @@ $result = mysql_query($sql, $localhost) or die(mysql_error());
 				<div class="panel-heading">Add Events</div>
 				<div class="panel-body">
 					<h3>Event Added Successfully</h3>
+					<p><a href="events.php" title="Back to events">Back to events</a></p>
 				</div>
 			</div>
 		</div>
