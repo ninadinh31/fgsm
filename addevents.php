@@ -20,43 +20,43 @@ require_once('includes/header.php');
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="date">Date:</label>
-									<input type="date" class="form-control" id="date">
+									<input type="date" name="date" class="form-control" id="date">
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="start_time">Start Time:</label>
-									<input type="time" class="form-control" id="start_time">
+									<input type="time" name="start_time" class="form-control" id="start_time">
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="end_time">End Time:</label>
-									<input type="time" class="form-control" id="end_time">
+									<input type="time" name="end_time" class="form-control" id="end_time">
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="location">Location:</label>
-									<input type="text" class="form-control" id="location">
+									<input type="text" name="location" class="form-control" id="location">
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="event_name">Event Name:</label>
-							<input type="text" class="form-control" id="event_name">
+							<input type="text" name="event_name" class="form-control" id="event_name">
 						</div>
 						<div class="form-group">
 							<label for="event_type">Event Type:</label>
-							<input type="text" class="form-control" id="event_type">
+							<input type="text" name="event_type" class="form-control" id="event_type">
 						</div>
 						<div class="form-group">
 							<label for="event_description">Description:</label>
-							<input type="text" class="form-control" id="event_description">
+							<input type="text" name="event_description" class="form-control" id="event_description">
 						</div>	
 						<div class="form-group">
 							<label for="event_rsvp_link">RSVP Link:</label>
-							<input type="text" class="form-control" id="event_rsvp_link">
+							<input type="text" name="event_description" class="form-control" id="event_rsvp_link">
 						</div>
 						<button type="submit" class="btn btn-primary js-add-event-button">Add Event</button>
 					</form>
