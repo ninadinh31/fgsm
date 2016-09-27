@@ -1,6 +1,6 @@
 <?php
 /*
- * Add Events to the Federal & Global Fellows Events page
+ * Insert events to the Federal & Global Fellows database
  * By: Cameron Malagar
  * Date: 9/22/2016
  *
@@ -19,7 +19,7 @@ $event_description = mysql_real_escape_string($_POST['event_description']);
 $event_rsvp_link = mysql_real_escape_string($_POST['event_rsvp_link']);
 
 mysql_select_db($database_localhost, $localhost);
-$sql = "INSERT INTO tblEvents
+$sql = "INSERT INTO tblEvent
 			(EventDate, EventName, EventYear, EventLocation, EventType, EventAttendanceLink,
 			 EventStartTime, EventEndTime, EventDescription)
 		VALUES 
