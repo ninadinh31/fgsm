@@ -19,12 +19,12 @@ $event_description = mysql_real_escape_string($_POST['event_description']);
 $event_rsvp_link = mysql_real_escape_string($_POST['event_rsvp_link']);
 
 mysql_select_db($database_localhost, $localhost);
-$sql = 'INSERT INTO tblEvents
+$sql = "INSERT INTO tblEvents
 			(EventDate, EventName, EventYear, EventLocation, EventType, EventAttendanceLink,
 			 EventStartTime, EventEndTime, EventDescription)
 		VALUES 
-			('$date', '$event_name', '2017', '$location', '$event_type', '$event_rsvp_link', 
-			'$start_time', '$end_time', '$event_description');';
+			('" . $date . "', '" . $event_name . "', '2017', '" . $location . "', '" . $event_type . 
+			"', '" . $event_rsvp_link . "', '" . $start_time . "', '" . $end_time . "', '" . $event_description . "');";
 
 $result = mysql_query($sql, $localhost) or die(mysql_error());
 
