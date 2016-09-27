@@ -33,6 +33,7 @@ $result = mysql_query($sql, $localhost) or die(mysql_error());
 ?>
 
 	<div class="row">
+		<h1><?php echo $event_name?></h1>
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Add Events</div>
