@@ -26,7 +26,7 @@ $result = mysql_query($sql, $localhost) or die(mysql_error());
 $num_rows = mysql_num_rows($result);
 
 ?>
-	<script src="js/events.js" language="script"></script>
+
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-default">
