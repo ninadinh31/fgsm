@@ -110,7 +110,7 @@
 <!--Datatables js file-->
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" language="javascript"></script>
 <script src="//code.jquery.com/jquery-1.12.3.js" language="javascript"></script>
-
+<script src="js/events.js" language="script"></script>
 
 <script>
 var elem = document.querySelector('.main-gallery');
