@@ -109,6 +109,9 @@
 <script src="js/flickity.pkgd.js" language="javascript"></script>   
 <!--Datatables js file-->
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" language="javascript"></script>
+<script src="//code.jquery.com/jquery-1.12.3.js" language="javascript"></script>
+
+
 <script>
 var elem = document.querySelector('.main-gallery');
 var flkty = new Flickity( elem, {

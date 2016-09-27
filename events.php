@@ -8,6 +8,7 @@
 
 require_once('Connections/NewLogin.php');
 require_once('includes/header.php');
+require_once('js/events.js');
 
 mysql_select_db($database_localhost, $localhost);
 $sql = 'SELECT EventID as id,
