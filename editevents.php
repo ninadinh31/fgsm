@@ -1,20 +1,17 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>
-		Federal & Global Fellows Edit Events
-	</title>
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/events.js"></script>
-</head>	
-<body>
+<?php
+/*
+ * Edit existing events in the Federal & Global Fellows Events page
+ * By: Cameron Malagar
+ * Date: 9/27/2016
+ *
+ */
+
+require_once('includes/header.php');
+
+?>
 	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class="panel panel-default js-edit-event-panel">
+		<div class="col-md-12">
+			<div class="panel panel-default">
 				<div class="panel-heading">Edit Event</div>
 				<div class="panel-body">
 					<div class="row">

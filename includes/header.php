@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="css/font-awesome.css" />
+<!--Datatables css -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,7 +107,8 @@
 <!--Carousel files -->
 <link rel="stylesheet" href="css/flickity.css" type="text/css" media="screen">
 <script src="js/flickity.pkgd.js" language="javascript"></script>   
-
+<!--Datatables js file-->
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" language="javascript"></script>
 <script>
 var elem = document.querySelector('.main-gallery');
 var flkty = new Flickity( elem, {

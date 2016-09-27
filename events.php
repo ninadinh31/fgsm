@@ -31,7 +31,7 @@ $num_rows = mysql_num_rows($result);
 			<div class="panel panel-default">
 				<div class="panel-heading">Events with Federal & Global Fellows</div>
 				<div class="panel-body">
-					<table class="table table-hover">
+					<table class="table table-hover js-events-table">
 						<thead>
 							<tr>
 								<th class="col-md-2">Date</th>

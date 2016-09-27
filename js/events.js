@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	$('.js-events-table').DataTable();
+
 	var addEventButton = $(".js-add-event-button");
 	var editEventButton = $(".js-edit-event-button");
 	var addEventPanel = $(".js-add-event-panel");	
@@ -26,5 +29,7 @@ $(document).ready(function() {
 	finalAddEventButton.click(function() {
 		alert("Event added!");
 	});
+
+
 
 });
