@@ -18,6 +18,8 @@ $event_type = mysql_real_escape_string( $_POST['event_type']);
 $event_description = mysql_real_escape_string($_POST['event_description']);
 $event_rsvp_link = mysql_real_escape_string($_POST['event_rsvp_link']);
 
+echo $event_name;
+
 mysql_select_db($database_localhost, $localhost);
 $sql = sprintf("INSERT INTO tblEvent
 			(EventDate, EventName, EventYear, EventLocation, EventType, EventAttendanceLink,
