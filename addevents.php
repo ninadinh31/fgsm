@@ -6,7 +6,6 @@
  *
  */
 
-require_once('Connections/FGSP.php');
 require_once('includes/header.php');
 
 ?>

@@ -6,7 +6,7 @@
  *
  */
 
-require_once('Connections/FGSP.php');
+require_once('Connections/NewLogin.php');
 require_once('includes/header.php');
 
 $date = mysql_real_escape_string($_POST['date']);
@@ -18,7 +18,7 @@ $event_type = mysql_real_escape_string( $_POST['event_type']);
 $event_description = mysql_real_escape_string($_POST['event_description']);
 $event_rsvp_link = mysql_real_escape_string($_POST['event_rsvp_link']);
 
-mysql_select_db($database_FGSP, $FGSP);
+mysql_select_db($database_localhost, $localhost);
 $sql = 'INSERT INTO tblEvents
 			(EventDate, EventName, EventYear, EventLocation, EventType, EventAttendanceLink,
 			 EventStartTime, EventEndTime, EventDescription)
@@ -26,7 +26,7 @@ $sql = 'INSERT INTO tblEvents
 			('$date', '$event_name', '2017', '$location', '$event_type', '$event_rsvp_link', 
 			'$start_time', '$end_time', '$event_description');';
 
-$result = mysql_query($sql, $FGSP) or die(mysql_error());
+$result = mysql_query($sql, $localhost) or die(mysql_error());
 
 ?>
 
