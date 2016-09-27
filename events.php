@@ -8,7 +8,6 @@
 
 require_once('Connections/NewLogin.php');
 require_once('includes/header.php');
-require_once('js/events.js');
 
 mysql_select_db($database_localhost, $localhost);
 $sql = 'SELECT EventID as id,
@@ -27,6 +26,7 @@ $result = mysql_query($sql, $localhost) or die(mysql_error());
 $num_rows = mysql_num_rows($result);
 
 ?>
+	<script src="js/events.js" language="script"></script>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-default">
