@@ -31,10 +31,12 @@ $result = mysql_query($sql, $localhost) or die(mysql_error());
 ?>
 
 	<div class="row">
-		<div class="panel panel-default">
-			<div class="panel-heading">Add Events</div>
-			<div class="panel-body">
-				<h3>Event Added Successfully</h3>
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Add Events</div>
+				<div class="panel-body">
+					<h3>Event Added Successfully</h3>
+				</div>
 			</div>
 		</div>
 	</div>
