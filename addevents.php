@@ -9,6 +9,8 @@
 require_once('Connections/FGSP.php');
 require_once('includes/header.php');
 
+function()
+
 mysql_select_db($database_FGSP, $FGSP);
 $sql = 'INSERT INTO tblEvents
 			(EventDate, EventName, EventYear, EventLocation, EventType, EventAttendanceLink,
@@ -50,12 +52,12 @@ $sql = 'INSERT INTO tblEvents
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="event_type">Event Type:</label>
-					<input type="text" class="form-control" id="event_type">
-				</div>
-				<div class="form-group">
 					<label for="event_name">Event Name:</label>
 					<input type="text" class="form-control" id="event_name">
+				</div>
+				<div class="form-group">
+					<label for="event_type">Event Type:</label>
+					<input type="text" class="form-control" id="event_type">
 				</div>
 				<div class="form-group">
 					<label for="event_description">Description:</label>
@@ -65,7 +67,7 @@ $sql = 'INSERT INTO tblEvents
 					<label for="event_rsvp_link">RSVP Link:</label>
 					<input type="text" class="form-control" id="event_rsvp_link">
 				</div>
-				<button type="button" class="btn btn-primary js-add-event-button">Add Event</button>
+				<button type="submit" class="btn btn-primary js-add-event-button">Add Event</button>
 			</div>
 		</div>
 	</div>

@@ -56,7 +56,6 @@
 						<input type="text" class="form-control" id="event_rsvp_link">
 					</div>
 					<button type="button" class="btn btn-primary js-final-edit-event-button">Add Event</button>
-					<button type="button" class="btn btn-danger js-cancel-edit-event-button">Cancel</button>
 				</div>
 			</div>
 		</div>
