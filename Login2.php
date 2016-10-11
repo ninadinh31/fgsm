@@ -55,7 +55,7 @@ require_once('/includes/header.php');
             <div class="panel-heading">Log</div>
             <div class="panel-body">
                 <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
-                    <table class="table">
+                    <table class="table borderless">
                         <tbody>
                             <tr>
                                 <td>
