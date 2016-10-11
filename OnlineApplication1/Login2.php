@@ -64,7 +64,7 @@ require_once('../includes/header.php');
                                 </td>
                                 <td>
                                     <h3>Don't have an account?</h3>          
-                                    <a href="Registration1.php">Create a new account now</a>
+                                       <a href="Registration1.php">Create a new account now</a>
                                 </td>
                             </tr>
                             <tr>
