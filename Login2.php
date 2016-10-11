@@ -65,8 +65,8 @@ require_once('/includes/header.php');
                         <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                     </div>
                     <a href="Registration1.php">New User</a>
-                    <p>Forgot Username</p>
-                    <p>Forgot Password</p>
+                    <a href="">Forgot Username</a>
+                    <a href="">Forgot Password</a>
                     <button type="submit" class="btn btn-default">Log In</button>
                 </form>
 
