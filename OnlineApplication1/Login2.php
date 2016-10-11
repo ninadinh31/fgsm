@@ -52,34 +52,49 @@ if (isset($_POST['Username'])) {
 </head>
 
 <body>
-<form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
-  <table width="677" border="1" align="center" cellpadding="3">
-    <tbody>
-      <tr>
-        <td width="236"><h2 style="text-align: left">Log In</h2></td>
-        <td width="236" rowspan="4"><h3>Don't have an account?</h3>          <a href="Registration1.php">Create a new account now</a></td>
-      </tr>
-      <tr>
-        <td><h3>
-          <label for="Username">Username:</label>
-          <input name="Username" type="text" required id="Username">
-        </h3></td>
-      </tr>
-      <tr>
-        <td><h3>
-          <label for="Password">Password:</label>
-          <input name="Password" type="password" required id="Password">
-        </h3></td>
-      </tr>
-      <tr style="text-align: center">
-        <td><input name="Login" type="submit" id="Login" value="Log In"></td>
-      </tr>
-      <tr>
-        <td colspan="2">Forgot your Username or Password?</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>&nbsp;</p>
-</form>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="panel">
+      <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <h2>Log In</h2>
+              </td>
+              <td>
+                <h3>Don't have an account?</h3>          
+                <a href="Registration1.php">Create a new account now</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>
+                  <label for="Username">Username:</label>
+                  <input name="Username" type="text" required id="Username">
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>
+                  <label for="Password">Password:</label>
+                  <input name="Password" type="password" required id="Password">
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td><input name="Login" type="submit" id="Login" value="Log In"></td>
+            </tr>
+            <tr>
+              <td>Forgot your Username or Password?</td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
 </body>
 </html>
