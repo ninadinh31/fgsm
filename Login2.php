@@ -1,7 +1,7 @@
 <?php 
 
-require_once('../Connections/FGSP.php'); 
-require_once('../includes/header.php');
+require_once('/Connections/FGSP.php'); 
+require_once('/includes/header.php');
 
 // // *** Validate request to login to this site.
 // if (!isset($_SESSION)) {
