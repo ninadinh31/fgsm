@@ -54,45 +54,49 @@ if (isset($_POST['Username'])) {
     <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-heading">Log</div>
-            <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h2>Log In</h2>
-                            </td>
-                            <td>
-                                <h3>Don't have an account?</h3>          
-                                <a href="Registration1.php">Create a new account now</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>
-                                    <label for="Username">Username:</label>
-                                    <input name="Username" type="text" required id="Username">
-                                </h3>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>
-                                    <label for="Password">Password:</label>
-                                    <input name="Password" type="password" required id="Password">
-                                </h3>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input name="Login" type="submit" id="Login" value="Log In"></td>
-                        </tr>
-                        <tr>
-                            <td>Forgot your Username or Password?</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
+            <div class="panel-body">
+                <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h2>Log In</h2>
+                                </td>
+                                <td>
+                                    <h3>Don't have an account?</h3>          
+                                    <a href="Registration1.php">Create a new account now</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>
+                                        <label for="Username">Username:</label>
+                                        <input name="Username" type="text" required id="Username">
+                                    </h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>
+                                        <label for="Password">Password:</label>
+                                        <input name="Password" type="password" required id="Password">
+                                    </h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input name="Login" type="submit" id="Login" value="Log In"></td>
+                            </tr>
+                            <tr>
+                                <td>Forgot your Username or Password?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+
+
 </body>
 </html>
