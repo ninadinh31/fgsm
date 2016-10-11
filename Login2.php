@@ -50,12 +50,12 @@ require_once('/includes/header.php');
 ?>
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">Log</div>
             <div class="panel-body">
-                <!-- <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST"> -->
+                <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
                     <table class="table">
                         <tbody>
                             <tr>
@@ -91,7 +91,7 @@ require_once('/includes/header.php');
                             </tr>
                         </tbody>
                     </table>
-                <!-- </form> -->
+                </form>
             </div>
         </div>
     </div>
