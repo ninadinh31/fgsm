@@ -52,20 +52,11 @@ require_once('/includes/header.php');
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
-            <div class="panel-heading">Log</div>
+            <div class="panel-heading">Log In</div>
             <div class="panel-body">
                 <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
                     <table class="table borderless">
                         <tbody>
-                            <tr>
-                                <td>
-                                    <h2>Log In</h2>
-                                </td>
-                                <td>
-                                    <h3>Don't have an account?</h3>          
-                                    <a href="Registration1.php">Create a new account now</a>
-                                </td>
-                            </tr>
                             <tr>
                                 <td>
                                     <h3>
@@ -83,10 +74,16 @@ require_once('/includes/header.php');
                                 </td>
                             </tr>
                             <tr>
-                                <td><input name="Login" type="submit" id="Login" value="Log In"></td>
+                                <td>
+                                    <h3>Don't have an account?</h3>          
+                                    <a href="Registration1.php">Create a new account now</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Forgot your Username or Password?</td>
+                            </tr>
+                            <tr>
+                                <td><input name="Login" type="submit" id="Login" value="Log In"></td>
                             </tr>
                         </tbody>
                     </table>
