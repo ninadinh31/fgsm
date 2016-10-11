@@ -13,6 +13,7 @@ if (isset($_GET['accesscheck'])) {
 }
 
 if (isset($_POST['Username'])) {
+    echo "hello guys";
   $loginUsername=$_POST['Username'];
   $password=$_POST['Password'];
   $MM_fldUserAuthorization = "UserLevel";
