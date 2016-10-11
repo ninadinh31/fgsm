@@ -39,8 +39,8 @@ if (isset($_POST['Username'])) {
     header("Location: " . $MM_redirectLoginSuccess );
   }
   else {
-    header("Location: ". $MM_redirectLoginFailed );
     echo "<script type='text/javascript'>alert('Incorrect Login Credentials');</script>";
+    header("Location: ". $MM_redirectLoginFailed );
     //echo "You are not logged in.<br>";
   }
 }
