@@ -44,7 +44,7 @@ if (isset($_POST['Username'])) {
   }
 }
 
-require_once('includes/header.php');
+require_once('../includes/header.php');
 
 ?>
 
