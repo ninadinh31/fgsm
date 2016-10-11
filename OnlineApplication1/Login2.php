@@ -1,5 +1,8 @@
-<?php require_once('../Connections/FGSP.php'); ?>
-<?php
+<?php 
+
+require_once('../Connections/FGSP.php'); 
+require_once('../includes/header.php');
+
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
   session_start();
@@ -43,8 +46,6 @@ if (isset($_POST['Username'])) {
     //echo "You are not logged in.<br>";
   }
 }
-
-require_once('../includes/header.php');
 
 ?>
 
