@@ -64,10 +64,10 @@ require_once('/includes/header.php');
                         <label for="loginPassword">Password</label>
                         <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                     </div>
+                    <button type="submit" class="btn btn-default">Log In</button>
                     <a href="Registration1.php">New User</a><br />
                     <a href="">Forgot Username</a><br />
                     <a href="">Forgot Password</a><br />
-                    <button type="submit" class="btn btn-default">Log In</button>
                 </form>
 
 
