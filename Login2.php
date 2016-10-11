@@ -54,7 +54,25 @@ require_once('/includes/header.php');
         <div class="panel panel-default">
             <div class="panel-heading">Log In</div>
             <div class="panel-body">
-                <form ACTION="<?php echo $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
+
+                <form>
+                    <div class="form-group">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" class="form-control" id="loginUsername" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                    </div>
+                    <a href="Registration1.php">New User</a>
+                    <p>Forgot Username</p>
+                    <p>Forgot Password</p>
+                    <button type="submit" class="btn btn-default">Log In</button>
+                </form>
+
+
+<!-- 
+                <form ACTION="<?php $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
                     <table class="table borderless">
                         <tbody>
                             <tr>
@@ -75,8 +93,7 @@ require_once('/includes/header.php');
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Don't have an account?</h3>          
-                                    <a href="Registration1.php">Create a new account now</a>
+                                    <a href="Registration1.php">New User</a>
                                 </td>
                             </tr>
                             <tr>
@@ -87,7 +104,7 @@ require_once('/includes/header.php');
                             </tr>
                         </tbody>
                     </table>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
