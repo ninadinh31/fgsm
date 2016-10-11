@@ -24,7 +24,7 @@ $sql = sprintf("INSERT INTO tblEvent
 			 		EventStartTime, EventEndTime, EventDescription)
 				VALUES 
 					('%s', '%s', '2017', '%s', '%s', '%s', '%s', '%s', '%s');",
-			$date, $event_name, $location, $event_type, $event_rsvp_link, $start_time, $end_time, $event_description);
+					$date, $event_name, $location, $event_type, $event_rsvp_link, $start_time, $end_time, $event_description);
 
 $result = mysql_query($sql, $localhost) or die(mysql_error());
 
