@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('.js-events-table').DataTable();
+	$(".js-events-table").DataTable();
 
 	var addEventButton = $(".js-add-event-button");
 	var editEventButton = $(".js-edit-event-button");

@@ -7,13 +7,13 @@
  */
 
 require_once('includes/header.php');
-
 ?>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Edit Event</div>
 				<div class="panel-body">
+					
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
