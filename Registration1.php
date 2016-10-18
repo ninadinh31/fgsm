@@ -1,7 +1,8 @@
 <?php
 
-require_once('Connections/FGSP.php'); ?>
-<?php
+require_once('Connections/NewLogin.php');
+require_once('includes/header.php');
+
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -155,16 +156,7 @@ $row_rstRegistration = mysql_fetch_assoc($rstRegistration);
 $totalRows_rstRegistration = mysql_num_rows($rstRegistration);
 
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<style>
-.registration {
-	border: 1px solid #999999;
-	font: normal 14px helvetica; color:#444444;
-}
-</style>
+
 <script>
 
 function validate(form)
