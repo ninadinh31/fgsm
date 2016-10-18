@@ -1,6 +1,6 @@
 <?php 
 
-require_once('/Connections/NewLogin.php'); 
+require_once('Connections/NewLogin.php'); 
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
@@ -13,19 +13,18 @@ if (isset($_GET['accesscheck'])) {
 }
 
 if (isset($_POST['Username'])) {
-    echo "hello guys";
     $loginUsername=$_POST['Username'];
-    $password=$_POST['Password'];
+    $password=sha1(GetSQLValueString($_POST['Password'], 'text'));
     $MM_fldUserAuthorization = "UserLevel";
     $MM_redirectLoginSuccess = "ControlPanel2.php";
-    $MM_redirectLoginFailed = "Login1.php";
+    $MM_redirectLoginFailed = "Login2.php";
     $MM_redirecttoReferrer = false;
-    mysql_select_db($database_FGSP, $FGSP);
+    mysql_select_db($database_localhost, $localhost);
   	
-    $LoginRS__query=sprintf("SELECT Username, Password, UserLevel FROM tblusers WHERE Username=%s AND Password=%s",
-    GetSQLValueString($loginUsername, 'text'), GetSQLValueString($password, 'text')); 
+    $LoginRS__query=sprintf("SELECT Username, Password, UserLevel FROM tblUsers WHERE Username=%s AND Password={$password}",
+    GetSQLValueString($loginUsername, 'text')); 
    
-    $LoginRS = mysql_query($LoginRS__query, $FGSP) or die(mysql_error());
+    $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());
     $loginFoundUser = mysql_num_rows($LoginRS);
     if ($loginFoundUser) {
     
@@ -52,7 +51,7 @@ if (isset($_POST['Username'])) {
     }
 }
 
-    require_once('/includes/header.php');
+    require_once('includes/header.php');
 ?>
 
 <div class="row">

@@ -37,16 +37,16 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 // *** Redirect if username or UID or email exists
 $MM_flag="MM_insert";
 if (isset($_POST[$MM_flag])) {
-  $MM_dupKeyRedirect="Login1.php";
+  $MM_dupKeyRedirect="Login2.php";
   $loginUsername = $_POST['txtUsername'];
   $loginUID = $_POST['txtUID'];
   $loginEmail = $_POST['txtEmail'];
-  $LoginRS__query = sprintf("SELECT Username FROM tblusers WHERE Username=%s OR UID=%s OR Email=%s", 
+  $LoginRS__query = sprintf("SELECT Username FROM tblUsers WHERE Username=%s OR UID=%s OR Email=%s", 
   							GetSQLValueString($loginUsername, "text"),
 							GetSQLValueString($loginUID, "text"),
 							GetSQLValueString($loginEmail, "text"));
-  mysql_select_db($database_FGSP, $FGSP);
-  $LoginRS=mysql_query($LoginRS__query, $FGSP) or die(mysql_error());
+  mysql_select_db($database_localhost, $localhost);
+  $LoginRS=mysql_query($LoginRS__query, $localhost) or die(mysql_error());
   $loginFoundUser = mysql_num_rows($LoginRS);
 
   //if there is a row in the database, the username/uid was found - can not add the requested username
@@ -131,15 +131,15 @@ if (isset($_POST["Register"])){
    //$insertPass = sha1(GetSQLValueString($_POST['txtPassword'], "text"));
   //$insertConFPass = sha1(GetSQLValueString($_POST['txtConfirmPassword'], "text"));
 	
-  $insertSQL = sprintf("INSERT INTO tblusers (Firstname, Lastname, Email, Username, Password, ConfirmPassword, `UID`) VALUES (%s, %s, %s, %s, '{$password}', '{$cpassword}', %s)",
+  $insertSQL = sprintf("INSERT INTO tblUsers (Firstname, Lastname, Email, Username, Password, ConfirmPassword, `UID`) VALUES (%s, %s, %s, %s, '{$password}', '{$cpassword}', %s)",
                        GetSQLValueString($_POST['txtFirstname'], "text"),
                        GetSQLValueString($_POST['txtLastname'], "text"),
                        GetSQLValueString($_POST['txtEmail'], "text"),
                        GetSQLValueString($_POST['txtUsername'], "text"),
                        GetSQLValueString($_POST['txtUID'], "int"));
 
-  mysql_select_db($database_FGSP, $FGSP);
-  $Result1 = mysql_query($insertSQL, $FGSP) or die(mysql_error());
+  mysql_select_db($database_localhost, $localhost);
+  $Result1 = mysql_query($insertSQL, $localhost) or die(mysql_error());
   
   //$insertGoTo = "Login1.php";
   //if (isset($_SERVER['QUERY_STRING'])) {
@@ -149,9 +149,9 @@ if (isset($_POST["Register"])){
  // header(sprintf("Location: %s", $insertGoTo));
 }
 }
-mysql_select_db($database_FGSP, $FGSP);
-$query_rstRegistration = "SELECT * FROM tblusers";
-$rstRegistration = mysql_query($query_rstRegistration, $FGSP) or die(mysql_error());
+mysql_select_db($database_localhost, $localhost);
+$query_rstRegistration = "SELECT * FROM tblUsers";
+$rstRegistration = mysql_query($query_rstRegistration, $localhost) or die(mysql_error());
 $row_rstRegistration = mysql_fetch_assoc($rstRegistration);
 $totalRows_rstRegistration = mysql_num_rows($rstRegistration);
 
