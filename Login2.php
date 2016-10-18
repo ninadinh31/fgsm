@@ -14,37 +14,42 @@ if (isset($_GET['accesscheck'])) {
 
 if (isset($_POST['Username'])) {
     echo "hello guys";
-  $loginUsername=$_POST['Username'];
-  $password=$_POST['Password'];
-  $MM_fldUserAuthorization = "UserLevel";
-  $MM_redirectLoginSuccess = "ControlPanel2.php";
-  $MM_redirectLoginFailed = "Login1.php";
-  $MM_redirecttoReferrer = false;
-  mysql_select_db($database_FGSP, $FGSP);
+    $loginUsername=$_POST['Username'];
+    $password=$_POST['Password'];
+    $MM_fldUserAuthorization = "UserLevel";
+    $MM_redirectLoginSuccess = "ControlPanel2.php";
+    $MM_redirectLoginFailed = "Login1.php";
+    $MM_redirecttoReferrer = false;
+    mysql_select_db($database_FGSP, $FGSP);
   	
-  $LoginRS__query=sprintf("SELECT Username, Password, UserLevel FROM tblusers WHERE Username=%s AND Password=%s",
-  GetSQLValueString($loginUsername, 'text'), GetSQLValueString($password, 'text')); 
+    $LoginRS__query=sprintf("SELECT Username, Password, UserLevel FROM tblusers WHERE Username=%s AND Password=%s",
+    GetSQLValueString($loginUsername, 'text'), GetSQLValueString($password, 'text')); 
    
-  $LoginRS = mysql_query($LoginRS__query, $FGSP) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-  if ($loginFoundUser) {
+    $LoginRS = mysql_query($LoginRS__query, $FGSP) or die(mysql_error());
+    $loginFoundUser = mysql_num_rows($LoginRS);
+    if ($loginFoundUser) {
     
-    $loginStrGroup  = mysql_result($LoginRS,0,'UserLevel');
+        $loginStrGroup  = mysql_result($LoginRS,0,'UserLevel');
     
-	if (PHP_VERSION >= 5.1) {session_regenerate_id(true);} else {session_regenerate_id();}
-    //declare two session variables and assign them
-    $_SESSION['MM_Username'] = $loginUsername;
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
+	    if (PHP_VERSION >= 5.1) {
+            session_regenerate_id(true);
+        } else {
+            session_regenerate_id();
+        }
 
-    if (isset($_SESSION['PrevUrl']) && false) {
-      $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
+        //declare two session variables and assign them
+        $_SESSION['MM_Username'] = $loginUsername;
+        $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
+
+        if (isset($_SESSION['PrevUrl']) && false) {
+            $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
+        }
+        
+        header("Location: " . $MM_redirectLoginSuccess );
+    } else {
+        header("Location: ". $MM_redirectLoginFailed );
+        echo "You are not logged in.<br>";
     }
-    header("Location: " . $MM_redirectLoginSuccess );
-  }
-  else {
-    header("Location: ". $MM_redirectLoginFailed );
-    echo "You are not logged in.<br>";
-  }
 }
 
     require_once('/includes/header.php');
