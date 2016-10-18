@@ -21,7 +21,7 @@ if (isset($_POST['Username'])) {
     $MM_redirecttoReferrer = false;
     mysql_select_db($database_localhost, $localhost);
   	
-    $LoginRS__query=sprintf("SELECT Username, Password, UserLevel FROM tblUsers WHERE Username=%s AND Password={$password}",
+    $LoginRS__query=sprintf("SELECT Username, Password, UserLevel FROM tblUsers WHERE Username=%s AND Password='{$password}'",
     GetSQLValueString($loginUsername, 'text')); 
    
     $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());
