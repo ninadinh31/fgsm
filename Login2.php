@@ -1,6 +1,6 @@
 <?php 
 
-require_once('/Connections/FGSP.php'); 
+require_once('/Connections/NewLogin.php'); 
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
