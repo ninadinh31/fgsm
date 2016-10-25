@@ -63,7 +63,7 @@ if (isset($_POST["loginUsername"])) {
     $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());
     $loginFoundUser = mysql_num_rows($LoginRS);
 
-    header("Location: events.php");
+    header("Location: www.globalsemesterdc.umd.edu/events.php");
 
     if ($loginFoundUser) {
         header("Location: events.php");
