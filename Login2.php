@@ -7,21 +7,47 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
+if (!function_exists("GetSQLValueString")) {
+    function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") {
+        if (PHP_VERSION < 6) {
+            $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+        }
+
+        $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+        switch ($theType) {
+            case "text":
+                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+                break;    
+            case "long":
+            case "int":
+                $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+                break;
+            case "double":
+                $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+                break;
+            case "date":
+                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+                break;
+            case "defined":
+                $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+                break;
+        }
+        return $theValue;
+    }
+}
+
 $loginFormAction = $_SERVER['PHP_SELF'];
 if (isset($_GET['accesscheck'])) {
   $_SESSION['PrevUrl'] = $_GET['accesscheck'];
 }
 
 if (isset($_POST['loginUsername'])) {
-    $loginUsername=$_POST['loginUsername'];
-    ?>
-    <p>hi my name is cameron</p>
-    <?php
-    $password = sha1(GetSQLValueString($_POST['loginPassword'], "text"));
+    $loginUsername = $_POST["loginUsername"];
+    
+    $password = sha1(GetSQLValueString($_POST["loginPassword"], "text"));
     //$password = GetSQLValueString(sha1($_POST['Password']), "text);
     
-    ?>
-    <?php
     $MM_fldUserAuthorization = "UserLevel";
     $MM_redirectLoginSuccess = "events.php";
     $MM_redirectLoginFailed = "Login2.php";
