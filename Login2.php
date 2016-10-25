@@ -15,7 +15,7 @@ if (isset($_GET['accesscheck'])) {
 if (isset($_POST['loginUsername'])) {
     $loginUsername=$_POST['loginUsername'];
     ?>
-    
+    <p>hi my name is cameron</p>
     <?php
     $password = sha1(GetSQLValueString($_POST['loginPassword'], "text"));
     //$password = GetSQLValueString(sha1($_POST['Password']), "text);
@@ -70,11 +70,11 @@ if (isset($_POST['loginUsername'])) {
                 <form ACTION="<?php echo $loginFormAction; ?>" method="POST">
                     <div class="form-group">
                         <label for="loginUsername">Username</label>
-                        <input type="text" class="form-control" id="loginUsername" placeholder="Username">
+                        <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
                     </div>
                     <div class="form-group">
                         <label for="loginPassword">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                     </div>
                     <p>cameron</p>
                     <input value="Log In" type="submit" class="btn btn-default"><br />
