@@ -18,7 +18,13 @@ if (isset($_POST['Username'])) {
     
     <?php
     // $password=sha1(GetSQLValueString($_POST['Password'], 'text'));
-    $password = GetSQLValueString(sha1($_POST['Password']), 'text');
+    $password = GetSQLValueString(sha1($_POST['Password']), "text");
+    
+    ?>
+    <script type="text/javascript">
+        alert(<?php echo $password?>);
+    </script>
+    <?php
     $MM_fldUserAuthorization = "UserLevel";
     $MM_redirectLoginSuccess = "ControlPanel2.php";
     $MM_redirectLoginFailed = "Login2.php";
