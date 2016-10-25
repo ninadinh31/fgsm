@@ -96,7 +96,7 @@ if (isset($_POST["loginUsername"])) {
             <div class="panel-heading">Log In</div>
             <div class="panel-body">
 
-                <form ACTION="<?php echo $loginFormAction; ?>" method="POST">
+                <form ACTION="events.php" method="POST">
                     <div class="form-group">
                         <label for="loginUsername">Username</label>
                         <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
