@@ -62,9 +62,11 @@ if (isset($_POST["loginUsername"])) {
    
     $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());
     $loginFoundUser = mysql_num_rows($LoginRS);
-    echo $loginFoundUser;
+
+    header("Location: events.php");
+
     if ($loginFoundUser) {
-    
+        header("Location: events.php");
         $loginStrGroup  = mysql_result($LoginRS,0,'UserLevel');
     
 	    if (PHP_VERSION >= 5.1) {
