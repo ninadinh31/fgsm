@@ -67,7 +67,7 @@ if (isset($_POST['loginUsername'])) {
             <div class="panel-heading">Log In</div>
             <div class="panel-body">
 
-                <form action="<?php echo $loginFormAction; ?>" method="POST">
+                <form ACTION="<?php echo $loginFormAction; ?>" method="POST">
                     <div class="form-group">
                         <label for="loginUsername">Username</label>
                         <input type="text" class="form-control" id="loginUsername" placeholder="Username">
@@ -76,7 +76,8 @@ if (isset($_POST['loginUsername'])) {
                         <label for="loginPassword">Password</label>
                         <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-default">Log In</button><br />
+                    <p>cameron</p>
+                    <input value="Log In" type="submit" class="btn btn-default"><br />
                     <a href="Registration1.php">New User</a><br />
                     <a href="">Forgot Username</a><br />
                     <a href="">Forgot Password</a>
