@@ -62,6 +62,7 @@ if (isset($_POST["loginUsername"])) {
    
     $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());
     $loginFoundUser = mysql_num_rows($LoginRS);
+    echo $loginFoundUser;
     if ($loginFoundUser) {
     
         $loginStrGroup  = mysql_result($LoginRS,0,'UserLevel');
@@ -80,9 +81,9 @@ if (isset($_POST["loginUsername"])) {
             $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
         }
         
-        header("Location: " . $MM_redirectLoginSuccess );
+        header("Location: " . $MM_redirectLoginSuccess);
     } else {
-        header("Location: ". $MM_redirectLoginFailed );
+        header("Location: " . $MM_redirectLoginFailed);
         echo "You are not logged in.<br>";
     }
 }
@@ -96,7 +97,7 @@ if (isset($_POST["loginUsername"])) {
             <div class="panel-heading">Log In</div>
             <div class="panel-body">
 
-                <form ACTION="Login2.php" method="POST">
+                <form ACTION="<?php echo $loginFormAction; ?>" method="POST">
                     <div class="form-group">
                         <label for="loginUsername">Username</label>
                         <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
@@ -105,7 +106,6 @@ if (isset($_POST["loginUsername"])) {
                         <label for="loginPassword">Password</label>
                         <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                     </div>
-                    <p>cameron</p>
                     <input value="Log In" type="submit" class="btn btn-default"><br />
                     <a href="Registration1.php">New User</a><br />
                     <a href="">Forgot Username</a><br />
