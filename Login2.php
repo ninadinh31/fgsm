@@ -42,7 +42,10 @@ if (isset($_GET['accesscheck'])) {
   $_SESSION['PrevUrl'] = $_GET['accesscheck'];
 }
 
-if (isset($_POST['loginUsername'])) {
+if (isset($_POST["loginUsername"])) {
+    ?>
+    <script>alert('IT IS WORKING CAM');</script>
+    <?php 
     $loginUsername = $_POST["loginUsername"];
     
     $password = sha1(GetSQLValueString($_POST["loginPassword"], "text"));
