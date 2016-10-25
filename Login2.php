@@ -67,7 +67,7 @@ if (isset($_POST['loginUsername'])) {
             <div class="panel-heading">Log In</div>
             <div class="panel-body">
 
-                <form action="<?php $loginFormAction; ?>" method="post">
+                <form action="<?php echo $loginFormAction; ?>" method="post">
                     <div class="form-group">
                         <label for="loginUsername">Username</label>
                         <input type="text" class="form-control" id="loginUsername" placeholder="Username">
