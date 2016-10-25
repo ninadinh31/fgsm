@@ -12,21 +12,18 @@ if (isset($_GET['accesscheck'])) {
   $_SESSION['PrevUrl'] = $_GET['accesscheck'];
 }
 
-if (isset($_POST['Username'])) {
-    $loginUsername=$_POST['Username'];
+if (isset($_POST['loginUsername'])) {
+    $loginUsername=$_POST['loginUsername'];
     ?>
     
     <?php
-    // $password=sha1(GetSQLValueString($_POST['Password'], 'text'));
-    $password = GetSQLValueString(sha1($_POST['Password']), "text");
+    $password = sha1(GetSQLValueString($_POST['loginPassword'], "text"));
+    //$password = GetSQLValueString(sha1($_POST['Password']), "text);
     
     ?>
-    <script type="text/javascript">
-        alert(<?php echo $password?>);
-    </script>
     <?php
     $MM_fldUserAuthorization = "UserLevel";
-    $MM_redirectLoginSuccess = "ControlPanel2.php";
+    $MM_redirectLoginSuccess = "events.php";
     $MM_redirectLoginFailed = "Login2.php";
     $MM_redirecttoReferrer = false;
     mysql_select_db($database_localhost, $localhost);
