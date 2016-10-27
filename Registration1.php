@@ -37,7 +37,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 // *** Redirect if username or UID or email exists
 $MM_flag="MM_insert";
 if (isset($_POST[$MM_flag])) {
-  $MM_dupKeyRedirect="Login2.php";
+  $MM_dupKeyRedirect="login.php";
   $loginUsername = $_POST['txtUsername'];
   $loginUID = $_POST['txtUID'];
   $loginEmail = $_POST['txtEmail'];

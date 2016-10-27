@@ -38,22 +38,20 @@ if (!function_exists("GetSQLValueString")) {
 }
 
 $loginFormAction = $_SERVER['PHP_SELF'];
+
 if (isset($_GET['accesscheck'])) {
   $_SESSION['PrevUrl'] = $_GET['accesscheck'];
 }
 
 if (isset($_POST["loginUsername"])) {
-    ?>
-    <script>alert('IT IS WORKING CAM');</script>
-    <?php 
     $loginUsername = $_POST["loginUsername"];
     
-    $password = sha1(GetSQLValueString($_POST["loginPassword"], "text"));
+    $password = sha1(GetSQLValueString($_POST['loginPassword'], "text"));
     //$password = GetSQLValueString(sha1($_POST['Password']), "text);
     
     $MM_fldUserAuthorization = "UserLevel";
-    $MM_redirectLoginSuccess = "events.php";
-    $MM_redirectLoginFailed = "Login2.php";
+    $MM_redirectLoginSuccess = "controlpanel.php";
+    $MM_redirectLoginFailed = "login.php";
     $MM_redirecttoReferrer = false;
     mysql_select_db($database_localhost, $localhost);
   	
@@ -63,10 +61,7 @@ if (isset($_POST["loginUsername"])) {
     $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());
     $loginFoundUser = mysql_num_rows($LoginRS);
 
-    header("Location: www.globalsemesterdc.umd.edu/events.php");
-
     if ($loginFoundUser) {
-        header("Location: events.php");
         $loginStrGroup  = mysql_result($LoginRS,0,'UserLevel');
     
 	    if (PHP_VERSION >= 5.1) {
@@ -88,9 +83,10 @@ if (isset($_POST["loginUsername"])) {
         header("Location: " . $MM_redirectLoginFailed);
         echo "You are not logged in.<br>";
     }
-}
+}    
 
-    require_once('includes/header.php');
+require_once('includes/header.php');
+
 ?>
 
 <div class="row">
@@ -99,14 +95,14 @@ if (isset($_POST["loginUsername"])) {
             <div class="panel-heading">Log In</div>
             <div class="panel-body">
 
-                <form ACTION="<?php echo $loginFormAction; ?>" method="POST">
+                <form action="<?php echo $loginFormAction; ?>" method="post">
                     <div class="form-group">
                         <label for="loginUsername">Username</label>
-                        <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+                        <input type="text" class="form-control" name="loginUsername" id="loginUsername" placeholder="Username" required>
                     </div>
                     <div class="form-group">
                         <label for="loginPassword">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                        <input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" required>
                     </div>
                     <input value="Log In" type="submit" class="btn btn-default"><br />
                     <a href="Registration1.php">New User</a><br />
