@@ -60,10 +60,10 @@ require_once('includes/header.php');
 ?>
 
 <div class="js-username">
-	<p><?php echo $_SESSION['MM_Username']; ?></p>
+	<?php echo $_SESSION['MM_Username']; ?>
 </div>
 <div class="js-usergroup">
-	<p><?php echo $_SESSION['MM_UserGroup']; ?></p>
+	<?php echo $_SESSION['MM_UserGroup']; ?>
 </div>
 <script type="text/javascript" src="js/controlpanel.js"></script>
 <div class="row">
