@@ -57,7 +57,8 @@ if (!isset($_SESSION)) {
 
 require_once('includes/header.php');
 
-print_r(array_values($_SESSION));
+echo $_SESSION['MM_Username'];
+echo $_SESSION['MM_UserGroup'];
 
 ?>
 
