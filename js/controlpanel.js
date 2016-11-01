@@ -11,8 +11,9 @@ $(document).ready(function() {
 	if (usergroup.text() === '1') {
 		addEvents.show();
 		editEvents.show();
+		alert
 	} else {
-		alert(hello);
+		alert('hello');
 	}
 
 });
