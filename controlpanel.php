@@ -57,7 +57,7 @@ if (!isset($_SESSION)) {
 
 require_once('includes/header.php');
 
-echo $_SESSION;
+print_r(array_values($_SESSION));
 
 ?>
 
