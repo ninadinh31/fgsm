@@ -57,6 +57,8 @@ if (!isset($_SESSION)) {
 
 require_once('includes/header.php');
 
+echo $_SESSION;
+
 ?>
 
 <div class="row">
