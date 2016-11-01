@@ -52,7 +52,7 @@ if (!isset($_SESSION)) {
 //     $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
 //     echo "You don't have access to this page.";
 //     header("Location: ". $MM_restrictGoTo); 
-//     exit;
+//     exit;	
 // }
 
 require_once('includes/header.php');
@@ -60,10 +60,10 @@ require_once('includes/header.php');
 ?>
 
 <div class="js-username">
-	<p><?php print $_SESSION['MM_Username']; ?></p>
+	<p><?php echo $_SESSION['MM_Username']; ?></p>
 </div>
 <div class="js-usergroup">
-	<p><?php print $_SESSION['MM_UserGroup']; ?></p>
+	<p><?php echo $_SESSION['MM_UserGroup']; ?></p>
 </div>
 <script type="text/javascript" src="js/controlpanel.js"></script>
 <div class="row">
