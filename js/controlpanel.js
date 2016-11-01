@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var addEvents = $('.js-add-events');
 	var editEvents = $('.js-edit-events');
 
-	alert(usergroup.text());
+	alert(username.text());
 
 	if (usergroup.text() === '1') {
 		addEvents.show();
