@@ -57,9 +57,6 @@ if (!isset($_SESSION)) {
 
 require_once('includes/header.php');
 
-print $_SESSION['MM_Username'];
-print $_SESSION['MM_UserGroup'];
-
 ?>
 
 <div class="row">
@@ -67,11 +64,21 @@ print $_SESSION['MM_UserGroup'];
 		<div class="panel panel-default">
 			<div class="panel-heading">Control Panel</div>
 			<div class="panel-body">
-				<a href="events.php">Federal & Global Fellows Events</a><br>
-				<a href="addevents.php">Admin Add Event</a><br>
-				<a href="editevents.php">Admin Edit/Delete Event</a><br>
-				<a href="">Internship Opportunities</a><br>
-				<a href="">Federal & Global Fellows Application</a><br>
+				<div>
+					<a href="events.php">Federal & Global Fellows Events</a>
+				</div>
+				<div>
+					<a href="addevents.php">Admin Add Event</a>
+				</div>
+				<div>
+					<a href="editevents.php">Admin Edit/Delete Event</a>
+				</div>
+				<div>
+					<a href="">Internship Opportunities</a>
+				</div>
+				<div>
+					<a href="">Federal & Global Fellows Application</a>
+				</div>
 			</div>
 		</div>
 	</div>
