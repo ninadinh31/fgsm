@@ -60,10 +60,10 @@ require_once('includes/header.php');
 ?>
 
 <div class="js-username">
-	<?php echo $_SESSION['UserName']; ?>
+	<?php echo $_SESSION['MM_Username']; ?>
 </div>
 <div class="js-usergroup">
-	<?php echo $_SESSION['UserGroup']; ?>
+	<?php echo $_SESSION['MM_UserGroup']; ?>
 </div>
 <div class="row">
 	<div class="col-md-12">
