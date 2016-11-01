@@ -59,10 +59,10 @@ require_once('includes/header.php');
 
 ?>
 
-<div class="js-username hidden">
+<div class="js-username">
 	<?php echo $_SESSION['UserName'] ?>
 </div>
-<div class="js-usergroup hidden">
+<div class="js-usergroup">
 	<?php echo $_SESSION['UserGroup'] ?>
 </div>
 <div class="row">
