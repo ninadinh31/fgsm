@@ -59,6 +59,12 @@ require_once('includes/header.php');
 
 ?>
 
+<div class="js-username hidden">
+	<?php echo $_SESSION['UserName'] ?>
+</div>
+<div class="js-usergroup hidden">
+	<?php echo $_SESSION['UserGroup'] ?>
+</div>
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
@@ -67,10 +73,10 @@ require_once('includes/header.php');
 				<div>
 					<a href="events.php">Federal & Global Fellows Events</a>
 				</div>
-				<div>
+				<div class="hidden">
 					<a href="addevents.php">Admin Add Event</a>
 				</div>
-				<div>
+				<div class="hidden">
 					<a href="editevents.php">Admin Edit/Delete Event</a>
 				</div>
 				<div>
