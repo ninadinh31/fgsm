@@ -73,10 +73,10 @@ require_once('includes/header.php');
 				<div>
 					<a href="events.php">Federal & Global Fellows Events</a>
 				</div>
-				<div class="hidden">
+				<div class="js-add-events hidden">
 					<a href="addevents.php">Admin Add Event</a>
 				</div>
-				<div class="hidden">
+				<div class="js-edit-events hidden">
 					<a href="editevents.php">Admin Edit/Delete Event</a>
 				</div>
 				<div>
