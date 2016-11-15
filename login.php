@@ -2,6 +2,10 @@
 
 require_once('Connections/NewLogin.php'); 
 
+define("STUDENT", 0);
+define("ADMIN", 1);
+define("APPLICANT", 2);
+
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
   session_start();
@@ -78,6 +82,19 @@ if (isset($_POST["loginUsername"])) {
             $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
         }
         
+        // This is an Accepted Student 
+        if ($_SESSION['MM_UserGroup'] == STUDENT) {
+            $MM_redirectLoginSuccess = "studentcontrolpanel.php"
+
+        // This is an Admin user
+        } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
+            $MM_redirectLoginSuccess = "admincontrolpanel.php"
+
+        // This is an applicant
+        } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
+            $MM_redirectLoginSuccess = "applicantcontrolpanel.php"
+        }
+ 
         header("Location: " . $MM_redirectLoginSuccess);
     } else {
         header("Location: " . $MM_redirectLoginFailed);
@@ -109,42 +126,6 @@ require_once('includes/header.php');
                     <a href="">Forgot Username</a><br />
                     <a href="">Forgot Password</a>
                 </form>
-
-
-<!-- 
-                <form ACTION="<?php $loginFormAction; ?>" id="frmLogin" name="frmLogin" method="POST">
-                    <table class="table borderless">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <h3>
-                                        <label for="Username">Username:</label>
-                                        <input name="Username" type="text" required id="Username">
-                                    </h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>
-                                        <label for="Password">Password:</label>
-                                        <input name="Password" type="password" required id="Password">
-                                    </h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="Registration1.php">New User</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Forgot your Username or Password?</td>
-                            </tr>
-                            <tr>
-                                <td><input name="Login" type="submit" id="Login" value="Log In"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form> -->
             </div>
         </div>
     </div>
