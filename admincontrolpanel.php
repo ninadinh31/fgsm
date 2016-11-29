@@ -3,9 +3,9 @@
 require_once('Connections/NewLogin.php'); 
 
 // *** Validate request to login to this site.
-if (!isset($_SESSION)) {
-  session_start();
-}
+session_start();
+require_once('includes/header.php');
+
 
 // /**
 //  * Determines if the current user is authorized to access the login page
@@ -54,30 +54,25 @@ if (!isset($_SESSION)) {
 //     header("Location: ". $MM_restrictGoTo); 
 //     exit;	
 // }
-// 
-// require_once('includes/header.php');
+
 
 ?>
  
-<div class="js-username">
-	<p><?php echo $_SESSION['MM_Username']; ?></p>
-</div>
-<div class="js-usergroup">
-	<p><?php echo $_SESSION['MM_UserGroup']; ?></p>
-</div>
-<script type="text/javascript" src="js/controlpanel.js"></script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">Administrator Control Panel</div>
 			<div class="panel-body">
 				<div>
+					<p>Welcome <?php echo $_SESSION['MM_UserGroup'];?></p>
+				</div>
+				<div>
 					<a href="events.php">Federal & Global Fellows Events</a>
 				</div>
-				<div class="js-add-events hidden">
+				<div class="js-add-events">
 					<a href="addevents.php">Admin Add Event</a>
 				</div>
-				<div class="js-edit-events hidden">
+				<div class="js-edit-events">
 					<a href="editevents.php">Admin Edit/Delete Event</a>
 				</div>
 				<div>
