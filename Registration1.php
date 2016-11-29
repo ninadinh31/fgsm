@@ -280,7 +280,7 @@ function validateEmail(field)
 </body>
 </html>
 
-<?php
+<!-- <?php
 function validate_firstname($field)
 {
 	return ($field == "") ? "No firstname was entered<br>": "";
@@ -329,4 +329,4 @@ function validate_email($field)
 	return "";
 }
 mysql_free_result($rstRegistration);
-?>
+?> -->

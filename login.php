@@ -51,7 +51,6 @@ if (isset($_POST["loginUsername"])) {
     $loginUsername = $_POST["loginUsername"];
     
     $password = sha1(GetSQLValueString($_POST['loginPassword'], "text"));
-    //$password = GetSQLValueString(sha1($_POST['Password']), "text);
     
     $MM_fldUserAuthorization = "UserLevel";
     $MM_redirectLoginSuccess = "controlpanel.php";
@@ -98,7 +97,6 @@ if (isset($_POST["loginUsername"])) {
         header("Location: " . $MM_redirectLoginSuccess);
     } else {
         header("Location: " . $MM_redirectLoginFailed);
-        echo "You are not logged in.<br>";
     }
 }    
 
