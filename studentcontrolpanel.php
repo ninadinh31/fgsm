@@ -1,6 +1,7 @@
 <?php 
 
 require_once('Connections/NewLogin.php'); 
+require_once('includes/header.php');
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
@@ -54,8 +55,6 @@ if (!isset($_SESSION)) {
 //     header("Location: ". $MM_restrictGoTo); 
 //     exit;	
 // }
-// 
-// require_once('includes/header.php');
 
 ?>
 
