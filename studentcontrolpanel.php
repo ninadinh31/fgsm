@@ -3,9 +3,9 @@
 require_once('Connections/NewLogin.php'); 
 
 if (!isset($_SESSION['MM_UserGroup']) ) {
-	header("Location: login.php");
-} else {
+	
 	session_start();
+} else {
 }
 
 ?>
