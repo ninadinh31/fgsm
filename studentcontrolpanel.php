@@ -67,8 +67,8 @@ require_once('includes/header.php');
 			<div class="panel-heading">Student Control Panel</div>
 			<div class="panel-body">
 				<div>
-					<h3>Welcome <?php echo $_SESSION['MM_Username']; ?>!</h3>
-					<h3>User level: Student</h5>
+					<p>Welcome <?php echo $_SESSION['MM_Username']; ?>!</p>
+					<p>User level: Student</p>
 				</div>
 				<div>
 					<a href="events.php">Federal & Global Fellows Events</a>
