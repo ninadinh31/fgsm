@@ -280,53 +280,53 @@ function validateEmail(field)
 </body>
 </html>
 
-<!-- <?php
-function validate_firstname($field)
-{
-	return ($field == "") ? "No firstname was entered<br>": "";
-}
-function validate_lastname($field)
-{
-	return ($field == "") ? "No lastname was entered<br>": "";
-}
-function validate_username($field)
-{
-	if ($field == "") return "No Username was entered<br>";
-	else if (strlen($field) < 5)
-		return "Username must be at least 5 characters<br>";
-	else if (preg_match("/[^a-zA-Z0-9_-]/", $field))
-	 	return "Only letters, numbers, - and _ allowed in Usernames<br>";
-	return "";
-}
-function validate_password($field)
-{
-	if ($field == "") return "No Password was entered<br>";
-	else if (strlen($field) < 6)
-		return "Password must be at least 6 characters<br>";
-	else if (!preg_match("/[a-z]/", $field) || !preg_match("/[A-Z]/", $field) || !preg_match("/[0-9]/", $field))
-		return "Password require 1 each of a-z, A-Z and 0-9<br>";
-	return "";
-}
-function validate_cpassword($field)
-{
-	if ($field == "") return "No Confirm Password was entered<br>";
-	else if (strlen($field) < 6)
-		return "Confirm Password must be at least 6 characters<br>";
-	else if (!preg_match("/[a-z]/", $field) || !preg_match("/[A-Z]/", $field) || !preg_match("/[0-9]/", $field))
-		return "Confirm Password require 1 each of a-z, A-Z and 0-9<br>";
-	return "";
-}
-function validate_uid($field)
-{
-	return ($field == "") ? "No UID was entered<br>": "";
-}
-function validate_email($field)
-{
-	if ($field == "") return "No Email was entered<br>";
-	 else if (!((strpos($field, ".") > 0) &&
-	 			 (strpos($field, "@") > 0))	|| preg_match("/[^a-zA-Z0-9.@_-]/", $field))
-		return "The Email address is invalid<br>";
-	return "";
-}
-mysql_free_result($rstRegistration);
-?> -->
+<?php
+// function validate_firstname($field)
+// {
+// 	return ($field == "") ? "No firstname was entered<br>": "";
+// }
+// function validate_lastname($field)
+// {
+// 	return ($field == "") ? "No lastname was entered<br>": "";
+// }
+// function validate_username($field)
+// {
+// 	if ($field == "") return "No Username was entered<br>";
+// 	else if (strlen($field) < 5)
+// 		return "Username must be at least 5 characters<br>";
+// 	else if (preg_match("/[^a-zA-Z0-9_-]/", $field))
+// 	 	return "Only letters, numbers, - and _ allowed in Usernames<br>";
+// 	return "";
+// }
+// function validate_password($field)
+// {
+// 	if ($field == "") return "No Password was entered<br>";
+// 	else if (strlen($field) < 6)
+// 		return "Password must be at least 6 characters<br>";
+// 	else if (!preg_match("/[a-z]/", $field) || !preg_match("/[A-Z]/", $field) || !preg_match("/[0-9]/", $field))
+// 		return "Password require 1 each of a-z, A-Z and 0-9<br>";
+// 	return "";
+// }
+// function validate_cpassword($field)
+// {
+// 	if ($field == "") return "No Confirm Password was entered<br>";
+// 	else if (strlen($field) < 6)
+// 		return "Confirm Password must be at least 6 characters<br>";
+// 	else if (!preg_match("/[a-z]/", $field) || !preg_match("/[A-Z]/", $field) || !preg_match("/[0-9]/", $field))
+// 		return "Confirm Password require 1 each of a-z, A-Z and 0-9<br>";
+// 	return "";
+// }
+// function validate_uid($field)
+// {
+// 	return ($field == "") ? "No UID was entered<br>": "";
+// }
+// function validate_email($field)
+// {
+// 	if ($field == "") return "No Email was entered<br>";
+// 	 else if (!((strpos($field, ".") > 0) &&
+// 	 			 (strpos($field, "@") > 0))	|| preg_match("/[^a-zA-Z0-9.@_-]/", $field))
+// 		return "The Email address is invalid<br>";
+// 	return "";
+// }
+// mysql_free_result($rstRegistration);
+?>
