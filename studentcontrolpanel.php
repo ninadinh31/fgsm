@@ -60,7 +60,6 @@ require_once('includes/header.php');
 
 ?>
 
-<script type="text/javascript" src="js/controlpanel.js"></script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
