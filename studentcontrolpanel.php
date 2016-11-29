@@ -1,7 +1,8 @@
 <?php 
 
-require_once('Connections/NewLogin.php'); 
 require_once('includes/header.php');
+
+require_once('Connections/NewLogin.php'); 
 
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
