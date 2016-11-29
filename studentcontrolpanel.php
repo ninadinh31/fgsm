@@ -2,7 +2,7 @@
 
 require_once('Connections/NewLogin.php'); 
 
-if (!isset($_SESSION['MM_UserGroup']) || $_SESSION['MM_UserGroup'] != 0) {
+if (!isset($_SESSION['MM_UserGroup']) ) {
 	header("Location: login.php");
 } else {
 	session_start();
