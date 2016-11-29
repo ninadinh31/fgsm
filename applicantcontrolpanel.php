@@ -1,11 +1,8 @@
- <?php 
+<?php 
 
+session_start();
 require_once('Connections/NewLogin.php'); 
-
-// *** Validate request to login to this site.
-if (!isset($_SESSION)) {
-  session_start();
-}
+require_once('includes/header.php');
 
 // /**
 //  * Determines if the current user is authorized to access the login page
@@ -54,8 +51,6 @@ if (!isset($_SESSION)) {
 //     header("Location: ". $MM_restrictGoTo); 
 //     exit;	
 // }
-
-require_once('includes/header.php');
 
 ?>
 
