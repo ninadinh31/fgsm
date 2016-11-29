@@ -10,20 +10,20 @@ define("APPLICANT", 2);
 if (!isset($_SESSION['MM_UserGroup'])) {
   session_start();
 } else {
-    // This is an Accepted Student 
-    if ($_SESSION['MM_UserGroup'] == STUDENT) {
-        $MM_redirectLoginSuccess = "studentcontrolpanel.php";
+    // // This is an Accepted Student 
+    // if ($_SESSION['MM_UserGroup'] == STUDENT) {
+    //     $MM_redirectLoginSuccess = "studentcontrolpanel.php";
 
-    // This is an Admin user
-    } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
-        $MM_redirectLoginSuccess = "admincontrolpanel.php";
+    // // This is an Admin user
+    // } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
+    //     $MM_redirectLoginSuccess = "admincontrolpanel.php";
 
-    // This is an applicant
-    } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-        $MM_redirectLoginSuccess = "applicantcontrolpanel.php";
-    }
+    // // This is an applicant
+    // } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
+    //     $MM_redirectLoginSuccess = "applicantcontrolpanel.php";
+    // }
 
-    header("Location: " . $MM_redirectLoginSuccess);
+    // header("Location: " . $MM_redirectLoginSuccess);
 }
 
 if (!function_exists("GetSQLValueString")) {
