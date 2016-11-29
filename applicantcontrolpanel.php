@@ -54,13 +54,6 @@ require_once('includes/header.php');
 
 ?>
 
-<div class="js-username">
-	<p><?php echo $_SESSION['MM_Username']; ?></p>
-</div>
-<div class="js-usergroup">
-	<p><?php echo $_SESSION['MM_UserGroup']; ?></p>
-</div>
-<script type="text/javascript" src="js/controlpanel.js"></script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
