@@ -1,11 +1,9 @@
- <?php 
+<?php 
 
-require_once('Connections/NewLogin.php'); 
 
-// *** Validate request to login to this site.
 session_start();
+require_once('Connections/NewLogin.php'); 
 require_once('includes/header.php');
-
 
 // /**
 //  * Determines if the current user is authorized to access the login page
