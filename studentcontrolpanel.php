@@ -4,7 +4,9 @@ require_once('includes/header.php');
 
 require_once('Connections/NewLogin.php'); 
 
-// *** Validate request to login to this site.
+session_start();
+
+// // *** Validate request to login to this site.
 // if (!isset($_SESSION)) {
 //   session_start();
 // }
@@ -12,7 +14,7 @@ require_once('Connections/NewLogin.php');
 // /**
 //  * Determines if the current user is authorized to access the login page
 //  */
-// function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) { 
+// function isAuthorized($fhstrUsers, $strGroups, $UserName, $UserGroup) { 
 // 	// For security, start by assuming the visitor is NOT authorized. 
 // 	$isValid = False; 
 
