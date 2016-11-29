@@ -61,10 +61,10 @@ require_once('includes/header.php');
 ?>
 
 <div class="js-username">
-	<p><?php echo $_SESSION['MM_Username']; ?></p>
+	<p></p>
 </div>
 <div class="js-usergroup">
-	<p><?php echo $_SESSION['MM_UserGroup']; ?></p>
+	<p></p>
 </div>
 <script type="text/javascript" src="js/controlpanel.js"></script>
 <div class="row">
@@ -72,6 +72,20 @@ require_once('includes/header.php');
 		<div class="panel panel-default">
 			<div class="panel-heading">Student Control Panel</div>
 			<div class="panel-body">
+				<div>
+					<h3>Welcome <?php echo $_SESSION['MM_Username']; ?>!</h3>
+					<h3>User level: 
+						<?php 
+							if ($_SESSION['MM_UserGroup'] == 0) {
+								echo 'Student';
+							} else if ($_SESSION['MM_UserGroup'] == 1) {
+								echo 'Admin';
+							} else {
+								echo 'Applicant';
+							}
+						?>
+					</h3>
+				</div>
 				<div>
 					<a href="events.php">Federal & Global Fellows Events</a>
 				</div>
