@@ -1,11 +1,6 @@
 <?php 
 
-if (!isset($_SESSION['MM_UserGroup']) || $_SESSION['MM_UserGroup'] != 2) {
-	header("Location: login.php");
-} else {
-	session_start();
-}
-
+session_start();
 require_once('Connections/NewLogin.php'); 
 require_once('includes/header.php');
 
