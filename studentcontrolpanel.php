@@ -1,4 +1,4 @@
- <?php 
+<?php 
 
 require_once('Connections/NewLogin.php'); 
 
@@ -54,8 +54,8 @@ if (!isset($_SESSION)) {
 //     header("Location: ". $MM_restrictGoTo); 
 //     exit;	
 // }
-
-require_once('includes/header.php');
+// 
+// require_once('includes/header.php');
 
 ?>
 

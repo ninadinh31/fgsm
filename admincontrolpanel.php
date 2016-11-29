@@ -54,11 +54,11 @@ if (!isset($_SESSION)) {
 //     header("Location: ". $MM_restrictGoTo); 
 //     exit;	
 // }
-
-require_once('includes/header.php');
+// 
+// require_once('includes/header.php');
 
 ?>
-
+ 
 <div class="js-username">
 	<p><?php echo $_SESSION['MM_Username']; ?></p>
 </div>
