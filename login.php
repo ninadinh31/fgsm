@@ -84,15 +84,15 @@ if (isset($_POST["loginUsername"])) {
         
         // This is an Accepted Student 
         if ($_SESSION['MM_UserGroup'] == STUDENT) {
-            $MM_redirectLoginSuccess = "studentcontrolpanel.php"
+            $MM_redirectLoginSuccess = "studentcontrolpanel.php";
 
         // This is an Admin user
         } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
-            $MM_redirectLoginSuccess = "admincontrolpanel.php"
+            $MM_redirectLoginSuccess = "admincontrolpanel.php";
 
         // This is an applicant
         } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-            $MM_redirectLoginSuccess = "applicantcontrolpanel.php"
+            $MM_redirectLoginSuccess = "applicantcontrolpanel.php";
         }
  
         header("Location: " . $MM_redirectLoginSuccess);
