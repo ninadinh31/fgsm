@@ -2,11 +2,8 @@
 
 require_once('Connections/NewLogin.php'); 
 
-if (!isset($_SESSION['MM_UserGroup']) ) {
-	
-	session_start();
-} else {
-}
+session_start();
+require_once('includes/header.php');
 
 ?>
 
