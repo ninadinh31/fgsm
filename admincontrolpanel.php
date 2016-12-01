@@ -2,7 +2,14 @@
 session_start();
 
 if ($_SESSION['MM_UserGroup'] != 1) {
-	$MM_redirectLogin = "login.php";
+	if ($_SESSION['MM_UserGroup'] == 0) {
+		$MM_redirectLogin = "studentcontrolpanel.php";
+	} else if ($_SESSION['MM_UserGroup'] == 2) {
+		$MM_redirectLogin = "applicantcontrolpanel.php";
+	} else {
+		$MM_redirectLogin = "login.php";
+	}
+
     header("Location: " . $MM_redirectLogin);
 }
 

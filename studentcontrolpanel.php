@@ -8,7 +8,7 @@ if ($_SESSION['MM_UserGroup'] != 0) {
 	if ($_SESSION['MM_UserGroup'] == 1) {
 		$MM_redirectLogin = "admincontrolpanel.php";
 	} else if ($_SESSION['MM_UserGroup'] == 2) {
-		$MM_redirectLogin = "applicantcontrolpanel";
+		$MM_redirectLogin = "applicantcontrolpanel.php";
 	} else {
 		$MM_redirectLogin = "login.php";
 	}
