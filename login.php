@@ -6,25 +6,7 @@ define("STUDENT", 0);
 define("ADMIN", 1);
 define("APPLICANT", 2);
 
-// *** Validate request to login to this site.
-if (!isset($_SESSION['MM_UserGroup'])) {
-  session_start();
-} else {
-    // // This is an Accepted Student 
-    // if ($_SESSION['MM_UserGroup'] == STUDENT) {
-    //     $MM_redirectLoginSuccess = "studentcontrolpanel.php";
-
-    // // This is an Admin user
-    // } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
-    //     $MM_redirectLoginSuccess = "admincontrolpanel.php";
-
-    // // This is an applicant
-    // } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-    //     $MM_redirectLoginSuccess = "applicantcontrolpanel.php";
-    // }
-
-    // header("Location: " . $MM_redirectLoginSuccess);
-}
+session_start();
 
 if (!function_exists("GetSQLValueString")) {
     function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") {
