@@ -2,6 +2,7 @@
 
 session_start();
 
+// confirms that the user is authorized to access this page
 if ($_SESSION['MM_UserGroup'] != 2) {
 	if ($_SESSION['MM_UserGroup'] == 1) {
 		$MM_redirectLogin = "admincontrolpanel.php";
@@ -29,6 +30,12 @@ require_once('includes/header.php');
 					</div>
 					<div>
 						<a href="">Federal & Global Fellows Application</a>
+					</div>
+					<div class="row">
+						<div class="col-md-11"></div>
+						<div class="col-md-1">
+							<a href="logout.php">Logout</a>
+						</div>
 					</div>
 				</div>
 			</div>
