@@ -4,7 +4,7 @@ require_once('Connections/NewLogin.php');
 
 session_start();
 
-if (!isset($_SESSION['MM_UserGroup'])) {
+if (isset($_SESSION['MM_UserGroup'])) {
 
     // This is an Accepted Student 
     if ($_SESSION['MM_UserGroup'] == STUDENT) {
