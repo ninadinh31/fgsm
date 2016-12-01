@@ -4,25 +4,18 @@ require_once('Connections/NewLogin.php');
 
 session_start();
 
-if (isset($_SESSION['MM_UserGroup'])) {
-
-    // This is an Accepted Student 
-    if ($_SESSION['MM_UserGroup'] == STUDENT) {
-        $MM_redirectLogin = "studentcontrolpanel.php";
-
-    // This is an Admin user
-    } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
-        $MM_redirectLogin = "admincontrolpanel.php";
-
-    // This is an applicant
-    } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-        $MM_redirectLogin = "applicantcontrolpanel.php";
-    } else {
-    	$MM_redirectLogin = "login.php";
-    }
+if (!$_SESSION['MM_UserGroup'] != STUDENT) {
+	if ($_SESSION['MM_UserGroup'] == ADMIN) {
+		$MM_redirectLogin = "admincontrolpanel.php";
+	} else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
+		$MM_redirectLogin = "applicantcontrolpanel"
+	} else {
+		$MM_redirectLogin = "login.php";
+	}
 
     header("Location: " . $MM_redirectLogin);
 }
+
 
 require_once('includes/header.php');
 
