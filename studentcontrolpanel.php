@@ -21,7 +21,7 @@ if (!isset($_SESSION['MM_UserGroup'])) {
     	$MM_redirectLogin = "login.php";
     }
 
-    header("Location: " . $MM_redirectLoginSuccess);
+    header("Location: " . $MM_redirectLogin);
 }
 
 require_once('includes/header.php');
