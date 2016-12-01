@@ -1,6 +1,12 @@
 <?php 
 
 session_start();
+
+if ($_SESSION['MM_UserGroup'] != 2) {
+	$MM_redirectLogin = "login.php";
+    header("Location: " . $MM_redirectLogin);
+}
+
 require_once('Connections/NewLogin.php'); 
 require_once('includes/header.php');
 

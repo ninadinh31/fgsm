@@ -4,10 +4,10 @@ require_once('Connections/NewLogin.php');
 
 session_start();
 
-if ($_SESSION['MM_UserGroup'] != STUDENT) {
-	if ($_SESSION['MM_UserGroup'] == ADMIN) {
+if ($_SESSION['MM_UserGroup'] != 0) {
+	if ($_SESSION['MM_UserGroup'] == 1) {
 		$MM_redirectLogin = "admincontrolpanel.php";
-	} else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
+	} else if ($_SESSION['MM_UserGroup'] == 2) {
 		$MM_redirectLogin = "applicantcontrolpanel";
 	} else {
 		$MM_redirectLogin = "login.php";
