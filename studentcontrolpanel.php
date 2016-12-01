@@ -4,7 +4,7 @@ require_once('Connections/NewLogin.php');
 
 session_start();
 
-if (!$_SESSION['MM_UserGroup'] != STUDENT) {
+if ($_SESSION['MM_UserGroup'] != STUDENT) {
 	if ($_SESSION['MM_UserGroup'] == ADMIN) {
 		$MM_redirectLogin = "admincontrolpanel.php";
 	} else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
