@@ -103,6 +103,12 @@ require_once('includes/header.php');
 				<div>
 					<a href="">Federal & Global Fellows Application</a>
 				</div>
+				<div class="row">
+						<div class="col-md-11"></div>
+						<div class="col-md-1">
+							<a href="logout.php">Logout</a>
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>
