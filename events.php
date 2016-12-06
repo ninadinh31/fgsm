@@ -48,6 +48,7 @@ $num_rows = mysql_num_rows($result);
 
 	<div class="row">
 		<div class="col-md-12">
+			<p><?php echo isset($_SESSION('MM_Username')); ?></p>
 			<div class="panel panel-default">
 				<div class="panel-heading">Events with Federal & Global Fellows</div>
 				<div class="panel-body">
