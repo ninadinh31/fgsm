@@ -8,10 +8,8 @@
 
 session_start();
 
-isset($_SESSION('MM_Username');
-
 // confirms that the user is logged in
-if (isset($_SESSION('MM_Username'))) {
+if (isset($_SESSION['MM_Username'])) {
 	$MM_redirectLogin = "login.php";
     header("Location: " . $MM_redirectLogin);
 }
