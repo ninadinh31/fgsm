@@ -93,7 +93,7 @@
                          GetSQLValueString($_GET['docID'], "int"));
 
     mysql_select_db($database_localhost, $localhost);
-    $Result1 = mysql_query($deleteSQL, $FGSP) or die(mysql_error());
+    $Result1 = mysql_query($deleteSQL, $localhost) or die(mysql_error());
 
     $deleteGoTo = "index.php#tab-8";
     if (isset($_SERVER['QUERY_STRING'])) {
@@ -114,7 +114,7 @@
                          GetSQLValueString($_POST['UID'], "int"));
 
     mysql_select_db($database_localhost, $localhost);
-    $Result1 = mysql_query($updateSQL, $FGSP) or die(mysql_error());
+    $Result1 = mysql_query($updateSQL, $localhost) or die(mysql_error());
 
     $updateGoTo = "index.php";
     if (isset($_SERVER['QUERY_STRING'])) {
@@ -130,7 +130,7 @@
   }
   mysql_select_db($database_localhost, $localhost);
   $query_rstViewRegistration = sprintf("SELECT * FROM tblusers WHERE Username = %s", GetSQLValueString($colname_rstViewRegistration, "text"));
-  $rstViewRegistration = mysql_query($query_rstViewRegistration, $FGSP) or die(mysql_error());
+  $rstViewRegistration = mysql_query($query_rstViewRegistration, $localhost) or die(mysql_error());
   $row_rstViewRegistration = mysql_fetch_assoc($rstViewRegistration);
   $totalRows_rstViewRegistration = mysql_num_rows($rstViewRegistration);
 
@@ -140,7 +140,7 @@
   }
   mysql_select_db($database_localhost, $localhost);
   $query_rsApplication = sprintf("SELECT tblusers.Username, tblusers.Firstname, tblusers.Lastname, tblusers.Email, tblsqapplication.`UID`, tblsqapplication.Seniority, tblsqapplication.Gender, tblsqapplication.Race, tblsqapplication.OverallGPA, tblsqapplication.MajorGPA, tblsqapplication.Credits, tblsqapplication.Graduation, tblsqapplication.PgmYear, tblsqapplication.Citizenship, tblsqapplication.InternshipInterest, tblsqapplication.PastInternLocation, tblsqapplication.InternInFall, tblsqapplication.FallInternLoc, tblsqapplication.OtherComments FROM tblusers INNER JOIN tblsqapplication ON tblusers.UserID=tblsqapplication.UserID WHERE tblusers.Username = %s", GetSQLValueString($colname_rsApplication, "text"));
-  $rsApplication = mysql_query($query_rsApplication, $FGSP) or die(mysql_error());
+  $rsApplication = mysql_query($query_rsApplication, $localhost) or die(mysql_error());
   $row_rsApplication = mysql_fetch_assoc($rsApplication);
   $totalRows_rsApplication = mysql_num_rows($rsApplication);
 
@@ -158,7 +158,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsMajor = sprintf("SELECT tblusers.Username, tblsqprogramlist.Programs, tblsqprogramdetails.`UID`, tblsqprogramdetails.MID, tblsqprogramdetails.Type, tblsqprogramdetails.OtherMajors  FROM tblsqprogramdetails INNER JOIN tblsqprogramlist ON tblsqprogramdetails.MID = tblsqprogramlist.MID INNER JOIN tblusers ON tblusers.UID = tblsqprogramdetails.UID WHERE tblusers.Username = %s", GetSQLValueString($colname_rsMajor, "text"));
   $query_limit_rsMajor = sprintf("%s LIMIT %d, %d", $query_rsMajor, $startRow_rsMajor, $maxRows_rsMajor);
-  $rsMajor = mysql_query($query_limit_rsMajor, $FGSP) or die(mysql_error());
+  $rsMajor = mysql_query($query_limit_rsMajor, $localhost) or die(mysql_error());
   $row_rsMajor = mysql_fetch_assoc($rsMajor);
 
   if (isset($_GET['totalRows_rsMajor'])) {
@@ -183,7 +183,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsViewUNIVProgram = sprintf("SELECT tblsqunivprogramdetails.LID, CONCAT(b.LLPName, ' - ', a.LLPName) AS UPrograms, tblusers.Username, tblsqunivprogramdetails.`UID` FROM tblsqunivprograms a INNER JOIN tblsqunivprograms b ON a.MainLID=b.LID INNER JOIN tblsqunivprogramdetails ON tblsqunivprogramdetails.LID = a.LID INNER JOIN tblusers ON tblsqunivprogramdetails.UID = tblusers.UID WHERE tblusers.Username = %s ", GetSQLValueString($colname_rsViewUNIVProgram, "text"));
   $query_limit_rsViewUNIVProgram = sprintf("%s LIMIT %d, %d", $query_rsViewUNIVProgram, $startRow_rsViewUNIVProgram, $maxRows_rsViewUNIVProgram);
-  $rsViewUNIVProgram = mysql_query($query_limit_rsViewUNIVProgram, $FGSP) or die(mysql_error());
+  $rsViewUNIVProgram = mysql_query($query_limit_rsViewUNIVProgram, $localhost) or die(mysql_error());
   $row_rsViewUNIVProgram = mysql_fetch_assoc($rsViewUNIVProgram);
 
   if (isset($_GET['totalRows_rsViewUNIVProgram'])) {
@@ -208,7 +208,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsConcentration = sprintf("SELECT tblsqconcentration.Concentration, tblsqapplicationrank.ConID, tblsqapplicationrank.Rank, tblsqapplicationrank.RankID, tblsqapplication.`UID`, tblsqapplication.PgmYear, tblusers.UserID, tblusers.Username FROM tblsqconcentration RIGHT JOIN tblsqapplicationrank ON tblsqapplicationrank.ConID = tblsqconcentration.ConID LEFT JOIN tblsqapplication ON tblsqapplicationrank.UID = tblsqapplication.UID AND tblsqapplicationrank.PgmYear = tblsqapplication.PgmYear LEFT JOIN tblUsers ON tblsqapplication.UserID = tblUsers.UserID WHERE tblusers.Username = %s ", GetSQLValueString($colname_rsConcentration, "text"));
   $query_limit_rsConcentration = sprintf("%s LIMIT %d, %d", $query_rsConcentration, $startRow_rsConcentration, $maxRows_rsConcentration);
-  $rsConcentration = mysql_query($query_limit_rsConcentration, $FGSP) or die(mysql_error());
+  $rsConcentration = mysql_query($query_limit_rsConcentration, $localhost) or die(mysql_error());
   $row_rsConcentration = mysql_fetch_assoc($rsConcentration);
 
   if (isset($_GET['totalRows_rsConcentration'])) {
@@ -233,7 +233,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsCitizenshipList = sprintf("SELECT tblsqcitizenshipdetails.UID, tblsqcitizenshipdetails.CountryID, tblsqcountry.Country, tblUsers.Username FROM tblsqcountry RIGHT JOIN tblsqcitizenshipdetails ON tblsqcountry.CountryID = tblsqcitizenshipdetails.CountryID LEFT JOIN tblUsers ON tblsqcitizenshipdetails.UID = tblUsers.UID WHERE tblUsers.Username = %s ORDER BY tblsqcountry.Country", GetSQLValueString($colname_rsCitizenshipList, "text"));
   $query_limit_rsCitizenshipList = sprintf("%s LIMIT %d, %d", $query_rsCitizenshipList, $startRow_rsCitizenshipList, $maxRows_rsCitizenshipList);
-  $rsCitizenshipList = mysql_query($query_limit_rsCitizenshipList, $FGSP) or die(mysql_error());
+  $rsCitizenshipList = mysql_query($query_limit_rsCitizenshipList, $localhost) or die(mysql_error());
   $row_rsCitizenshipList = mysql_fetch_assoc($rsCitizenshipList);
 
   if (isset($_GET['totalRows_rsCitizenshipList'])) {
@@ -258,7 +258,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsSupplementaryCourses = sprintf("SELECT tblusers.UserID, tblusers.Username, tblsqsupplementarydetails.CourseID, tblsqsupplementarydetails.YearTaken, tblsqsupplementarydetails.`UID`, tblsqsupplementarycourses.CourseTitle FROM tblsqsupplementarydetails INNER JOIN  tblusers  ON tblsqsupplementarydetails.UID=tblUsers.UID  INNER JOIN tblsqsupplementarycourses  ON tblsqsupplementarycourses.CourseID = tblsqsupplementarydetails.CourseID WHERE tblusers.Username = %s ", GetSQLValueString($colname_rsSupplementaryCourses, "text"));
   $query_limit_rsSupplementaryCourses = sprintf("%s LIMIT %d, %d", $query_rsSupplementaryCourses, $startRow_rsSupplementaryCourses, $maxRows_rsSupplementaryCourses);
-  $rsSupplementaryCourses = mysql_query($query_limit_rsSupplementaryCourses, $FGSP) or die(mysql_error());
+  $rsSupplementaryCourses = mysql_query($query_limit_rsSupplementaryCourses, $localhost) or die(mysql_error());
   $row_rsSupplementaryCourses = mysql_fetch_assoc($rsSupplementaryCourses);
 
   if (isset($_GET['totalRows_rsSupplementaryCourses'])) {
@@ -283,7 +283,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsDocuments = sprintf("SELECT tblusers.Username, tblsqdocuments.docName, tblsqdocuments.docContent, tblsqdocuments.PgmYear, tblsqdocuments.`UID`, tblsqdocuments.docCategory, tblsqdocuments.docID FROM tblsqdocuments INNER JOIN tblusers  ON tblusers.UID = tblsqdocuments.UID  INNER JOIN tblsqapplication  ON tblsqapplication.UID = tblsqdocuments.UID AND  tblsqapplication.PgmYear = tblsqdocuments.PgmYear WHERE tblusers.Username = %s", GetSQLValueString($colname_rsDocuments, "text"));
   $query_limit_rsDocuments = sprintf("%s LIMIT %d, %d", $query_rsDocuments, $startRow_rsDocuments, $maxRows_rsDocuments);
-  $rsDocuments = mysql_query($query_limit_rsDocuments, $FGSP) or die(mysql_error());
+  $rsDocuments = mysql_query($query_limit_rsDocuments, $localhost) or die(mysql_error());
   $row_rsDocuments = mysql_fetch_assoc($rsDocuments);
 
   if (isset($_GET['totalRows_rsDocuments'])) {
@@ -308,7 +308,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsMarketing = sprintf("SELECT tblusers.UserID, tblusers.Username, tblsqMarketing.MarketingType, tblsqMarketingDetails.UID, tblsqMarketingDetails.PgmYear, tblsqMarketingDetails.MarketingID, tblsqMarketingDetails.MarketingLocation FROM tblsqMarketingDetails INNER JOIN  tblusers  ON tblsqMarketingDetails.UID=tblUsers.UID  INNER JOIN tblsqMarketing ON tblsqMarketingDetails.MarketingID = tblsqMarketing.MarketingID WHERE tblusers.Username = %s ", GetSQLValueString($colname_rsMarketing, "text"));
   $query_limit_rsMarketing = sprintf("%s LIMIT %d, %d", $query_rsMarketing, $startRow_rsMarketing, $maxRows_rsMarketing);
-  $rsMarketing = mysql_query($query_limit_rsMarketing, $FGSP) or die(mysql_error());
+  $rsMarketing = mysql_query($query_limit_rsMarketing, $localhost) or die(mysql_error());
   $row_rsMarketing = mysql_fetch_assoc($rsMarketing);
 
   if (isset($_GET['totalRows_rsMarketing'])) {
@@ -333,7 +333,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsLanguages = sprintf("SELECT tblsqlanguage.`Language`, tblsqlanguage.CountryID, tblsqlanguagedetails.`UID`, tblsqlanguagedetails.LanguageID, tblsqlanguagedetails.ProficiencyLevel, tblusers.Username  FROM tblsqlanguagedetails INNER JOIN tblsqLanguage ON tblsqlanguagedetails.LanguageID=tblsqlanguage.LanguageID INNER JOIN tblusers ON tblUsers.UID=tblsqlanguagedetails.UID WHERE tblusers.Username = %s", GetSQLValueString($colname_rsLanguages, "text"));
   $query_limit_rsLanguages = sprintf("%s LIMIT %d, %d", $query_rsLanguages, $startRow_rsLanguages, $maxRows_rsLanguages);
-  $rsLanguages = mysql_query($query_limit_rsLanguages, $FGSP) or die(mysql_error());
+  $rsLanguages = mysql_query($query_limit_rsLanguages, $localhost) or die(mysql_error());
   $row_rsLanguages = mysql_fetch_assoc($rsLanguages);
 
   if (isset($_GET['totalRows_rsLanguages'])) {
@@ -358,7 +358,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsViewScholarship = sprintf("SELECT tblsqscholarshipdetails.ScholarshipID, tblsqscholarshipdetails.`UID`, tblsqscholarshipdetails.ScholarshipYear, tblsqscholarship.Scholarship, tblusers.Username FROM tblsqscholarshipdetails INNER JOIN tblsqscholarship ON tblsqscholarshipdetails.ScholarshipID=tblsqscholarship.ScholarshipID INNER JOIN tblusers ON tblsqscholarshipdetails.UID=tblusers.UID WHERE tblusers.Username = %s", GetSQLValueString($colname_rsViewScholarship, "text"));
   $query_limit_rsViewScholarship = sprintf("%s LIMIT %d, %d", $query_rsViewScholarship, $startRow_rsViewScholarship, $maxRows_rsViewScholarship);
-  $rsViewScholarship = mysql_query($query_limit_rsViewScholarship, $FGSP) or die(mysql_error());
+  $rsViewScholarship = mysql_query($query_limit_rsViewScholarship, $localhost) or die(mysql_error());
   $row_rsViewScholarship = mysql_fetch_assoc($rsViewScholarship);
 
   if (isset($_GET['totalRows_rsViewScholarship'])) {
@@ -383,7 +383,7 @@
   mysql_select_db($database_localhost, $localhost);
   $query_rsStudyAbroad = sprintf("SELECT tblsqstudyabroad.StudyAID, tblsqstudyabroad.`UID`, tblsqstudyabroad.Institution, tblsqstudyabroad.StudyYear, tblsqcountry.Country, tblusers.Username FROM tblsqstudyabroad INNER JOIN tblsqcountry ON tblsqcountry.CountryID=tblsqstudyabroad.CountryID INNER JOIN tblusers ON tblusers.UID=tblsqstudyabroad.UID WHERE tblusers.Username=%s", GetSQLValueString($colname_rsStudyAbroad, "text"));
   $query_limit_rsStudyAbroad = sprintf("%s LIMIT %d, %d", $query_rsStudyAbroad, $startRow_rsStudyAbroad, $maxRows_rsStudyAbroad);
-  $rsStudyAbroad = mysql_query($query_limit_rsStudyAbroad, $FGSP) or die(mysql_error());
+  $rsStudyAbroad = mysql_query($query_limit_rsStudyAbroad, $localhost) or die(mysql_error());
   $row_rsStudyAbroad = mysql_fetch_assoc($rsStudyAbroad);
 
   if (isset($_GET['totalRows_rsStudyAbroad'])) {
