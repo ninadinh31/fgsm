@@ -104,7 +104,7 @@
   }
 
   if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "frmControlPanel")) {
-    $updateSQL = sprintf("UPDATE tblsqapplication SET UserID=%s, InternshipInterest=%s, PastInternLocation=%s, InternInFall=%s, FallInternLoc=%s, OtherComments=%s WHERE `UID`=%s",
+    $updateSQL = sprintf("UPDATE tblsqApplication SET UserID=%s, InternshipInterest=%s, PastInternLocation=%s, InternInFall=%s, FallInternLoc=%s, OtherComments=%s WHERE `UID`=%s",
                          GetSQLValueString($_POST['UserID'], "int"),
                          GetSQLValueString($_POST['txtEditGenInternship'], "text"),
                          GetSQLValueString($_POST['txtEditPastInternship'], "text"),
@@ -139,7 +139,7 @@
     $colname_rsApplication = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsApplication = sprintf("SELECT tblUsers.Username, tblUsers.Firstname, tblUsers.Lastname, tblUsers.Email, tblsqapplication.`UID`, tblsqapplication.Seniority, tblsqapplication.Gender, tblsqapplication.Race, tblsqapplication.OverallGPA, tblsqapplication.MajorGPA, tblsqapplication.Credits, tblsqapplication.Graduation, tblsqapplication.PgmYear, tblsqapplication.Citizenship, tblsqapplication.InternshipInterest, tblsqapplication.PastInternLocation, tblsqapplication.InternInFall, tblsqapplication.FallInternLoc, tblsqapplication.OtherComments FROM tblUsers INNER JOIN tblsqapplication ON tblUsers.UserID=tblsqapplication.UserID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsApplication, "text"));
+  $query_rsApplication = sprintf("SELECT tblUsers.Username, tblUsers.Firstname, tblUsers.Lastname, tblUsers.Email, tblsqApplication.`UID`, tblsqApplication.Seniority, tblsqApplication.Gender, tblsqApplication.Race, tblsqApplication.OverallGPA, tblsqApplication.MajorGPA, tblsqApplication.Credits, tblsqApplication.Graduation, tblsqApplication.PgmYear, tblsqApplication.Citizenship, tblsqApplication.InternshipInterest, tblsqApplication.PastInternLocation, tblsqApplication.InternInFall, tblsqApplication.FallInternLoc, tblsqApplication.OtherComments FROM tblUsers INNER JOIN tblsqApplication ON tblUsers.UserID=tblsqApplication.UserID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsApplication, "text"));
   $rsApplication = mysql_query($query_rsApplication, $localhost) or die(mysql_error());
   $row_rsApplication = mysql_fetch_assoc($rsApplication);
   $totalRows_rsApplication = mysql_num_rows($rsApplication);
@@ -206,7 +206,7 @@
     $colname_rsConcentration = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsConcentration = sprintf("SELECT tblsqconcentration.Concentration, tblsqapplicationrank.ConID, tblsqapplicationrank.Rank, tblsqapplicationrank.RankID, tblsqapplication.`UID`, tblsqapplication.PgmYear, tblUsers.UserID, tblUsers.Username FROM tblsqconcentration RIGHT JOIN tblsqapplicationrank ON tblsqapplicationrank.ConID = tblsqconcentration.ConID LEFT JOIN tblsqapplication ON tblsqapplicationrank.UID = tblsqapplication.UID AND tblsqapplicationrank.PgmYear = tblsqapplication.PgmYear LEFT JOIN tblUsers ON tblsqapplication.UserID = tblUsers.UserID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsConcentration, "text"));
+  $query_rsConcentration = sprintf("SELECT tblsqconcentration.Concentration, tblsqApplicationrank.ConID, tblsqApplicationrank.Rank, tblsqApplicationrank.RankID, tblsqApplication.`UID`, tblsqApplication.PgmYear, tblUsers.UserID, tblUsers.Username FROM tblsqconcentration RIGHT JOIN tblsqApplicationrank ON tblsqApplicationrank.ConID = tblsqconcentration.ConID LEFT JOIN tblsqApplication ON tblsqApplicationrank.UID = tblsqApplication.UID AND tblsqApplicationrank.PgmYear = tblsqApplication.PgmYear LEFT JOIN tblUsers ON tblsqApplication.UserID = tblUsers.UserID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsConcentration, "text"));
   $query_limit_rsConcentration = sprintf("%s LIMIT %d, %d", $query_rsConcentration, $startRow_rsConcentration, $maxRows_rsConcentration);
   $rsConcentration = mysql_query($query_limit_rsConcentration, $localhost) or die(mysql_error());
   $row_rsConcentration = mysql_fetch_assoc($rsConcentration);
@@ -281,7 +281,7 @@
     $colname_rsDocuments = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsDocuments = sprintf("SELECT tblUsers.Username, tblsqdocuments.docName, tblsqdocuments.docContent, tblsqdocuments.PgmYear, tblsqdocuments.`UID`, tblsqdocuments.docCategory, tblsqdocuments.docID FROM tblsqdocuments INNER JOIN tblUsers  ON tblUsers.UID = tblsqdocuments.UID  INNER JOIN tblsqapplication  ON tblsqapplication.UID = tblsqdocuments.UID AND  tblsqapplication.PgmYear = tblsqdocuments.PgmYear WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsDocuments, "text"));
+  $query_rsDocuments = sprintf("SELECT tblUsers.Username, tblsqdocuments.docName, tblsqdocuments.docContent, tblsqdocuments.PgmYear, tblsqdocuments.`UID`, tblsqdocuments.docCategory, tblsqdocuments.docID FROM tblsqdocuments INNER JOIN tblUsers  ON tblUsers.UID = tblsqdocuments.UID  INNER JOIN tblsqApplication  ON tblsqApplication.UID = tblsqdocuments.UID AND  tblsqApplication.PgmYear = tblsqdocuments.PgmYear WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsDocuments, "text"));
   $query_limit_rsDocuments = sprintf("%s LIMIT %d, %d", $query_rsDocuments, $startRow_rsDocuments, $maxRows_rsDocuments);
   $rsDocuments = mysql_query($query_limit_rsDocuments, $localhost) or die(mysql_error());
   $row_rsDocuments = mysql_fetch_assoc($rsDocuments);
