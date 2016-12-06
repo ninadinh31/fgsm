@@ -1,6 +1,6 @@
 <?php 
   
-  require_once('../Connections/FGSP.php'); 
+  require_once('../Connections/NewLogin.php'); 
   
   if (!isset($_SESSION)) {
     session_start();
@@ -95,7 +95,7 @@
     mysql_select_db($database_FGSP, $FGSP);
     $Result1 = mysql_query($deleteSQL, $FGSP) or die(mysql_error());
 
-    $deleteGoTo = "ControlPanel2.php#tab-8";
+    $deleteGoTo = "index.php#tab-8";
     if (isset($_SERVER['QUERY_STRING'])) {
       $deleteGoTo .= (strpos($deleteGoTo, '?')) ? "&" : "?";
       $deleteGoTo .= $_SERVER['QUERY_STRING'];
