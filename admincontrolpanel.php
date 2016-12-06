@@ -1,6 +1,13 @@
 <?php 
 session_start();
 
+// confirms that the user is logged in
+if (isset($_SESSION('MM_Username'))) {
+	$MM_redirectLogin = "login.php";
+    header("Location: " . $MM_redirectLogin);
+}
+
+// confirms that the user is authorized to access this page
 if ($_SESSION['MM_UserGroup'] != 1) {
 	if ($_SESSION['MM_UserGroup'] == 0) {
 		$MM_redirectLogin = "studentcontrolpanel.php";

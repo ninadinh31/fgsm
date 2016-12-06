@@ -1,6 +1,10 @@
-session_start();
-unset($_SESSION['username']);
-session_destroy();
+<?php 
 
-header("Location: login.php");
-exit;
+	session_start();
+	unset($_SESSION['MM_UserGroup']);
+	unset($_SESSION['MM_Username']);
+	session_destroy();
+
+	header("Location: login.php");
+
+?>
