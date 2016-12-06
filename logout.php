@@ -1,10 +1,14 @@
 <?php 
 
 	session_start();
-	unset($_SESSION['MM_UserGroup']);
-	unset($_SESSION['MM_Username']);
+	unsetSessionVariable('MM_UserGroup');
+	unsetSessionVariable('MM_Username');
 	session_destroy();
 
 	header("Location: login.php");
+
+	function unsetSessionVariable ($sessionVariableName) {
+	   unset($GLOBALS[_SESSION][$sessionVariableName]);
+	}
 
 ?>
