@@ -88,7 +88,7 @@
   }
 
   if ((isset($_GET['docID'])) && ($_GET['docID'] != "")) {
-    $deleteSQL = sprintf("DELETE FROM tblsqdocuments WHERE docID=%s",
+    $deleteSQL = sprintf("DELETE FROM tblsqDocuments WHERE docID=%s",
                          GetSQLValueString($_GET['docID'], "int"));
 
     mysql_select_db($database_localhost, $localhost);
@@ -280,7 +280,7 @@
     $colname_rsDocuments = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsDocuments = sprintf("SELECT tblUsers.Username, tblsqdocuments.docName, tblsqdocuments.docContent, tblsqdocuments.PgmYear, tblsqdocuments.`UID`, tblsqdocuments.docCategory, tblsqdocuments.docID FROM tblsqdocuments INNER JOIN tblUsers  ON tblUsers.UID = tblsqdocuments.UID  INNER JOIN tblsqApplication  ON tblsqApplication.UID = tblsqdocuments.UID AND  tblsqApplication.PgmYear = tblsqdocuments.PgmYear WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsDocuments, "text"));
+  $query_rsDocuments = sprintf("SELECT tblUsers.Username, tblsqDocuments.docName, tblsqDocuments.docContent, tblsqDocuments.PgmYear, tblsqDocuments.`UID`, tblsqDocuments.docCategory, tblsqDocuments.docID FROM tblsqDocuments INNER JOIN tblUsers  ON tblUsers.UID = tblsqDocuments.UID  INNER JOIN tblsqApplication  ON tblsqApplication.UID = tblsqDocuments.UID AND  tblsqApplication.PgmYear = tblsqDocuments.PgmYear WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsDocuments, "text"));
   $query_limit_rsDocuments = sprintf("%s LIMIT %d, %d", $query_rsDocuments, $startRow_rsDocuments, $maxRows_rsDocuments);
   $rsDocuments = mysql_query($query_limit_rsDocuments, $localhost) or die(mysql_error());
   $row_rsDocuments = mysql_fetch_assoc($rsDocuments);
