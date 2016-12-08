@@ -155,7 +155,7 @@
     $colname_rsMajor = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsMajor = sprintf("SELECT tblUsers.Username, tblsqprogramlist.Programs, tblsqprogramdetails.`UID`, tblsqprogramdetails.MID, tblsqprogramdetails.Type, tblsqprogramdetails.OtherMajors  FROM tblsqprogramdetails INNER JOIN tblsqprogramlist ON tblsqprogramdetails.MID = tblsqprogramlist.MID INNER JOIN tblUsers ON tblUsers.UID = tblsqprogramdetails.UID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsMajor, "text"));
+  $query_rsMajor = sprintf("SELECT tblUsers.Username, tblsqprogramlist.Programs, tblsqProgramDetails.`UID`, tblsqProgramDetails.MID, tblsqProgramDetails.Type, tblsqProgramDetails.OtherMajors  FROM tblsqProgramDetails INNER JOIN tblsqprogramlist ON tblsqProgramDetails.MID = tblsqprogramlist.MID INNER JOIN tblUsers ON tblUsers.UID = tblsqProgramDetails.UID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsMajor, "text"));
   $query_limit_rsMajor = sprintf("%s LIMIT %d, %d", $query_rsMajor, $startRow_rsMajor, $maxRows_rsMajor);
   $rsMajor = mysql_query($query_limit_rsMajor, $localhost) or die(mysql_error());
   $row_rsMajor = mysql_fetch_assoc($rsMajor);
