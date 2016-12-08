@@ -230,7 +230,7 @@
     $colname_rsCitizenshipList = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsCitizenshipList = sprintf("SELECT tblsqcitizenshipdetails.UID, tblsqcitizenshipdetails.CountryID, tblsqcountry.Country, tblUsers.Username FROM tblsqcountry RIGHT JOIN tblsqcitizenshipdetails ON tblsqcountry.CountryID = tblsqcitizenshipdetails.CountryID LEFT JOIN tblUsers ON tblsqcitizenshipdetails.UID = tblUsers.UID WHERE tblUsers.Username = %s ORDER BY tblsqcountry.Country", GetSQLValueString($colname_rsCitizenshipList, "text"));
+  $query_rsCitizenshipList = sprintf("SELECT tblsqcitizenshipdetails.UID, tblsqcitizenshipdetails.CountryID, tblsqCountry.Country, tblUsers.Username FROM tblsqCountry RIGHT JOIN tblsqcitizenshipdetails ON tblsqCountry.CountryID = tblsqcitizenshipdetails.CountryID LEFT JOIN tblUsers ON tblsqcitizenshipdetails.UID = tblUsers.UID WHERE tblUsers.Username = %s ORDER BY tblsqCountry.Country", GetSQLValueString($colname_rsCitizenshipList, "text"));
   $query_limit_rsCitizenshipList = sprintf("%s LIMIT %d, %d", $query_rsCitizenshipList, $startRow_rsCitizenshipList, $maxRows_rsCitizenshipList);
   $rsCitizenshipList = mysql_query($query_limit_rsCitizenshipList, $localhost) or die(mysql_error());
   $row_rsCitizenshipList = mysql_fetch_assoc($rsCitizenshipList);
@@ -380,7 +380,7 @@
     $colname_rsStudyAbroad = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsStudyAbroad = sprintf("SELECT tblsqstudyabroad.StudyAID, tblsqstudyabroad.`UID`, tblsqstudyabroad.Institution, tblsqstudyabroad.StudyYear, tblsqcountry.Country, tblUsers.Username FROM tblsqstudyabroad INNER JOIN tblsqcountry ON tblsqcountry.CountryID=tblsqstudyabroad.CountryID INNER JOIN tblUsers ON tblUsers.UID=tblsqstudyabroad.UID WHERE tblUsers.Username=%s", GetSQLValueString($colname_rsStudyAbroad, "text"));
+  $query_rsStudyAbroad = sprintf("SELECT tblsqstudyabroad.StudyAID, tblsqstudyabroad.`UID`, tblsqstudyabroad.Institution, tblsqstudyabroad.StudyYear, tblsqCountry.Country, tblUsers.Username FROM tblsqstudyabroad INNER JOIN tblsqCountry ON tblsqCountry.CountryID=tblsqstudyabroad.CountryID INNER JOIN tblUsers ON tblUsers.UID=tblsqstudyabroad.UID WHERE tblUsers.Username=%s", GetSQLValueString($colname_rsStudyAbroad, "text"));
   $query_limit_rsStudyAbroad = sprintf("%s LIMIT %d, %d", $query_rsStudyAbroad, $startRow_rsStudyAbroad, $maxRows_rsStudyAbroad);
   $rsStudyAbroad = mysql_query($query_limit_rsStudyAbroad, $localhost) or die(mysql_error());
   $row_rsStudyAbroad = mysql_fetch_assoc($rsStudyAbroad);
