@@ -255,7 +255,7 @@
     $colname_rsSupplementaryCourses = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsSupplementaryCourses = sprintf("SELECT tblUsers.UserID, tblUsers.Username, tblsqsupplementarydetails.CourseID, tblsqsupplementarydetails.YearTaken, tblsqsupplementarydetails.`UID`, tblsqsupplementarycourses.CourseTitle FROM tblsqsupplementarydetails INNER JOIN  tblUsers  ON tblsqsupplementarydetails.UID=tblUsers.UID  INNER JOIN tblsqsupplementarycourses  ON tblsqsupplementarycourses.CourseID = tblsqsupplementarydetails.CourseID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsSupplementaryCourses, "text"));
+  $query_rsSupplementaryCourses = sprintf("SELECT tblUsers.UserID, tblUsers.Username, tblsqSupplementaryDetails.CourseID, tblsqSupplementaryDetails.YearTaken, tblsqSupplementaryDetails.`UID`, tblsqsupplementarycourses.CourseTitle FROM tblsqSupplementaryDetails INNER JOIN  tblUsers  ON tblsqSupplementaryDetails.UID=tblUsers.UID  INNER JOIN tblsqsupplementarycourses  ON tblsqsupplementarycourses.CourseID = tblsqSupplementaryDetails.CourseID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsSupplementaryCourses, "text"));
   $query_limit_rsSupplementaryCourses = sprintf("%s LIMIT %d, %d", $query_rsSupplementaryCourses, $startRow_rsSupplementaryCourses, $maxRows_rsSupplementaryCourses);
   $rsSupplementaryCourses = mysql_query($query_limit_rsSupplementaryCourses, $localhost) or die(mysql_error());
   $row_rsSupplementaryCourses = mysql_fetch_assoc($rsSupplementaryCourses);
