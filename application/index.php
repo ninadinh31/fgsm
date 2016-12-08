@@ -123,6 +123,9 @@
     header(sprintf("Location: %s", $updateGoTo));
   }
 
+  require_once('includes/header.php');
+
+
   $colname_rstViewRegistration = "-1";
   if (isset($_SESSION['MM_Username'])) {
     $colname_rstViewRegistration = $_SESSION['MM_Username'];
