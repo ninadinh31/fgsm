@@ -123,7 +123,7 @@
     header(sprintf("Location: %s", $updateGoTo));
   }
 
-  require_once('includes/header.php');
+  require_once('../includes/header.php');
 
 
   $colname_rstViewRegistration = "-1";
