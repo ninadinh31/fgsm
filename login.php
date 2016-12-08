@@ -7,6 +7,7 @@ define("ADMIN", 1);
 define("APPLICANT", 2);
 
 session_start();
+require_once('includes/header.php');
 
 // *** Validate request to login to this site.
 if (isset($_SESSION['MM_UserGroup'])) {
@@ -116,8 +117,6 @@ if (isset($_POST["loginUsername"])) {
         header("Location: " . $MM_redirectLoginFailed);
     }
 }    
-
-require_once('includes/header.php');
 
 ?>
 
