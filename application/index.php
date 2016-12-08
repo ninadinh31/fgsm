@@ -46,7 +46,7 @@
     if (strpos($MM_restrictGoTo, "?")) $MM_qsChar = "&";
     if (isset($_SERVER['QUERY_STRING']) && strlen($_SERVER['QUERY_STRING']) > 0) 
     $MM_referrer .= "?" . $_SERVER['QUERY_STRING'];
-    $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
+    // $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
     header("Location: ". $MM_restrictGoTo); 
     exit;
   }
