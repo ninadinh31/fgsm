@@ -205,7 +205,7 @@
     $colname_rsConcentration = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsConcentration = sprintf("SELECT tblsqConcentration.Concentration, tblsqApplicationrank.ConID, tblsqApplicationrank.Rank, tblsqApplicationrank.RankID, tblsqApplication.`UID`, tblsqApplication.PgmYear, tblUsers.UserID, tblUsers.Username FROM tblsqConcentration RIGHT JOIN tblsqApplicationrank ON tblsqApplicationrank.ConID = tblsqConcentration.ConID LEFT JOIN tblsqApplication ON tblsqApplicationrank.UID = tblsqApplication.UID AND tblsqApplicationrank.PgmYear = tblsqApplication.PgmYear LEFT JOIN tblUsers ON tblsqApplication.UserID = tblUsers.UserID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsConcentration, "text"));
+  $query_rsConcentration = sprintf("SELECT  .Concentration, tblsqApplicationRank.ConID, tblsqApplicationRank.Rank, tblsqApplicationRank.RankID, tblsqApplication.`UID`, tblsqApplication.PgmYear, tblUsers.UserID, tblUsers.Username FROM tblsqConcentration RIGHT JOIN tblsqApplicationRank ON tblsqApplicationRank.ConID = tblsqConcentration.ConID LEFT JOIN tblsqApplication ON tblsqApplicationRank.UID = tblsqApplication.UID AND tblsqApplicationRank.PgmYear = tblsqApplication.PgmYear LEFT JOIN tblUsers ON tblsqApplication.UserID = tblUsers.UserID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsConcentration, "text"));
   $query_limit_rsConcentration = sprintf("%s LIMIT %d, %d", $query_rsConcentration, $startRow_rsConcentration, $maxRows_rsConcentration);
   $rsConcentration = mysql_query($query_limit_rsConcentration, $localhost) or die(mysql_error());
   $row_rsConcentration = mysql_fetch_assoc($rsConcentration);
