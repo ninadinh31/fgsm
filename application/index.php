@@ -180,7 +180,7 @@
     $colname_rsViewUNIVProgram = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsViewUNIVProgram = sprintf("SELECT tblsqunivprogramdetails.LID, CONCAT(b.LLPName, ' - ', a.LLPName) AS UPrograms, tblUsers.Username, tblsqunivprogramdetails.`UID` FROM tblsqUNIVPrograms a INNER JOIN tblsqUNIVPrograms b ON a.MainLID=b.LID INNER JOIN tblsqunivprogramdetails ON tblsqunivprogramdetails.LID = a.LID INNER JOIN tblUsers ON tblsqunivprogramdetails.UID = tblUsers.UID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsViewUNIVProgram, "text"));
+  $query_rsViewUNIVProgram = sprintf("SELECT tblsqUNIVProgramDetails.LID, CONCAT(b.LLPName, ' - ', a.LLPName) AS UPrograms, tblUsers.Username, tblsqUNIVProgramDetails.`UID` FROM tblsqUNIVPrograms a INNER JOIN tblsqUNIVPrograms b ON a.MainLID=b.LID INNER JOIN tblsqUNIVProgramDetails ON tblsqUNIVProgramDetails.LID = a.LID INNER JOIN tblUsers ON tblsqUNIVProgramDetails.UID = tblUsers.UID WHERE tblUsers.Username = %s ", GetSQLValueString($colname_rsViewUNIVProgram, "text"));
   $query_limit_rsViewUNIVProgram = sprintf("%s LIMIT %d, %d", $query_rsViewUNIVProgram, $startRow_rsViewUNIVProgram, $maxRows_rsViewUNIVProgram);
   $rsViewUNIVProgram = mysql_query($query_limit_rsViewUNIVProgram, $localhost) or die(mysql_error());
   $row_rsViewUNIVProgram = mysql_fetch_assoc($rsViewUNIVProgram);
