@@ -6,7 +6,7 @@
     session_start();
   }
   
-  $MM_authorizedUsers = "0,1";
+  $MM_authorizedUsers = "0,1,2";
   $MM_donotCheckaccess = "false";
 
   if (!$MM_authorizedUsers) {
