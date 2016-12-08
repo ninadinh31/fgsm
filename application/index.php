@@ -47,7 +47,6 @@
     if (isset($_SERVER['QUERY_STRING']) && strlen($_SERVER['QUERY_STRING']) > 0) 
     $MM_referrer .= "?" . $_SERVER['QUERY_STRING'];
     $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
-    echo "You don't have access to this page.";
     header("Location: ". $MM_restrictGoTo); 
     exit;
   }
