@@ -21,7 +21,7 @@ if (isset($_SESSION['MM_UserGroup'])) {
 
     // This is an applicant
     } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-        $MM_redirectLoginSuccess = "onlineapplication1/controlpanel2.php";
+        $MM_redirectLoginSuccess = "application/";
     }
 
     header("Location: " . $MM_redirectLoginSuccess);
