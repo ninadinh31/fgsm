@@ -107,7 +107,7 @@ if (isset($_POST["loginUsername"])) {
 
         // This is an applicant
         } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-            $MM_redirectLoginSuccess = "applicantcontrolpanel.php";
+            $MM_redirectLoginSuccess = "applicant/";
         }
  
         header("Location: " . $MM_redirectLoginSuccess);
