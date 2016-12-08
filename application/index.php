@@ -355,7 +355,7 @@
     $colname_rsViewScholarship = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsViewScholarship = sprintf("SELECT tblsqScholarshipDetails.ScholarshipID, tblsqScholarshipDetails.`UID`, tblsqScholarshipDetails.ScholarshipYear, tblsqscholarship.Scholarship, tblUsers.Username FROM tblsqScholarshipDetails INNER JOIN tblsqscholarship ON tblsqScholarshipDetails.ScholarshipID=tblsqscholarship.ScholarshipID INNER JOIN tblUsers ON tblsqScholarshipDetails.UID=tblUsers.UID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsViewScholarship, "text"));
+  $query_rsViewScholarship = sprintf("SELECT tblsqScholarshipDetails.ScholarshipID, tblsqScholarshipDetails.`UID`, tblsqScholarshipDetails.ScholarshipYear, tblsqScholarship.Scholarship, tblUsers.Username FROM tblsqScholarshipDetails INNER JOIN tblsqScholarship ON tblsqScholarshipDetails.ScholarshipID=tblsqScholarship.ScholarshipID INNER JOIN tblUsers ON tblsqScholarshipDetails.UID=tblUsers.UID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsViewScholarship, "text"));
   $query_limit_rsViewScholarship = sprintf("%s LIMIT %d, %d", $query_rsViewScholarship, $startRow_rsViewScholarship, $maxRows_rsViewScholarship);
   $rsViewScholarship = mysql_query($query_limit_rsViewScholarship, $localhost) or die(mysql_error());
   $row_rsViewScholarship = mysql_fetch_assoc($rsViewScholarship);
