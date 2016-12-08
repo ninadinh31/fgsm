@@ -421,7 +421,7 @@
       <!-- <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%"> -->
       <h2 align="center">
         Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
-        <a href="Admin1.php">Admin</a> | <a href="Logout1.php"> Log Out</a>
+        <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
       </h2>
       <p align="center">Welcome
         <?php 
