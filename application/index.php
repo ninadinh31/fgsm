@@ -330,7 +330,7 @@
     $colname_rsLanguages = $_SESSION['MM_Username'];
   }
   mysql_select_db($database_localhost, $localhost);
-  $query_rsLanguages = sprintf("SELECT tblsqlanguage.`Language`, tblsqlanguage.CountryID, tblsqLanguageDetails.`UID`, tblsqLanguageDetails.LanguageID, tblsqLanguageDetails.ProficiencyLevel, tblUsers.Username  FROM tblsqLanguageDetails INNER JOIN tblsqLanguage ON tblsqLanguageDetails.LanguageID=tblsqlanguage.LanguageID INNER JOIN tblUsers ON tblUsers.UID=tblsqLanguageDetails.UID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsLanguages, "text"));
+  $query_rsLanguages = sprintf("SELECT tblsqLanguage.Language, tblsqLanguage.CountryID, tblsqLanguageDetails.UID, tblsqLanguageDetails.LanguageID, tblsqLanguageDetails.ProficiencyLevel, tblUsers.Username  FROM tblsqLanguageDetails INNER JOIN tblsqLanguage ON tblsqLanguageDetails.LanguageID=tblsqLanguage.LanguageID INNER JOIN tblUsers ON tblUsers.UID=tblsqLanguageDetails.UID WHERE tblUsers.Username = %s", GetSQLValueString($colname_rsLanguages, "text"));
   $query_limit_rsLanguages = sprintf("%s LIMIT %d, %d", $query_rsLanguages, $startRow_rsLanguages, $maxRows_rsLanguages);
   $rsLanguages = mysql_query($query_limit_rsLanguages, $localhost) or die(mysql_error());
   $row_rsLanguages = mysql_fetch_assoc($rsLanguages);
