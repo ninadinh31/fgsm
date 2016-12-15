@@ -401,51 +401,53 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
             <div id="Tabs1" class="col-md-12">
                 <ul class="nav nav-pills">
-                    <li class="active"><a href="#tabs-1">Background</a></li>
-                    <li><a href="#tabs-2">Major(s)</a></li>
-                    <li><a href="#tabs-3">University Programs</a></li>
-                    <li><a href="#tabs-4">Rank Concentrations</a></li>
-                    <li><a href="#tabs-6">Internship Interest</a></li>
-                    <li><a href="#tabs-5">Supplementary Courses</a></li>
-                    <li><a href="#tabs-7">Upload Documents</a></li>
-                    <li><a href="#tabs-8">Survey</a></li>
-                    <li><a href="#tabs-9">Review Application</a></li>
+                    <li class="active"><a data-toggle="tab" href="#tabs-1">Background</a></li>
+                    <li><a data-toggle="pill" href="#tabs-2">Major(s)</a></li>
+                    <li><a data-toggle="pill" href="#tabs-3">University Programs</a></li>
+                    <li><a data-toggle="pill" href="#tabs-4">Rank Concentrations</a></li>
+                    <li><a data-toggle="pill" href="#tabs-6">Internship Interest</a></li>
+                    <li><a data-toggle="pill" href="#tabs-5">Supplementary Courses</a></li>
+                    <li><a data-toggle="pill" href="#tabs-7">Upload Documents</a></li>
+                    <li><a data-toggle="pill" href="#tabs-8">Survey</a></li>
+                    <li><a data-toggle="pill" href="#tabs-9">Review Application</a></li>
                 </ul>
 
-                <div id="tabs-1">
-                    <?php include 'background.php'; ?>
-                </div>
+                <div class="tab-content">
+                    <div id="tabs-1" class="tab-pane fade in active">
+                        <?php include 'background.php'; ?>
+                    </div>
 
-                <div id="tabs-2">
-                    <?php include 'major.php'; ?>
-                </div>
+                    <div id="tabs-2" class="tab-pane fade">
+                        <?php include 'major.php'; ?>
+                    </div>
 
-                <div id="tabs-3">
-                    <?php include 'program.php'; ?>
-                </div>
+                    <div id="tabs-3" class="tab-pane fade">
+                        <?php include 'program.php'; ?>
+                    </div>
 
-                <div id="tabs-4">
-                    <?php include 'concentration.php'; ?>
-                </div>
+                    <div id="tabs-4" class="tab-pane fade">
+                        <?php include 'concentration.php'; ?>
+                    </div>
 
-                <div id="tabs-5">
-                    <?php include 'supplementary.php'; ?>
-                </div>
+                    <div id="tabs-5" class="tab-pane fade">
+                        <?php include 'supplementary.php'; ?>
+                    </div>
 
-                <div id="tabs-6">
-                    <?php include 'internship.php'; ?>
-                </div>
+                    <div id="tabs-6" class="tab-pane fade">
+                        <?php include 'internship.php'; ?>
+                    </div>
 
-                <div id="tabs-7">
-                    <?php include 'upload.php'; ?>
-                </div>
+                    <div id="tabs-7" class="tab-pane fade">
+                        <?php include 'upload.php'; ?>
+                    </div>
 
-                <div id="tabs-8">
-                    <?php include 'survey.php'; ?>
-                </div>
+                    <div id="tabs-8" class="tab-pane fade">
+                        <?php include 'survey.php'; ?>
+                    </div>
 
-                <div id="tabs-9">
-                    <h1 align="center"><i><a href="ReviewApplicationAdmin.php">Review Application</a></i></h1>
+                    <div id="tabs-9" class="tab-pane fade">
+                        <h1 align="center"><i><a href="ReviewApplicationAdmin.php">Review Application</a></i></h1>
+                    </div>
                 </div>
 
             </div>
