@@ -29,7 +29,6 @@ if (isset($_SESSION['MM_UserGroup'])) {
 
 require_once('includes/header.php');
 
-
 if (!function_exists("GetSQLValueString")) {
     function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") {
         if (PHP_VERSION < 6) {
