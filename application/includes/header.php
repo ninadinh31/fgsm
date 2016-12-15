@@ -337,7 +337,7 @@ font-size: 17px;
     </nav>
     
  	<div class="row" align="center" style="margin:0px;">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="align-content:center;background-color:#000; ">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#000; ">
   			<a href="http://www.globalsemesterdc.umd.edu"><img src="../../images/FedGlobalFellows.jpg"  class="img-responsive" alt="Global Fellows in Washington, DC icon and banner" height="333" hspace="0" vspace="0" border="0"></a>
     	</div>
     </div>
