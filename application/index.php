@@ -422,14 +422,6 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
 <body>
     <div class="container">
         <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
-        <p> Welcome
-            <?php 
-            echo $row_rstViewRegistration['Firstname']; 
-            ?>! 
-            <?php 
-            echo $row_rstViewRegistration['UID']; 
-            ?>
-        </p>
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
             <p>Please click links below to complete the application form:<?php echo $row_rstViewRegistration['Username']; ?></p>
 
