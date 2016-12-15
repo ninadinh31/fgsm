@@ -401,7 +401,7 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
             <div id="Tabs1" class="col-md-12">
                 <ul class="nav nav-pills">
-                    <li class="active"><a data-toggle="tab" href="#tabs-1">Background</a></li>
+                    <li class="active"><a data-toggle="pill" href="#tabs-1">Background</a></li>
                     <li><a data-toggle="pill" href="#tabs-2">Major(s)</a></li>
                     <li><a data-toggle="pill" href="#tabs-3">University Programs</a></li>
                     <li><a data-toggle="pill" href="#tabs-4">Rank Concentrations</a></li>
