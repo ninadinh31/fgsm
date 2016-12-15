@@ -335,17 +335,7 @@ font-size: 17px;
         	</button>
         	<a class="brand" href="http://www.globalsemesterdc.umd.edu" style="color:#fff;">Global Fellows in Washington, D.C.</a> <br>
         </div>
-               	
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color:#000;color:#fff;">
-            <ul class="nav navbar-nav">
-                <li><a href="about-gs.html" style="">About</a></li>                
-                <li><a href="seminars-gs.html" style="">Seminars</a></li> 
-                <li><a href="internships-gs.html" style="">Internships</a></li> 
-                <li><a href="courses-gs.html" style="">Supplementary Courses</a></li>    
-                <li><a href="alumni-gs.html" style="">Alumni</a></li>             
-                <li><a href="../Jointapplication.docx" style="">Application</a></li>
-            </ul>
-        </div>
+
     </nav>
     
  	<div class="row" align="center" style="margin:0px;background-color:#000;">
