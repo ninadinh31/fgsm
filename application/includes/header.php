@@ -40,7 +40,7 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background-color: #000000;
+		background-color: #2a5135;
 		text-align: left;
 		color: #333;
 		margin-left: 1px;
