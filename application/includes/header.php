@@ -38,7 +38,7 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background-color: #ff4d4d;
+		background-color: #ffffe6;
 		text-align: left;
 		color: #333;
 		margin-left: 1px;
