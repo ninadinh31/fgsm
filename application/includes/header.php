@@ -193,8 +193,7 @@ $(document).ready( function() {
 .container {
 	max-width: 1000px;
 	border: 1px;
-	border-color: #FFF;
-	background-color:#FFF;
+
 	border-style:solid;
 	
 }
