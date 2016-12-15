@@ -40,6 +40,7 @@
 	body {
 		margin: 0;
 		padding: 0;
+		background-color: #000;
 		text-align: left;
 		color: #333;
 		margin-left: 1px;
@@ -193,7 +194,8 @@ $(document).ready( function() {
 .container {
 	max-width: 1000px;
 	border: 1px;
-
+	border-color: #FFF;
+	background-color:#FFF;
 	border-style:solid;
 	
 }
