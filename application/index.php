@@ -434,65 +434,65 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
             ?>
         </p>
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
-        <p>Please click links below to complete the application form:<?php echo $row_rstViewRegistration['Username']; ?></p>
+            <p>Please click links below to complete the application form:<?php echo $row_rstViewRegistration['Username']; ?></p>
 
-        <div id="Tabs1" class="col-md-12">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#tabs-1">Background</a></li>
-                <li><a href="#tabs-2">Major(s)</a></li>
-                <li><a href="#tabs-3">University Programs</a></li>
-                <li><a href="#tabs-4">Rank Concentrations</a></li>
-                <li><a href="#tabs-6">Internship Interest</a></li>
-                <li><a href="#tabs-5">Supplementary Courses</a></li>
-                <li><a href="#tabs-7">Upload Documents</a></li>
-                <li><a href="#tabs-8">Survey</a></li>
-                <li><a href="#tabs-9">Review Application</a></li>
-            </ul>
+            <div id="Tabs1" class="col-md-12">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#tabs-1">Background</a></li>
+                    <li><a href="#tabs-2">Major(s)</a></li>
+                    <li><a href="#tabs-3">University Programs</a></li>
+                    <li><a href="#tabs-4">Rank Concentrations</a></li>
+                    <li><a href="#tabs-6">Internship Interest</a></li>
+                    <li><a href="#tabs-5">Supplementary Courses</a></li>
+                    <li><a href="#tabs-7">Upload Documents</a></li>
+                    <li><a href="#tabs-8">Survey</a></li>
+                    <li><a href="#tabs-9">Review Application</a></li>
+                </ul>
 
-            <div id="tabs-1">
-                <?php include 'background.php'; ?>
+                <div id="tabs-1">
+                    <?php include 'background.php'; ?>
+                </div>
+
+                <div id="tabs-2">
+                    <?php include 'major.php'; ?>
+                </div>
+
+                <div id="tabs-3">
+                    <?php include 'program.php'; ?>
+                </div>
+
+                <div id="tabs-4">
+                    <?php include 'concentration.php'; ?>
+                </div>
+
+                <div id="tabs-5">
+                    <?php include 'supplementary.php'; ?>
+                </div>
+
+                <div id="tabs-6">
+                    <?php include 'internship.php'; ?>
+                </div>
+
+                <div id="tabs-7">
+                    <?php include 'upload.php'; ?>
+                </div>
+
+                <div id="tabs-8">
+                    <?php include 'survey.php'; ?>
+                </div>
+
+                <div id="tabs-9">
+                    <h1 align="center"><i><a href="ReviewApplicationAdmin.php">Review Application</a></i></h1>
+                </div>
+
             </div>
-
-            <div id="tabs-2">
-                <?php include 'major.php'; ?>
-            </div>
-
-            <div id="tabs-3">
-                <?php include 'program.php'; ?>
-            </div>
-
-            <div id="tabs-4">
-                <?php include 'concentration.php'; ?>
-            </div>
-
-            <div id="tabs-5">
-                <?php include 'supplementary.php'; ?>
-            </div>
-
-            <div id="tabs-6">
-                <?php include 'internship.php'; ?>
-            </div>
-
-            <div id="tabs-7">
-                <?php include 'upload.php'; ?>
-            </div>
-
-            <div id="tabs-8">
-                <?php include 'survey.php'; ?>
-            </div>
-
-            <div id="tabs-9">
-                <h1 align="center"><i><a href="ReviewApplicationAdmin.php">Review Application</a></i></h1>
-            </div>
-
-        </div>
-        <input type="hidden" name="MM_update" value="frmControlPanel">
-    </form>
-    <script type="text/javascript">
-      $(function() {
-         $( "#Tabs1" ).tabs(); 
-     });
-    </script>
+            <input type="hidden" name="MM_update" value="frmControlPanel">
+        </form>
+        <script type="text/javascript">
+          $(function() {
+             $( "#Tabs1" ).tabs(); 
+         });
+        </script>
     </div>
 </body>
 </html>
