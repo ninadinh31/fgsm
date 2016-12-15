@@ -333,7 +333,7 @@ font-size: 17px;
                     <span class="icon-bar"></span>
                 </p>
         	</button>
-        	<a class="brand" href="http://www.globalsemesterdc.umd.edu" style="color:#fff;">Global Fellows in Washington, D.C.</a> <br>
+        	<a class="brand" href="http://www.globalsemesterdc.umd.edu" style="color:#fff;">Federal and Global Semester Online Application</a><br>
         </div>
 
     </nav>

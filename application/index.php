@@ -421,10 +421,7 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
 
 <body>
     <div class="container">
-        <h2>
-            Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
-            <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
-        </h2>
+        <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
         <p> Welcome
             <?php 
             echo $row_rstViewRegistration['Firstname']; 
