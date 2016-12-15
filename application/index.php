@@ -397,29 +397,6 @@ if (isset($_GET['totalRows_rsStudyAbroad'])) {
 $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad)-1;
 ?>
 
-
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Admin</title>
-    <link href="../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
-    <link href="../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
-    <link href="../jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <script src="../jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="../jQueryAssets/jquery.ui-1.10.4.tabs.min.js" type="text/javascript"></script>
-    <script src="../js/ControlPanel2.js" type="text/javascript"></script> 
-    <!-- <script type="text/javascript">
-      function MM_goToURL() { //v3.0
-        var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
-        for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
-      }
-  </script> -->
-</head>
-
-<body>
     <div class="container">
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
             <div id="Tabs1" class="col-md-12">
