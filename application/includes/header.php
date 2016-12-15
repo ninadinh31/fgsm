@@ -5,16 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Global Fellows in Washington, DC - University of Maryland</title>
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon /" />
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon /" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta content="Army ROTC - University of Maryland" />
 	<meta name="" content=""/>
 	<meta name="Description" content=" " />
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="../css/bootstrap.css">
-<!--Datatables css -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="../../css/bootstrap.css">
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -103,12 +101,10 @@
 	}
 </style>
 <!--Carousel files -->
-<link rel="stylesheet" href="css/flickity.css" type="text/css" media="screen">
-<script src="js/flickity.pkgd.js" language="javascript"></script>   
+<link rel="stylesheet" href="../../css/flickity.css" type="text/css" media="screen">
+<script src="../../js/flickity.pkgd.js" language="javascript"></script>   
 <!--Datatables js file-->
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" language="javascript"></script>
 <script src="//code.jquery.com/jquery-1.12.3.js" language="javascript"></script>
-<script src="js/events.js" language="script"></script>
 
 <script>
 var elem = document.querySelector('.main-gallery');
