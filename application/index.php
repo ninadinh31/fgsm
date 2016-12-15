@@ -422,11 +422,11 @@
   <body>
     <div class="container">
       <!-- <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%"> -->
-      <h2 align="center">
+      <h2>
         Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
         <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
       </h2>
-      <p align="center">Welcome
+      <p>Welcome
         <?php 
           echo $row_rstViewRegistration['Firstname']; 
         ?>! 
@@ -456,251 +456,31 @@
           </div>
           
           <div id="tabs-2">
-            <h3 align="center">Major</h3>
-            <table width="493" border="3" align="center">
-              <tbody>
-                <tr>
-                  <td width="259">
-                    <strong>Program
-                      <input name="UID" type="hidden" id="UID" value="<?php echo $row_rsMajor['UID']; ?>">
-                      <input name="MID" type="hidden" id="MID" value="<?php echo $row_rsMajor['MID']; ?>">
-                    </strong>
-                  </td>
-                  <td width="106"><strong>Type</strong></td>
-                  <td width="106">&nbsp;</td>
-                </tr>
-                <?php 
-                  do { 
-                ?>
-                  <tr>
-                    <td><?php echo $row_rsMajor['Programs']; ?></td>
-                    <td><?php echo $row_rsMajor['Type']; ?></td>
-                    <td><a href="DeleteMajor1.php?UID=<?php echo $row_rsMajor['UID'];?> && MID=<?php echo $row_rsMajor['MID'];?>">Delete Major</a></td>
-                  </tr>
-                <?php } while ($row_rsMajor = mysql_fetch_assoc($rsMajor)); ?>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="Add Major" type="button" id="Add Major" onClick="MM_goToURL('parent','Majors1.php');return document.MM_returnValue" value="Add Major">
-              <input name="Editbutton" type="button" id="Editbutton" onClick="MM_goToURL('parent','OtherMajor1.php');return document.MM_returnValue" value="Edit Other Major">
-            </p>
+            <?php include 'major.php'; ?>
           </div>
           
           <div id="tabs-3">
-            <h3 align="center">University Programs</h3>
-            <table width="893" border="1px solid black" align="center">
-              <tbody>
-                <tr>
-                  <td width="498"><strong>University Programs
-                    <input name="UID" type="hidden" id="UID" value="<?php echo $row_rsViewUNIVProgram['UID']; ?>">
-                    <input name="LID" type="hidden" id="LID" value="<?php echo $row_rsViewUNIVProgram['LID']; ?>">
-                  </strong></td>
-                  <td width="379">&nbsp;</td>
-                </tr>
-                <?php 
-                  do { 
-                ?>
-                  <tr>
-                    <td><?php echo $row_rsViewUNIVProgram['UPrograms']; ?></td>
-                    <td><a href="DeleteUniversityPrograms1.php?UID=<?php echo $row_rsViewUNIVProgram['UID'];?> && LID=<?php echo 	  $row_rsViewUNIVProgram['LID'];?>">Delete Program</a></td>
-                  </tr>
-                <?php 
-                  } while ($row_rsViewUNIVProgram = mysql_fetch_assoc($rsViewUNIVProgram)); 
-                ?>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="Add University Programs" type="button" id="AddUniPrograms" onClick="MM_goToURL('parent','UniversityPrograms.php');return document.MM_returnValue" value="Add University Programs">
-            </p>
-            <br>
-            <h3 align="center">Scholarships</h3>
-            <table align="center" width="892" border="1">
-              <tbody>
-                <tr>
-                  <td width="502"><strong>Scholarship(s)
-                    <input name="UID" type="hidden" id="UID" value="<?php echo $row_rsViewScholarship['UID']; ?>">
-                    <input name="ScholarshipID" type="hidden" id="ScholarshipID" value="<?php echo $row_rsViewScholarship['ScholarshipID']; ?>">
-                    </strong>
-                  </td>
-                  <td width="232"><strong>Year</strong></td>
-                  <td width="136">&nbsp;</td>
-                </tr>
-               <?php do { ?>
-                <tr>
-                  <td><?php echo $row_rsViewScholarship['Scholarship']; ?></td>
-                  <td><?php echo $row_rsViewScholarship['ScholarshipYear']; ?></td>
-                  <td><a href="DeleteScholarship1.php?UID=<?php echo $row_rsViewScholarship['UID'];?> && ScholarshipID=<?php echo $row_rsViewScholarship['ScholarshipID'];?>">Delete Scholarship</a></td>
-                </tr>
-                <?php } while ($row_rsViewScholarship = mysql_fetch_assoc($rsViewScholarship)); ?>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="butAddScholarship" type="button" id="butAddScholarship" onClick="MM_goToURL('parent','AddScholarship1.php');return document.MM_returnValue" value="Add Scholarship">
-            </p>
-            <br>
-            <h3 align="center">Study Abroad Experience</h3>
-            <table align="center" width="895" border="1">
-              <tbody>
-                <tr>
-                  <td width="294">
-                    <strong>Institution/Location
-                      <input name="StudyAID" type="hidden" id="StudyAID" value="<?php echo $row_rsStudyAbroad['StudyAID']; ?>">
-                    </strong>
-                  </td>
-                  <td width="246"><strong>Country</strong></td>
-                  <td width="190"><strong>Year</strong></td>
-                  <td width="137">&nbsp;</td>
-                </tr>
-                <?php do { ?>
-                  <tr>
-                    <td><?php echo $row_rsStudyAbroad['Institution']; ?></td>
-                    <td><?php echo $row_rsStudyAbroad['Country']; ?></td>
-                    <td><?php echo $row_rsStudyAbroad['StudyYear']; ?></td>
-                    <td><a href="DeleteStudyAbroad.php?StudyAID=<?php echo $row_rsStudyAbroad['StudyAID'];?>">Delete Study Abroad</a></td>
-                  </tr>
-                <?php } while ($row_rsStudyAbroad = mysql_fetch_assoc($rsStudyAbroad)); ?>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="butAddStudyAbroad" type="button" id="butAddStudyAbroad" onClick="MM_goToURL('parent','AddStudyAbroad1.php');return document.MM_returnValue" value="Add Study Abroad">
-            </p>
+            <?php include 'program.php'; ?>
           </div>
           
           <div id="tabs-4">
-            <h3 align="center">Rank of Concentrations</h3>
-            <table align="center" width="872" height="57" border="1">
-              <tbody>
-                <tr>
-                  <td width="165">&nbsp;</td>
-                  <td width="286"><strong>Concentration</strong></td>
-                  <td width="147"><strong>Rank</strong></td>
-                  <td width="246">&nbsp;</td>
-                </tr>
-                <?php 
-                  do { 
-                ?>
-                  <tr>
-                    <td><?php echo $row_rsConcentration['UID']; ?></td>
-                    <td><?php echo $row_rsConcentration['Concentration']; ?></td>
-                    <td><?php echo $row_rsConcentration['Rank']; ?></td>
-                    <td><a href="DeleteConcentration1.php?RankID=<?php echo $row_rsConcentration['RankID'];?>">Delete Concentration</a></td>
-                  </tr>
-                <?php 
-                  } while ($row_rsConcentration = mysql_fetch_assoc($rsConcentration)); 
-                ?>
-              </tbody>
-            </table>
-            <br>
-            <p align="center">
-              <input name="AddConcentration" type="button" id="AddConcentration" onClick="MM_goToURL('parent','Concentration1.php');return document.MM_returnValue" value="Add Concentration">
-            </p>
+            <?php include 'concentration.php'; ?>
           </div>
           
           <div id="tabs-5">
-            <h3 align="center">Supplementary Courses</h3>
-            <table align="center" width="883" border="1">
-              <tbody>
-                <tr>
-                  <td width="240"><strong>Supplementary Courses</strong></td>
-                  <td width="230"><strong>Course Code</strong></td>
-                  <td width="197"><strong>UID</strong></td>
-                  <td width="188">&nbsp;</td>
-                </tr>
-                <?php do { ?>
-                <tr>
-                  <td><?php echo $row_rsSupplementaryCourses['CourseTitle']; ?></td>
-                  <td><?php echo $row_rsSupplementaryCourses['CourseID']; ?></td>
-                  <td><?php echo $row_rsSupplementaryCourses['UID']; ?></td>
-                  <td><a href="DeleteSupplementaryCrs1.php?UID=<?php echo $row_rsSupplementaryCourses['UID'];?> && CourseID=<?php echo $row_rsSupplementaryCourses['CourseID'];?>">Delete Course</a></td>
-                </tr>
-                <?php } while ($row_rsSupplementaryCourses = mysql_fetch_assoc($rsSupplementaryCourses)); ?>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="AddSupplementary" type="button" id="AddSupplementary" onClick="MM_goToURL('parent','Supplementary1.php');return document.MM_returnValue" value="Add Supplementary Course">
-              </p>
+            <?php include 'supplementary.php'; ?>
           </div>
 
           <div id="tabs-6">
-            <h3 align="center">Internship Interests</h3>
-            <table align="center" width="491" border="1">
-              <tbody>
-                <tr>
-                  <td width="254"><b>General Internship Interest</b></td>
-                  <td width="221"><?php echo $row_rsApplication['InternshipInterest']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Past Student Internship</b></td>
-                  <td><?php echo $row_rsApplication['PastInternLocation']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Interning in Fall 2016?</b></td>
-                  <td><?php echo $row_rsApplication['InternInFall']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>If interning in Fall 2016, please specify location</b></td>
-                  <td><?php echo $row_rsApplication['FallInternLoc']; ?></td>
-                </tr>
-                <tr>
-                  <td><b>Other comments on your interest or passion</b></td>
-                  <td><?php echo $row_rsApplication['OtherComments']; ?></td>
-                </tr>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="ButAddIntInterest" type="button" id="ButAddIntInterest" onClick="MM_goToURL('parent','InternshipInterest1.php');return document.MM_returnValue" value="Add/Edit Internship Interest">
-            </p>
+            <?php include 'internship.php'; ?>
           </div>
           
           <div id="tabs-7">
-            <h3 align="center">Upload Documents</h3>
-            <table align="center" width="488" height="53" border="1">
-              <tbody>
-                <tr>
-                  <td width="273"><strong>Document Type</strong></td>
-                  <td width="199"><strong>Document</strong></td>
-                  <td width="199">&nbsp;</td>
-                </tr>
-                <?php do { ?>
-                <tr>
-                  <td><?php echo $row_rsDocuments['docCategory']; ?></td>
-                  <td><a href="uploads/<?php echo $row_rsDocuments['docName'] ?>"><?php echo $row_rsDocuments['docName'];?></a></td>
-                  <td><input name="txtdocID" type="hidden" id="txtdocID" value="<?php echo $row_rsDocuments['docID']; ?>">
-                    <a href="DeleteDoc1.php?docID=<?php echo $row_rsDocuments['docID'] ?>">Delete</a></td>
-                </tr>
-                <?php } while ($row_rsDocuments = mysql_fetch_assoc($rsDocuments)); ?>
-              </tbody>
-            </table>
-            <p align="center">
-              <input name="butUploadDocs" type="button" id="butUploadDocs" onClick="MM_goToURL('parent','Documents1.php');return document.MM_returnValue" value="Upload Documents">
-            </p>
+            <?php include 'upload.php'; ?>
           </div>
 
           <div id="tabs-8">
-            <h3 align="center">Survey</h3>
-            <p align="center"><i>How did you hear about the Federal Semester and Global Semester Programs?</i></p>
-            <table align="center" width="1007" border="1">
-              <tbody>
-                <tr>
-                  <td width="219"><strong>Method</strong></td>
-                  <td width="273"><strong>Details</strong></td>
-                  <td width="119">UID</td>
-                  <td width="156">PgmYear</td>
-                  <td width="206">&nbsp;</td>
-                </tr>
-                <?php do { ?>
-                <tr>
-                  <td><?php echo $row_rsMarketing['MarketingType']; ?></td>
-                  <td><?php echo $row_rsMarketing['MarketingLocation']; ?></td>
-                  <td><?php echo $row_rsMarketing['UID']; ?></td>
-                  <td><?php echo $row_rsMarketing['PgmYear']; ?></td>
-                  <td><a href="DeleteMarketing1.php?UID=<?php echo $row_rsMarketing['UID'];?> && PgmYear=<?php echo $row_rsMarketing['PgmYear'];?> && MarketingID=<?php echo $row_rsMarketing['MarketingID'];?>">Delete</a></td>
-                </tr>
-                <?php } while ($row_rsMarketing = mysql_fetch_assoc($rsMarketing)); ?>
-              </tbody>
-            </table>
-            <p align="center"><input name="subAddMarketing" type="submit" id="subAddMarketing" onClick="MM_goToURL('parent','Marketing1.php');return document.MM_returnValue" value="Add Survey"></p>
-            <p>&nbsp;</p>
+            <?php include 'survey.php'; ?>
           </div>
 
           <div id="tabs-9">
