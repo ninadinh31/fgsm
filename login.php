@@ -8,24 +8,24 @@ define("APPLICANT", 2);
 
 session_start();
 
-// *** Validate request to login to this site.
-if (isset($_SESSION['MM_UserGroup'])) {
+// // *** Validate request to login to this site.
+// if (isset($_SESSION['MM_UserGroup'])) {
     
-    // This is an Accepted Student 
-    if ($_SESSION['MM_UserGroup'] == STUDENT) {
-        $MM_redirectLoginSuccess = "studentcontrolpanel.php";
+//     // This is an Accepted Student 
+//     if ($_SESSION['MM_UserGroup'] == STUDENT) {
+//         $MM_redirectLoginSuccess = "studentcontrolpanel.php";
 
-    // This is an Admin user
-    } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
-        $MM_redirectLoginSuccess = "admincontrolpanel.php";
+//     // This is an Admin user
+//     } else if ($_SESSION['MM_UserGroup'] == ADMIN) {
+//         $MM_redirectLoginSuccess = "admincontrolpanel.php";
 
-    // This is an applicant
-    } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
-        $MM_redirectLoginSuccess = "application/";
-    }
+//     // This is an applicant
+//     } else if ($_SESSION['MM_UserGroup'] == APPLICANT) {
+//         $MM_redirectLoginSuccess = "application/";
+//     }
 
-    header("Location: " . $MM_redirectLoginSuccess);
-}
+//     header("Location: " . $MM_redirectLoginSuccess);
+// }
 
 require_once('includes/header.php');
 
