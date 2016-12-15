@@ -421,7 +421,6 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
 
 <body>
     <div class="container">
-        <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
             <div id="Tabs1" class="col-md-12">
                 <ul class="nav nav-pills">
@@ -480,6 +479,7 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
              $( "#Tabs1" ).tabs(); 
          });
         </script>
+        <a href="Admin1.php">Admin</a> | <a href="../logout.php"> Log Out</a>
     </div>
 </body>
 </html>
