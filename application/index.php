@@ -452,7 +452,7 @@
           </ul>
           
           <div id="tabs-1">
-            <?php require_once('background.php'); ?>
+            <?php include 'background.php'; ?>
           </div>
           
           <div id="tabs-2">
