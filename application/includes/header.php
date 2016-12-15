@@ -12,9 +12,7 @@
 	<meta name="Description" content=" " />
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="css/font-awesome.css" />
+<link rel="stylesheet" href="../css/bootstrap.css">
 <!--Datatables css -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 
