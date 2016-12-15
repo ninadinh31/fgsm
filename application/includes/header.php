@@ -40,7 +40,6 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background-color: #2a5135;
 		text-align: left;
 		color: #333;
 		margin-left: 1px;
@@ -294,7 +293,7 @@ font-size: 17px;
 	
 	@media (max-width: 767px) {
 		.dropdown-menu.multi-column {
-			min-width: 240px !important;
+			min-width:  		240px !important;
 			overflow-x: hidden;
 		}
 	}
