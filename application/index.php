@@ -123,7 +123,7 @@ if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "frmControlPanel")) 
   header(sprintf("Location: %s", $updateGoTo));
 }
 
-require_once('includes/header.php');
+// require_once('includes/header.php');
 
 
 $colname_rstViewRegistration = "-1";
@@ -395,6 +395,10 @@ if (isset($_GET['totalRows_rsStudyAbroad'])) {
     $totalRows_rsStudyAbroad = mysql_num_rows($all_rsStudyAbroad);
 }
 $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad)-1;
+
+require_once('includes/header.php');
+
+
 ?>
 
     <div class="container">
