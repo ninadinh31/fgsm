@@ -12,11 +12,11 @@
 	<meta name="Description" content=" " />
 
 <!-- JQuery -->
-<script src="../../jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="../../css/bootstrap.css">
-<script src="../../bootstrap.js" type="text/javascript"></script>
+<script src="../../js/bootstrap.js" type="text/javascript"></script>
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
