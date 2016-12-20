@@ -12,7 +12,9 @@
 	<meta name="Description" content=" " />
 
 <!-- Bootstrap -->
+<script src="jquery.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="../../css/bootstrap.css">
+<script src="bootstrap.min.js" type="text/javascript"></script>
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
