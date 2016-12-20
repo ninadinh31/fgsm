@@ -402,14 +402,14 @@ $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad
     <div class="container">
         <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
             <div id="Tabs1" class="col-md-12">
-                <ul class="nav nav-pills">
-                    <li class="active"><a data-toggle="pill" href="#tabs-1">Background</a></li>
-                    <li><a data-toggle="pill" href="#tabs-2">Major(s)</a></li>
-                    <li><a data-toggle="pill" href="#tabs-4">Rank Concentrations</a></li>
-                    <li><a data-toggle="pill" href="#tabs-5">Supplementary Courses</a></li>
-                    <li><a data-toggle="pill" href="#tabs-7">Upload Documents</a></li>
-                    <li><a data-toggle="pill" href="#tabs-8">Survey</a></li>
-                    <li><a data-toggle="pill" href="#tabs-9">Review Application</a></li>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tabs-1">Background</a></li>
+                    <li><a data-toggle="tab" href="#tabs-2">Major(s)</a></li>
+                    <li><a data-toggle="tab" href="#tabs-4">Rank Concentrations</a></li>
+                    <li><a data-toggle="tab" href="#tabs-5">Supplementary Courses</a></li>
+                    <li><a data-toggle="tab" href="#tabs-7">Upload Documents</a></li>
+                    <li><a data-toggle="tab" href="#tabs-8">Survey</a></li>
+                    <li><a data-toggle="tab" href="#tabs-9">Review Application</a></li>
                 </ul>
 
                 <?php require_once('includes/header.php'); ?>
