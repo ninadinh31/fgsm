@@ -396,8 +396,6 @@ if (isset($_GET['totalRows_rsStudyAbroad'])) {
 }
 $totalPages_rsStudyAbroad = ceil($totalRows_rsStudyAbroad/$maxRows_rsStudyAbroad)-1;
 
-require_once('includes/header.php');
-
 
 ?>
 
@@ -415,6 +413,8 @@ require_once('includes/header.php');
                     <li><a data-toggle="pill" href="#tabs-8">Survey</a></li>
                     <li><a data-toggle="pill" href="#tabs-9">Review Application</a></li>
                 </ul>
+
+                <?php require_once('includes/header.php'); ?>
 
                 <div class="tab-content">
                     <div id="tabs-1" class="tab-pane fade in active">
