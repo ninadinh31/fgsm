@@ -3,7 +3,7 @@
 if (!isset($_SESSION)) {
   session_start();
 }
-$MM_authorizedUsers = "1,3";
+$MM_authorizedUsers = "0,1,3";
 $MM_donotCheckaccess = "false";
 
 // *** Restrict Access To Page: Grant or deny access to this page
@@ -57,6 +57,9 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
   <tbody>
     <tr>
       <td width="246"><a href="SearchInternship2.php">Search Internship</a></td>
+    </tr>
+    <tr>
+      <td><a href="OnlineForm.php">OnlineApplication</a></td>
     </tr>
     <tr>
       <td>View Events Schedule</td>

@@ -6,7 +6,7 @@
     session_start();
   }
   
-  $MM_authorizedUsers = "0,1";
+  $MM_authorizedUsers = "0,1,2";
   $MM_donotCheckaccess = "false";
 
   if (!$MM_authorizedUsers) {
@@ -406,6 +406,11 @@
     <link href="../jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    .container p {
+	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+}
+    </style>
     <script src="../jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="../jQueryAssets/jquery.ui-1.10.4.tabs.min.js" type="text/javascript"></script>
     <script src="../js/ControlPanel2.js" type="text/javascript"></script> 
@@ -420,21 +425,21 @@
   <body>
     <div class="container">
       <!-- <img src="images/smallheader.jpg" alt="Federal/Global Semester Banner" style="margin-bottom:1px;position:relative;width:100%"> -->
-      <h2 align="center">
-        Welcome to the Federal and Global Semester 2016 -  2017 Online Application System<br>
-        <a href="Admin1.php">Admin</a> | <a href="Logout1.php"> Log Out</a>
-      </h2>
+      <h2 align="center">University of Maryland, College Park</h2>
+      <h2 align="center">Welcome to the Federal and Global Fellows 2017 -  2018 Online Application System<br>
+      <a href="Admin1.php">Admin</a> | <a href="Logout1.php"> Log Out</a> </h2>
       <p align="center">Welcome
         <?php 
           echo $row_rstViewRegistration['Firstname']; 
-        ?>! 
-        <?php 
-          echo $row_rstViewRegistration['UID']; 
-        ?>
-      </p>
+        ?>!      </p>
+      <p>The Federal Fellows Program prepares talented, diverse undergraduate students to excel in professional internship and pursue careers of influence and impact, especially in the public sector. Global Fellows in Washington, D.C. prepares students with the knowledge, skills, attitudes and experience necessary to become leaders in our increasing globalized society. Both are yealong programs that combine a fall academic seminar taught by industry experts and a spring internship.  All students have access to personal advising, workshops, special events, guest speakers, and D.C. trips regardless of program/concentration. Applicants are strongly encouraged to come by the office to learn more about fall concentration seminars.</p>
+      <p><strong>Applications requirements:</strong></p>
+      <p>- Completed Online Application Form      </p>
+      <p>- Upload Resume (can include but not limited to paid/unpaid work, volunteer experience, leadership activities, scholarship/awards, international study, computer, and all language skills including approximate proficiency level, etc.)      </p>
+      <p>- Upload Personal Statement      </p>
+      <p>- Unload Unofficial transcripts      </p>
       <form action="<?php echo $editFormAction; ?>" id="frmControlPanel" name="frmControlPanel" method="POST">
-        <p>Please click links below to complete the application form:<?php echo $row_rstViewRegistration['Username']; ?></p>
-        
+    <p>Please click tabs below and complete all sections accordingly:<?php echo $row_rstViewRegistration['Username']; ?></p>
         
         <div id="Tabs1">
           <ul>
@@ -450,7 +455,7 @@
           </ul>
           
           <div id="tabs-1">
-            <h3>Background</h3>
+            <h3>Background: </h3>
             <table class="table">
               <tbody>
                 <tr>
@@ -482,7 +487,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Race</strong></td>
+                  <td><strong>Ethnicity</strong></td>
                   <td>
                     <?php 
                       echo $row_rsApplication['Race']; 
@@ -518,7 +523,7 @@
                       echo $row_rsApplication['Credits']; 
                     ?>
                   </td>
-                  <td><strong>Interning in Fall 2016?</strong></td>
+                  <td><strong>Interning in Fall 2017?</strong></td>
                   <td>
                     <?php 
                       echo $row_rsApplication['InternInFall']; 
@@ -594,7 +599,7 @@
           </div>
           
           <div id="tabs-2">
-            <h3 align="center">Major</h3>
+            <h4 align="center">Please add all your Majors and Minors</h4>
             <table width="493" border="3" align="center">
               <tbody>
                 <tr>
@@ -705,7 +710,7 @@
           </div>
           
           <div id="tabs-4">
-            <h3 align="center">Rank of Concentrations</h3>
+            <h4 align="center">Please rank all concentrations in which you are interested in applying:</h4>
             <table align="center" width="872" height="57" border="1">
               <tbody>
                 <tr>
@@ -837,7 +842,7 @@
                 <?php } while ($row_rsMarketing = mysql_fetch_assoc($rsMarketing)); ?>
               </tbody>
             </table>
-            <p align="center"><input name="subAddMarketing" type="submit" id="subAddMarketing" onClick="MM_goToURL('parent','Marketing1.php');return document.MM_returnValue" value="Add Survey"></p>
+            <p align="center"><input name="subAddMarketing" type="submit" id="subAddMarketing" onClick="MM_goToURL('parent','Marketing1.php');return document.MM_returnValue" value="Submit"></p>
             <p>&nbsp;</p>
           </div>
 
