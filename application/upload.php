@@ -1,10 +1,10 @@
-<h3 align="center">Upload Documents</h3>
-            <table align="center" width="488" height="53" border="1">
+<h3>Upload Documents</h3>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td width="273"><strong>Document Type</strong></td>
-                  <td width="199"><strong>Document</strong></td>
-                  <td width="199">&nbsp;</td>
+                  <td><strong>Document Type</strong></td>
+                  <td><strong>Document</strong></td>
+                  <td>&nbsp;</td>
                 </tr>
                 <?php do { ?>
                 <tr>
@@ -17,5 +17,5 @@
               </tbody>
             </table>
             <p align="center">
-              <input name="butUploadDocs" type="button" id="butUploadDocs" onClick="MM_goToURL('parent','Documents1.php');return document.MM_returnValue" value="Upload Documents">
+              <input name="butUploadDocs" type="button" id="butUploadDocs" class="btn btn-primary" onClick="MM_goToURL('parent','Documents1.php');return document.MM_returnValue" value="Upload Documents">
             </p>

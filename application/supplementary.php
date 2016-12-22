@@ -1,11 +1,19 @@
-<h3 align="center">Supplementary Courses</h3>
-            <table align="center" width="883" border="1">
+<?php
+
+$query = sprintf("SELECT CourseID, CourseTitle FROM tblsqSupplementaryCourses", GetSQLValueString($colname_concentrations, "text"));
+$concentrationsList = mysql_query($query, $localhost) or die(mysql_error());
+$row_concentrations = mysql_fetch_assoc($concentrationsList);
+
+?>
+
+<h3>Supplementary Courses</h3>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td width="240"><strong>Supplementary Courses</strong></td>
-                  <td width="230"><strong>Course Code</strong></td>
-                  <td width="197"><strong>UID</strong></td>
-                  <td width="188">&nbsp;</td>
+                  <td><strong>Supplementary Courses</strong></td>
+                  <td><strong>Course Code</strong></td>
+                  <td><strong>UID</strong></td>
+                  <td>&nbsp;</td>
                 </tr>
                 <?php do { ?>
                 <tr>
@@ -18,5 +26,5 @@
               </tbody>
             </table>
             <p align="center">
-              <input name="AddSupplementary" type="button" id="AddSupplementary" onClick="MM_goToURL('parent','Supplementary1.php');return document.MM_returnValue" value="Add Supplementary Course">
+              <input name="AddSupplementary" type="button" id="AddSupplementary" class="btn btn-primary" onClick="MM_goToURL('parent','Supplementary1.php');return document.MM_returnValue" value="Add Supplementary Course">
               </p>

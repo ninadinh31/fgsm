@@ -1,9 +1,10 @@
-<h3 align="center">Internship Interests</h3>
-            <table align="center" width="491" border="1">
+
+<h3>Internship Interests</h3>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td width="254"><b>General Internship Interest</b></td>
-                  <td width="221"><?php echo $row_rsApplication['InternshipInterest']; ?></td>
+                  <td><b>General Internship Interest</b></td>
+                  <td><?php echo $row_rsApplication['InternshipInterest']; ?></td>
                 </tr>
                 <tr>
                   <td><b>Past Student Internship</b></td>
@@ -24,5 +25,5 @@
               </tbody>
             </table>
             <p align="center">
-              <input name="ButAddIntInterest" type="button" id="ButAddIntInterest" onClick="MM_goToURL('parent','InternshipInterest1.php');return document.MM_returnValue" value="Add/Edit Internship Interest">
+              <input name="ButAddIntInterest" type="button" class="btn btn-primary" id="ButAddIntInterest" onClick="MM_goToURL('parent','InternshipInterest1.php');return document.MM_returnValue" value="Add/Edit Internship Interest">
             </p>

@@ -42,7 +42,6 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background-color: #ffffe6;
 		text-align: left;
 		color: #333;
 		margin-left: 1px;
@@ -51,7 +50,6 @@
 	
     .dropdown-menu {
 		min-width: 200px; 
-		background-color:#333;
 	}
 	
 	.dropdown-menu.columns-5 {
@@ -317,7 +315,7 @@ font-size: 17px;
 	<script> umdHeader.init({ news: false }); </script>
   
      <!--UGST Header-->
-     <nav class="navbar navbar-default" role="navigation" style="margin-bottom:0px;background-color:#000;">
+     <nav class="navbar navbar-default" role="navigation" style="margin-bottom:0px;background-color:#990000;">
      	<div class="navbar-header">
         	<button type="button"  class="navbar-toggle" data-toggle="collapse"
                  data-target="#bs-example-navbar-collapse-1" style="background-color:#000;color:#fff;" >
@@ -335,6 +333,6 @@ font-size: 17px;
     
  	<div class="row" align="center" style="margin:0px;background-color:#000;">
     	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="align-content:center;background-color:#000; ">
-  			<a href="http://www.globalsemesterdc.umd.edu"><img src="../../images/FedGlobalFellows.jpg"  class="img-responsive" alt="Global Fellows in Washington, DC icon and banner" height="333" hspace="0" vspace="0" border="0"></a>
+  			<a href="http://www.globalsemesterdc.umd.edu"></a>
     	</div>
     </div>

@@ -1,27 +1,27 @@
-<h3 align="center">Rank of Concentrations</h3>
-            <table align="center" width="872" height="57" border="1">
+<?php 
+
+$query = sprintf("SELECT Concentration FROM tblsqConcentration", GetSQLValueString($colname_concentrations, "text"));
+$concentrationsList = mysql_query($query, $localhost) or die(mysql_error());
+$row_concentrations = mysql_fetch_assoc($concentrationsList);
+
+?>
+
+<h3>Rank of Concentrations</h3>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td width="165">&nbsp;</td>
-                  <td width="286"><strong>Concentration</strong></td>
-                  <td width="147"><strong>Rank</strong></td>
-                  <td width="246">&nbsp;</td>
+                  <td><strong>Concentration</strong></td>
+                  <td><strong>Rank</strong></td>
                 </tr>
                 <?php 
                   do { 
                 ?>
                   <tr>
-                    <td><?php echo $row_rsConcentration['UID']; ?></td>
-                    <td><?php echo $row_rsConcentration['Concentration']; ?></td>
-                    <td><?php echo $row_rsConcentration['Rank']; ?></td>
-                    <td><a href="DeleteConcentration1.php?RankID=<?php echo $row_rsConcentration['RankID'];?>">Delete Concentration</a></td>
+                    <td><?php echo $row_concentrations['Concentration']; ?></td>
+                    <td></td>
                   </tr>
                 <?php 
-                  } while ($row_rsConcentration = mysql_fetch_assoc($rsConcentration)); 
+                  } while ($row_concentrations = mysql_fetch_assoc($concentrationsList)); 
                 ?>
               </tbody>
             </table>
-            <br>
-            <p align="center">
-              <input name="AddConcentration" type="button" id="AddConcentration" onClick="MM_goToURL('parent','Concentration1.php');return document.MM_returnValue" value="Add Concentration">
-            </p>

@@ -140,6 +140,12 @@ do {
   <td><?php echo $row_rsStudyAbroad['Country']; ?></td>
   <td><?php echo $row_rsStudyAbroad['StudyYear']; ?></td>
   <td><a href="DeleteStudyAbroad.php?StudyAID=<?php echo $row_rsStudyAbroad['StudyAID'];?>">Delete Study Abroad</a></td>
+              <td colspan="2">
+                <div class="form-group">
+                    <label for="ethnicity">Ethnicity:</label>
+                    <input type="text" class="form-control" value="<?php echo $row_rsApplication['Race']; ?>" id="ethnicity">
+                </div>
+            </td>
 </tr>
 <?php } while ($row_rsStudyAbroad = mysql_fetch_assoc($rsStudyAbroad)); ?>
 </tbody>
